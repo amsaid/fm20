@@ -1,0 +1,21 @@
+﻿<panel colour_team_names="true" colour_team_scores="true">
+  <!--background colour-->
+  <widget class="picture" id="bkcl" auto_size="vertical" file="heffem/match overview/right" cached="true" rthr="68" alignment="centre">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+    <layout class="centre_in_parent_attachment" alignment="vertical" />
+  </widget>
+
+  <container>
+    <layout class="arrange_horizontal_attachment" layout="-1,100" gap="10" offset="8"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+
+    <!-- team name -->
+    <widget class="text" id="mitn" font="title" size="19"  alignment="centre"/>
+
+  <container/>
+
+  </container>
+
+</panel>

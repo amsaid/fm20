@@ -1,0 +1,61 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="plain_box">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="left" horizontal_inset="0" vertical_offset="0" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" section="Ptra" auto_size="all">
+				<translation id="text" translation_id="248422" type="use" value="Training[COMMENT; training section of player profile]" />
+			</widget>
+		</container>
+
+		<!--training happiness-->
+		<!--<widget class="text" id="pHop" size="large" alignment="left,top" height="41" style="semi_bold" multiline="true" />-->
+
+		<!--pos/role/duty-->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+			<widget class="training_position_role_duty_label" height="26" colour="text">
+				<record id="object_property" get_property="PTnp"/>
+			</widget>
+		</container>
+
+		<!--other infos-->
+		<container class="client_object_property_labelled_panel_grid" id="1row" height="38" row_count="1">
+			<record id="object_property" get_property="objt" set_property="objt" />
+			<record id="label_widget_properties">
+				<boolean id="abbt" value="true"/>
+			</record>
+			<list id="properties">
+				<record id="PTaf">
+					<record id="value_widget_properties" wants_mouse_events="false" appearance="none" secondary_icon_enabled="false" colour="text">
+						<!--<flags id="auto_size" value="none"/>-->
+						<integer id="height" value="30"/>
+					</record>
+				</record>
+				<record id="PTiR">
+					<record id="value_widget_properties" wants_mouse_events="false" appearance="none" secondary_icon_enabled="false" alignment="centre" icon_alignment="centre">
+						<!--<flags id="auto_size" value="none"/>-->
+						<integer id="height" value="30"/>
+					</record>
+				</record>
+				<record id="Ptrt">
+					<record id="value_widget_properties" wants_mouse_events="false" appearance="none" secondary_icon_enabled="false">
+						<!--<flags id="auto_size" value="none"/>-->
+						<integer id="height" value="30"/>
+					</record>
+				</record>
+			</list>
+		</container>
+	</container>
+</panel>

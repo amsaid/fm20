@@ -1,0 +1,108 @@
+<panel>
+
+	<layout class="arrange_horizontal_attachment" layout="-6,-8" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+
+	<!--match information-->
+	<container class="vertical_adaptive_container" id="middle" inset="0" offset="0" priority="1">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- MATCH INFO  -->
+		<container  class="subsection_box" appearance="boxes/subsection/transparent/paper3"   default_height="-4"  priority="2" minimum_height="200" >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<widget class="match_info_panel" id="bmin" file="match/heffem match info overview small2" team_index="0">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+
+		
+
+		<!-- SELECTOR PANEL UNDERNEATH -->
+		<container  class="bordered_box" default_height="-3" priority="1" minimum_height="150"  appearance="boxes/bordered/standard/paper3">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="match_stats_panel" id="mtst" file="match/heffem match stats">
+					<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+							<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				</widget>
+		</container>
+
+
+	</container>
+	
+
+
+	<!--home match stats-->
+	<container  class="subsection_box" appearance="boxes/subsection/transparent/paper3"  id="hmts">
+		<layout class="arrange_vertical_attachment" layout="-7, -7" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+
+	<container class="horizontal_adaptive_container" layout="-5,-2" id="middle" inset="0" offset="0" priority="1">
+
+    <widget class="match_team_stats_panel" id="HMts" file="match/match team stats popup" team_index="0">
+      <record id="object_property">
+        <integer id="get_property" value="objt" />
+        <integer id="set_property" value="objt" />
+      </record>
+    </widget>
+
+    <container >
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <widget class="match_formation_panel" id="hmtt" file="match/heffem match formation panel review" team_index="0" read_only="true">
+        <translation id="title" translation_id="230056" type="use" value="Tactics" />
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+    </container>
+
+
+  </container>
+
+
+  <container class="horizontal_adaptive_container" layout="-5,-2" id="middle" inset="0" offset="0" priority="1">
+
+    <widget class="match_team_stats_panel" id="AMts" file="match/match team stats popup" team_index="1">
+      <record id="object_property">
+        <integer id="get_property" value="objt" />
+        <integer id="set_property" value="objt" />
+      </record>
+    </widget>
+
+    <container >
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <widget class="match_formation_panel" id="amtt" file="match/heffem match formation panel review" team_index="1" read_only="true">
+        <translation id="title" translation_id="230056" type="use" value="Tactics" />
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+    </container>
+
+  </container>
+
+	</container>
+
+
+
+	
+	
+</panel>

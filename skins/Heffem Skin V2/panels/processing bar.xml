@@ -1,0 +1,8 @@
+﻿<panel height="24">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container background_colour="heffem_dark"/>
+	<container id="barW" background_colour="heffem" hidden="true">
+		<animation class="colour_animation" animation_id="bums" trigger_id="hidden" trigger_value="true" duation="2.5" end_mode="cycle" start_value="0.9" end_value="1.1" coord_mode="absolute_to_target" limit_frame_rate="true"/>
+	</container>
+</panel>

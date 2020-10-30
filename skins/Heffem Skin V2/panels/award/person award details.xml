@@ -1,0 +1,256 @@
+<!-- person award details -->
+<panel height="380">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+    <container class="vertical_adaptive_container" inset="0" gap="0" >
+	  <layout class="arrange_vertical_attachment" layout="-4,40,-4" offset="0" gap="0"/>
+
+
+
+
+
+		<container class="plain_box" appearance="heffem/signature4" blue_replacement="black" inset="0" offset="0" priority="1">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+	
+
+			<widget class="picture" file="heffem/item_background/player" image_alignment="bottom,centre_x" red_replacement="award_gold" blue_replacement="award_gold2" scale_picture="true" keep_aspect_ratio="true"/>
+				<record id="object_property" get_property="oPCL" set_property="rrep" />
+				<record id="object_property" get_property="oSCL" set_property="clr" />
+
+			<!-- Player Picture -->
+			<widget class="picture" id="ppic" height="100" scale_picture="true" image_alignment="centre" column_span="2" row_span="5" col="0" row="0">
+				<!-- only show the picture if we should show portraits -->
+				<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+					<boolean id="value" value="false"/>
+				</attachment>
+			</widget>
+
+
+	</container>
+
+	<container class="bordered_box" default_height="34" appearance="heffem/signature3" blue_replacement="award_gold" red_replacement="award_gold"  image_alignment="centre" >
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="person_button" id="apfn" auto_size="" alignment="centre_x,centre_y" colour="heffem3" font="signature"  multiline="false" size="19">
+				<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="titl" />
+					<integer id="set_property" value="text" />
+				</record>
+			</list>
+				</record>
+
+			</widget>
+	</container>
+
+    <container  height="-3" inset="0" gap="0" >
+	  <layout class="arrange_horizontal_attachment" layout="-4,-4" offset="0" gap="0"/>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <container  class="bordered_box" appearance="heffem/awardleft" red_replacement="award_gold" inset="0" gap="0" >
+	  <layout class="arrange_vertical_attachment" layout="27,27,27,27,27,27" offset="0" gap="0"/>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<!-- Club -->
+				<widget class="label" alignment="centre_x,centre_y"  colour="award_gold" font="text"  >
+					<translation id="text" translation_id="227737" type="use" value="Club"/>
+					<!-- only show the label if we should not show portraits -->
+					<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" >
+						<boolean id="value" value="true"/>
+					</attachment>
+				</widget>
+				<widget class="team_button" id="apcb" alignment="centre_x,centre_y"  icon_alignment="centre_x,centre_y"/>
+
+
+				<!-- Nationality -->
+				<widget class="label" alignment="centre_x,centre_y"  colour="award_gold" font="text"  >
+					<translation id="text" translation_id="229390" type="use" value="Nation"/>
+					<!-- only show the label if we should not show portraits -->
+					<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" >
+						<boolean id="value" value="true"/>
+					</attachment>
+				</widget>
+
+				<widget class="nation_button" id="apna"  alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" dspf="1"/>
+
+				<!-- Age -->
+				<widget class="label" alignment="centre_x,centre_y"  colour="award_gold" font="text"  >
+					<translation id="text" translation_id="227770" type="use" value="Age[comment - person age]"/>
+					<!-- only show the label if we should not show portraits -->
+					<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" >
+						<boolean id="value" value="true"/>
+					</attachment>
+				</widget>
+				<widget class="label" id="apag" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y"/>
+
+		</container>
+
+
+
+		<container class="bordered_box" appearance="heffem/awardright"  red_replacement="award_gold" width="-3" >
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+			<!-- Table containing data about the player, only 10 rows shown at a time -->
+			<widget class="table" id="padt" mode="fill_rows, stripe_rows" layout="1, -5, -3, 10" auto_size_rows="false" row_height="27" fixed_size_rows="true">
+
+			<list id="column_widget_properties">
+				<record index="1" alignment="left,centre_y"/>
+				<record index="2" alignment="right,centre_y" colour="award_gold"/>
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" sort_disabled="true"/>
+				<record index="1" left="2" sort_disabled="true"/>
+				<record index="2" alignment="right,centre_y" sort_disabled="true"/>
+			</list>
+
+				<!-- These match upto the rows defined in the table -->
+				<!-- if the widgets order is changed, update this	-->
+				<list id="row_properties">
+					<record index="0" initial_id="rwpo"/>
+					<record index="1" initial_id="rwap"/>
+					<record index="2" initial_id="rwga"/>
+					<record index="3" initial_id="rwwr"/>
+					<record index="4" initial_id="rwgl"/>
+					<record index="5" initial_id="rwas"/>
+					<record index="6" initial_id="rwco"/>
+					<record index="7" initial_id="rwyc"/>
+					<record index="8" initial_id="rwrc"/>
+					<record index="9" initial_id="rwgb"/>
+					<record index="10" initial_id="rwmm"/>
+					<record index="11" initial_id="rwvo"/>
+					<record index="12" initial_id="rwcs"/>
+					<record index="13" initial_id="rwav"/>
+					<record index="14" initial_id="rwmp"/>
+				</list>
+
+				<!-- Position -->
+				<widget class="label" col="1" row="0">
+					<translation id="text" translation_id="227884" type="use" value="Position"/>
+				</widget>
+				<widget class="position_label" id="appo" alignment="right,centre_y"  col="2" row="0"/>
+
+
+
+				<!-- Appearances -->
+				<widget class="label" col="1" row="1">
+					<translation id="text" translation_id="227845" type="use" value="Appearances"/>
+				</widget>
+				<widget class="label" id="apps" alignment="right,centre_y"  col="2" row="1"/>
+
+				<widget class="label" col="1" row="2">
+					<translation id="text" translation_id="247159" type="use" value="Games"/>
+				</widget>
+				<widget class="label" id="apga" alignment="right,centre_y"  col="2" row="2"/>
+
+				<widget class="label" col="1" row="3">
+					<translation id="text" translation_id="306798" type="use" value="Win Ratio[COMMENT: manager stat; games divided by wins]"/>
+				</widget>
+				<widget class="percentage_label" alignment="right,centre_y"  id="apwr" col="2" row="3"/>
+
+				<!-- Goals -->
+				<widget class="label" col="1" row="4">
+					<translation id="text" translation_id="227857" type="use" value="Goals"/>
+				</widget>
+				<widget class="label" id="apgl"  alignment="right,centre_y" col="2" row="4"/>
+
+				<!-- Assists -->
+				<widget class="label" col="1" row="5">
+					<translation id="text" translation_id="227847" type="use" value="Assists"/>
+				</widget>
+				<widget class="label" id="apas"  alignment="right,centre_y" col="2" row="5"/>
+
+				<!-- Conceded -->
+				<widget class="label" col="1" row="6">
+					<translation id="text" translation_id="247734" type="use" value="Conceded"/>
+				</widget>
+				<widget class="label" id="apco"  alignment="right,centre_y" col="2" row="6"/>
+
+				<!-- Yellow Cards -->
+				<widget class="label" col="1" row="7">
+					<translation id="text" translation_id="247391" type="use" value="Yellow Cards"/>
+				</widget>
+				<widget class="label" id="apyc"  alignment="right,centre_y" col="2" row="7"/>
+
+				<!-- Red Cards -->
+				<widget class="label" col="1" row="8">
+					<translation id="text" translation_id="247392" type="use" value="Red Cards"/>
+				</widget>
+				<widget class="label" id="aprc"  alignment="right,centre_y" col="2" row="8"/>
+
+				<!-- award_golden boot points -->
+				<widget class="label" col="1" row="9">
+					<translation id="text" translation_id="317385" type="use" value="Score"/>
+				</widget>
+				<widget class="label" id="apgb"  alignment="right,centre_y" col="2" row="9"/>
+
+				<!-- Man of the Match -->
+				<widget class="label" col="1" row="10">
+					<translation id="text" translation_id="257306" type="use" value="Man of the Match"/>
+				</widget>
+				<widget class="label" id="apmo"  alignment="right,centre_y" col="2" row="10"/>
+
+				<!-- Clean Sheets -->
+				<widget class="label" col="1" row="11">
+					<translation id="text" translation_id="317291" type="use" value="Clean Sheets[COMMENT: player stats; goalkeeper statistic for games where he didn't concede a goal]"/>
+				</widget>
+				<widget class="label" id="apcs"  alignment="right,centre_y" col="2" row="11"/>
+
+				<!-- Votes -->
+				<widget class="label" col="1" row="12">
+					<translation id="text" translation_id="258625" type="use" value="Voting Points"/>
+				</widget>
+				<widget class="label" id="apvo"  alignment="right,centre_y" col="2" row="12"/>
+
+				<!-- Average Rating -->
+				<widget class="label" col="1" row="13">
+					<translation id="text" translation_id="233158" type="use" value="Average Rating"/>
+				</widget>
+				<widget class="label" id="apav"  alignment="right,centre_y" col="2" row="13"/>
+
+				<widget class="label" col="1" row="14">
+					<translation id="text" translation_id="257305" type="use" value="Manager Points"/>
+				</widget>
+				<widget class="label" id="apmp"  alignment="right,centre_y" col="2" row="14"/>
+			</widget>
+
+		</container>
+
+	</container>
+
+
+	</container>
+
+
+			<!-- Table displaying a message when there is no award for the place -->
+			<widget class="table" id="noaw" mode="fill_rows" layout="-1"  fixed_size_rows="true" row_height="95" hidden="true" sort_disabled="true">
+
+
+				<list id="column_table_properties">
+					<record index="0" sort_disabled="true"/>
+					<record index="1" sort_disabled="true"/>
+					<record index="2" sort_disabled="true"/>
+					<record index="3" sort_disabled="true"/>
+				</list>
+
+			<!-- Player Picture -->
+			<widget class="picture" file="heffem/plainbg" red_replacement="heffem3"  width="500" height="90" scale_picture="true" image_alignment="centre"  col="0" row="0">
+			</widget>
+			<!-- Player Picture -->
+			<widget class="picture" file="heffem/plainbg" red_replacement="heffem3"  width="500" height="90" scale_picture="true" image_alignment="centre"  col="0" row="1">
+			</widget>
+			<!-- Player Picture -->
+			<widget class="picture" file="heffem/plainbg" red_replacement="heffem3"  width="500" height="90" scale_picture="true" image_alignment="centre"  col="0" row="2">
+			</widget>
+			<!-- Player Picture -->
+			<widget class="picture" file="heffem/plainbg" red_replacement="heffem3"  width="500" height="90" scale_picture="true" image_alignment="centre"  col="0" row="3">
+			</widget>
+			</widget>
+
+
+
+
+
+</panel>
+

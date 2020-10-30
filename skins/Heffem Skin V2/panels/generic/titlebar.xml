@@ -1,0 +1,85 @@
+<!-- normal header container used on all screens except the match screen -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/> 
+
+	<container class="plain_box" appearance="heffem/header/titlebar" width="1360">
+
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+
+
+		<boolean id="should_force_refresh" value="true" />
+
+		<container height="60">
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!-- main logos container -->
+			<container id="MnLg">
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+
+				<!--object name and search bar-->
+				<widget class="titlebar_search_panel" id="Tits">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+			</container>
+
+
+			<container width="45"/>
+
+			<!-- Group of buttons in the top left -->
+			<container class="bordered_box" height="55" appearance="chrome/boxes/game bar/paper">
+				<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="-10" />
+
+				<!-- World dropdown -->
+				<widget class="world_popup_button" id="wrld" width="64" icon="icons/26px/world" appearance="chrome/buttons/items/button" secondary_icon_enabled="false" icon_alignment="centre_x, centre_y">
+                <record id="primary_icon_properties" red_replacement="heffem" />
+                    <record id="secondary_icon_properties" red_replacement="heffem" />
+					<attachment class="test_multiple_globals_attachment" default_value="true">
+						<list id="get_properties">
+							<record get_property="gset" test_mode="0" value="false" />
+							<record get_property="iVMg" test_mode="0" comparison_mode="1" value="true" />
+						</list>
+						<integer id="set_property" value="hidn" />
+					</attachment>
+				</widget>
+				<!-- FM button -->
+				<widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="icons/26px/fm" width="64" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_x, centre_y">
+                <record id="primary_icon_properties" red_replacement="heffem" />
+                    <record id="secondary_icon_properties" red_replacement="heffem" />
+					<event id="click_notification_event" event_id="FM" item="NULL" />
+					<event id="menu_layout_notification_event" event_id="mlne" event_target="fmst" />
+					<record id="items" file="menus/game" />
+					<translation id="hint" translation_id="292829" type="use" value="Options[COMMENT: menubar game options button]" />
+				</widget>
+
+
+				<!--calendar button-->
+				<widget class="current_game_date_widget"  width="120"  id="cgdw">
+					<attachment class="test_global_attachment" get_property="cont" set_property="disa">
+						<list id="value">
+							<integer value="-5" />
+						</list>
+					</attachment>
+				</widget>
+				
+
+				<!-- continue button -->
+				<container id="ctnu" file="generic/continue" width="180" height="48">
+				</container>
+			</container>
+
+		</container>
+	</container>
+
+
+</panel>

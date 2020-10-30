@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="bordered_box">
+
+		<translation id="title" translation_id="230056" type="use" value="Tactics" />
+		<layout class="arrange_horizontal_attachment" layout="-4,-2" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+    <widget class="pitch_with_tactics" id="attp" vertical="true" icon_flags="use_player_kits_back,show_selection_image,show_position_strength,show_position_level_tooltip, show_numbers"  
+            pitch_alignment="centre_x, top" 
+			pitch_draw_goals="true" 
+            pitch_override_icon_size="3" 
+            pitch_dont_draw_indicators="true"
+            pitch_is_read_only="true">
+			
+
+			   <record id="pitch_base_appearance">
+				<string id="condition_perfect" value="boxes/custom/pitch pattern/grass_circles"/>
+			  </record>  
+			  <integer id="pitch_pattern_opacity" value="0"/>
+			  <integer id="pitch_detail_opacity" value="255"/>
+	</widget>
+		<widget class="table" id="tacT" layout="-1" mode="fill_rows" row_height="18">
+
+			<widget class="label" col="0" row="0" colour="white" style="semi_bold">
+				<translation id="text" translation_id="229988" type="use" value="Preferred Formation" />
+			</widget>
+			<widget class="label" col="0" row="2" colour="white" style="semi_bold">
+				<translation id="text" translation_id="242539" type="use" value="Playing Mentality" />
+			</widget>
+			<widget class="label" col="0" row="4" colour="white" style="semi_bold">
+				<translation id="text" translation_id="242534" type="use" value="Pressing Style" />
+			</widget>
+			<widget class="label" col="0" row="6" colour="white" style="semi_bold">
+				<translation id="text" translation_id="242547" type="use" value="Marking Style" />
+			</widget>
+			<widget class="label" col="0" row="8" colour="white" style="semi_bold">
+				<translation id="text" translation_id="242543" type="use" value="Coaching Style" />
+			</widget>
+ <widget class="label" id="plsL" col="0" colour="white" row="10" style="semi_bold">
+      <record id="object_property">
+        <integer id="get_property" value="npps" />
+        <boolean id="name" value="true"/>
+      </record>
+    </widget>
+			
+		
+   
+			
+			
+			<widget class="label" id="prfo" col="0" row="1" />
+			<widget class="label" id="plma" col="0" row="3" />
+			<widget class="label" id="prst" col="0" row="5" />
+			<widget class="label" id="mars" col="0" row="7" />
+			<widget class="label" id="coas" col="0" row="9" />
+ <widget class="playing_style_label" id="plsV" col="0" row="11">
+      <record id="object_property">
+        <integer id="get_property" value="npps" />
+      </record>
+
+    </widget>
+		</widget>
+
+	</widget>
+
+</panel>

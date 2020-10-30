@@ -1,0 +1,54 @@
+<!-- This panel is used for displaying a non players star rating for a particular job. It is designed to
+      pull data from a property list (as returned by PROP_PERSON_JOB_ROLES && JOB_PREFERENCES::get_job_roles) and must be 
+      used with an PROPERTY_LIST_VIEWER_XML_PANEL -->
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+    <layout class="arrange_horizontal_attachment" offset="0" alignment="right, extend" gap="0"/>
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+      <layout class="arrange_horizontal_attachment" offset="0" layout="52,-1" gap="1"/>
+
+      <widget class="value_based_picture" id="Rico" height="38" width="38" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<list id="value_list">
+				<!--dof-->						
+			  <record value="10" file="icons/custom/staff/dof" />			
+				<!--coach-->              
+              <record value="2" file="icons/custom/staff/coach" />              
+                <!--youth-->              
+              <record value="64" file="icons/custom/staff/youth" />                  
+                <!--gk coach-->
+              <record value="34" file="icons/custom/staff/coach" />              
+				<!--fitness coach-->            
+              <record value="26" file="icons/custom/staff/coach" />              
+				<!--assistant-->
+              <record value="20" file="icons/custom/staff/assistant" />              
+				<!--manager-->              
+              <record value="16" file="icons/custom/staff/manager" />              
+				<!--scout-->              
+              <record value="14" file="icons/custom/staff/scout" />  
+				<!--physio-->              
+              <record value="12" file="icons/custom/staff/physio" />
+			</list>           
+        <record id="object_property">
+          <integer id="get_property" value="Pjle"/>
+        </record>
+      </widget>
+
+      <widget class="job_label" id="jobL" alignment="left, centre_y" style="bold">
+        <record id="object_property">
+          <integer id="get_property" value="Pjle"/>
+        </record>
+      </widget>
+    </container>
+
+    <widget class="stars_range_strip" id="jobS" auto_size="horizontal" lrge="false" icon_alignment="left, centre_y">
+      <record id="object_property">
+        <integer id="get_property" value="valu"/>
+      </record>
+    </widget>
+  </container>
+</panel>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<panel>
+
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+  <container>
+    <layout class="arrange_vertical_attachment" layout="-1" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	
+
+
+
+
+	    <container class="bordered_box" appearance="" inset="0" offset="0" gap="0">
+      <layout class="arrange_horizontal_attachment" layout="-8,4,-3" offset="0" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	  
+	  
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		
+		<widget class="stadium_picture" id="STAp" image_alignment="centre_x, bottom"   keep_aspect_ratio="true" priority="1" default_height="200">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>	
+	
+	
+	
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1,41" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container/>
+	
+			<container class="bordered_box" height="41" maximum_width="460" appearance="heffem/transres"  red_replacement="heffem_dark">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	  <!--name-->
+		        <widget class="client_object_label" style="bold" id="nomV" size="15" font="title" colour="heffem" alignment="centre_y">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+        </record>
+      </widget>
+
+          </container>
+          </container>
+          </container>
+	  
+	  
+      <container/>
+
+
+      <container>
+        <layout class="arrange_vertical_attachment" layout="-3,3,-3,3,-3,3,-3" alignment="bottom,extend" offset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+
+        <container>
+          <layout class="arrange_vertical_attachment" layout="-3,-3" alignment="centre,extend" offset="0"/>
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+
+          <widget class="label" id="SctI" spec="text,small" colour="heffem" font="label" size="9" alignment="centre_x,centre" auto_size="vertical">
+            <record id="object_property">
+              <integer id="get_property" value="SctI" />
+              <boolean id="name" value="true" />
+            </record>
+          </widget>
+   <!--town-->
+      <widget class="city_label" spec="text" font="text"  id="nomL" size="10" colour="white"  alignment="centre_x,top" auto_size="vertical">
+        <record id="object_property">
+          <integer id="get_property" value="SctI" />
+        </record>
+      </widget>	  
+        </container>
+
+
+        <widget class="picture" file="dividers/standard/horizontal/line" height="3"  image_alignment="centre" />
+
+
+
+          <container>
+            <layout class="arrange_vertical_attachment" layout="-3,-3" alignment="bottom,extend" offset="0"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+            <widget class="label" id="ScpL" spec="text,small" font="label" colour="heffem" size="9" alignment="centre_x,centre" auto_size="vertical">
+              <record id="object_property">
+                <integer id="get_property" value="Scpy" />
+                <boolean id="name" value="true" />
+              </record>
+            </widget>
+            <!--capacity-->
+            <widget class="dashed_number_label" spec="text" font="text" id="ScpV" size="10" colour="white" alignment="centre_x,top" auto_size="vertical">
+              <record id="object_property">
+                <integer id="get_property" value="Scpy" />
+              </record>
+            </widget>
+          </container>
+
+
+        <widget class="picture" file="dividers/standard/horizontal/line" height="3"  image_alignment="centre" />
+
+
+					       <container>
+        <layout class="arrange_vertical_attachment" layout="-3,-3" alignment="bottom,extend" offset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+						
+			        <widget class="label" id="SbdL" spec="text,small" font="label" alignment="centre_x,centre" size="9" auto_size="vertical" colour="heffem">
+			          <record id="object_property">
+			            <integer id="get_property" value="Sbdy" />
+			            <boolean id="name" value="true" />
+			          </record>
+			        </widget>
+			
+			        <widget class="dashed_number_label" spec="text" font="text" id="SbdV" NumF="0" size="10" colour="white"  alignment="centre_x,top" auto_size="vertical">
+			          <record id="object_property">
+			            <integer id="get_property" value="Sbdy" />
+			          </record>
+			        </widget>
+			      </container>	
+				  
+        <widget class="picture" file="dividers/standard/horizontal/line" height="3"  image_alignment="centre" />
+
+				  
+	  			<!--stadium condition-->
+				 <container>
+        <layout class="arrange_vertical_attachment" layout="-3,-3" alignment="bottom,extend" offset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="label" id="SdcL" spec="text,small"  font="label" colour="heffem" size="9" alignment="centre_x,centre"  auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Sdcy" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+
+					<widget class="stadium_condition_label" spec="text" font="text" id="SdcV" size="10" colour="white" alignment="centre_x,top"  auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Sdcy" />
+						</record>
+					</widget>
+				</container>
+
+				
+
+
+
+
+      </container>
+
+	  
+
+	
+				  
+    </container>
+
+	
+</container>
+
+
+</panel>

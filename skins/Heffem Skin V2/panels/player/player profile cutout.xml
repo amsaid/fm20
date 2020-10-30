@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="bordered_box" appearance="">
+		<layout class="arrange_vertical_attachment" layout="285,200,200,180" inset="0" offset="30" gap="0" />  
+		<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true" />		
+		
+        <container class="icon_box" icon="">
+          <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+          <!-- Get player status flags-->
+          <record id="object_property" get_property="Pnfo" dont_set_object="true"/>
+
+          <!-- Player status icon with club badge-->
+          <widget class="player_status_all_button" id="secw" appearance="buttons/custom/status round" auto_size="all" alignment="bottom" offset_x="0" offset_y="4" gap="2" maximised="false" max_items_per_row_or_column="3" embed_in_frame="true">
+            <layout class="stick_to_sides_attachment" alignment="bottom" inset="0" embed_in_frame="true" />
+			<layout class="stick_to_sides_attachment" alignment="right" inset="10" embed_in_frame="true" />
+
+            <!-- Set icon to only show: Wnt, Bid, Trn, Lst, Loa, Yth, Wp-->
+            <integer id="type" value="1" />
+
+          </widget>
+        </container>
+
+		 <widget class="animated_wipe_cycle_fade_container" id="topc" interval="2">
+		</widget>
+
+                		
+	<!-- Profile picture -->
+        <widget class="picture" id="prop" height="300" width="300" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x">
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="70" />
+			<layout class="stick_to_sides_attachment" alignment="left" inset="-40" />
+			
+			<record id="object_property">
+				<list id="get_properties">
+					<record get_property="fcgn" />
+					<record get_property="Pfke" />
+					<record get_property="prpc" set_property="valu" />
+				</list>
+			</record>
+        </widget>
+		
+        <!-- Club logo -->
+		<widget class="object_portrait_picture" id="pclB" image_alignment="centre" scale_picture="true" width="180" height="180" wants_mouse_events="true" embed_in_frame="true">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="80" />
+			<layout class="stick_to_sides_attachment" alignment="left" inset="150" />
+					
+			<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt" />
+		</widget>				
+	</container>
+       
+</panel>

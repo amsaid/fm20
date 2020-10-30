@@ -1,0 +1,140 @@
+﻿<panel>
+
+	<layout class="arrange_horizontal_attachment" layout="-5,-8" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+
+	<!--match information-->
+	<container class="vertical_adaptive_container" id="middle" inset="0" offset="0" priority="1">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- MATCH INFO  -->
+		<container class="bordered_box"  default_height="-3"  priority="2" minimum_height="400" appearance="boxes/bordered/standard/paper3">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<widget class="match_info_panel" id="bmin" file="match/heffem match info overview small" team_index="0">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+
+		
+
+   		<container class="horizontal_adaptive_container" offset="0" inset="0" gap="5" default_height="-3" priority="5" mode="distribute_equally">	
+		<!-- SELECTOR PANEL UNDERNEATH -->
+		<container  class="bordered_box" default_height="-1" priority="1" minimum_height="250" appearance="boxes/bordered/standard/paper3">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="match_stats_panel" id="mtst" file="match/heffem match stats">
+					<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+							<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				</widget>
+		</container>
+
+		
+		<!-- SELECTOR PANEL UNDERNEATH -->
+		<container  class="bordered_box" default_height="-1" priority="1" minimum_height="250" appearance="boxes/bordered/standard/paper3">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <widget class="match_analysis_panel" id="Anal" title="Analysis" file="match/match analysis panel review">
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </widget>
+		</container>
+		</container>
+
+	</container>
+	
+
+
+	<!--home match stats-->
+	<container class="bordered_box" appearance="boxes/bordered/standard/paper3" id="hmts">
+		<layout class="arrange_vertical_attachment" layout="40,-10, -7" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+	<container class="horizontal_adaptive_container" layout="-1,-1" id="middle" inset="0" offset="0" priority="1">
+		<!--name and kit-->
+		<container class="home_match_incidents_panel" id="Hnkp" file="match/match incidents left in between highlights" height="100">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</container>
+
+		<!--name and kit-->
+		<container class="away_match_incidents_panel" id="Ankp" file="match/match incidents right in between highlights" height="100">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</container>
+	</container>
+
+	<container class="horizontal_adaptive_container" layout="-1,-1" id="middle" inset="0" offset="0" priority="1">
+
+
+		<widget class="match_team_stats_panel" id="HMts" file="match/match team stats review" team_index="0">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+		
+		<widget class="match_team_stats_panel" id="AMts" file="match/match team stats review2" team_index="1">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+		
+	</container>
+		
+
+	<container class="horizontal_adaptive_container" layout="-1,-1" id="middle" inset="0" offset="0" priority="1">
+				<container >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="match_formation_panel" id="hmtt" file="match/heffem match formation panel review" team_index="0" read_only="true">
+					<translation id="title" translation_id="230056" type="use" value="Tactics" />
+									<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				</widget>
+		</container>
+
+					<container >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="match_formation_panel" id="amtt" file="match/heffem match formation panel review" team_index="1" read_only="true">
+					<translation id="title" translation_id="230056" type="use" value="Tactics" />
+									<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				</widget>
+		</container>
+
+
+	</container>
+
+	</container>
+
+
+
+	
+	
+</panel>

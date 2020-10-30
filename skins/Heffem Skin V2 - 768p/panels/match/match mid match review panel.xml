@@ -1,0 +1,588 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="horizontal_adaptive_container" offset="0" gap="0" inset="0">
+	
+	
+<!-- LEFT PANEL -->
+	<container class="vertical_adaptive_container" inset="0" offset="0" minimum_width="400" default_width="-2" priority="3" gap="2">
+	
+	<!-- LEFT TOP PANEL -->
+	<container  red_replacement="primary" green_replacement="secondary" blue_replacement="primary" minimum_height="130" priority="3" default_height="150">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="2" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!--comp picture-->
+			<widget class="object_portrait_picture" id="fxCo" scale_picture="true" width="100" clickable="false">
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre_x,top" />
+				<record id="object_property">
+					<integer id="get_property" value="fxCo" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+		<!--blurb-->
+			<container class="subsection_box" appearance="boxes/subsection/transparent/paper3" >
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!--match period-->
+				<widget class="text" id="mper" size="xlarge" auto_size="vertical" font="title"/>
+
+				<!--journo comment-->
+				<widget class="text" auto_size="vertical" id="jcom" size="large" colour="text"/>
+
+				<!--name/media source-->
+				<widget class="text" auto_size="vertical" id="jnam" colour="faded text" />
+
+			</container>
+		</container> <!-- END LEFT TOP PANEL -->
+
+ <!--LEFT BOTTOM PANEL -->
+ <container class="subsection_box" appearance="boxes/subsection/transparent/paper3"  minimum_height="1" priority="3" default_height="-3">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+        <layout class="arrange_vertical_attachment" alignment="fill" offset="0" />
+        
+        <widget class="match_view_selector_panel" id="htr1" save_session_state="true" save_default_state="true" default_item="mtst" file="client_object/client object viewer selector match">
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+	
+<!-- LB1 Overview - 2 default options if want a different view change the file bit to point to alternative file -->	  
+	<widget class="match_info_panel" id="bmin" file="match/match info small ibh" >
+	<translation id="title" translation_id="292788" type="use" value="Overview[COMMENT: match screen; match overview panel title]" />
+	</widget>
+	<widget class="match_info_panel" id="bmin2" title="Overview (Small)" file="match/match info overview ibh"/>
+	
+	
+<!-- LB2 Match Stats - 2 default options if want a different view change the file bit to point to alternative file -->
+	<widget class="match_stats_panel" id="mtst" file="match/heffem match stats">
+	<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+	</widget>
+	<widget class="match_stats_panel" id="mtst2" title="Match Stats (Bars)" file="match/match stats">
+	</widget>
+
+	
+<!-- LB3 Formation - first widget is for H team, 2 for A team. if want a different view change the file bit on both to point to alternative file -->
+	<widget class="match_formation_panel" id="hmtt" file="match/match formation panel ibh" team_index="0" read_only="true">
+	<translation id="title" translation_id="230056" type="use" value="Tactics" />
+	</widget>
+	<widget class="match_formation_panel" id="amtt" file="match/match formation panel ibh" team_index="1" read_only="true">
+	<translation id="title" translation_id="230056" type="use" value="Tactics" />
+	</widget>
+	
+	
+<!-- LB5 Player Ratings - first widget is for H team, 2 for A team. if want a different view change the file bit on both to point to alternative file.-->
+	<!-- If you want the subs to appear in the first XI when brought on change the bottom bit to top for the other file -->
+	<widget class="match_team_stats_panel" id="hfMs" file="match/match team stats ibh bottom" team_index="0">
+	<record id="object_property">
+	<integer id="get_property" value="objt" />
+    <integer id="set_property" value="objt" />
+    </record>
+    </widget>
+	<widget class="match_team_stats_panel" id="afMs" file="match/match team stats ibh bottom" team_index="1">
+    <record id="object_property">
+    <integer id="get_property" value="objt" />
+    <integer id="set_property" value="objt" />
+    </record>
+    </widget>
+	
+	
+<!-- LB6 Motivation - first widget is for H team, 2 for A team. if want a different view change the file bit on both to point to alternative file.-->
+	<!-- If you want the subs to appear in the first XI when brought on change the bottom bit to top for the other file -->
+  <widget class="match_team_stats_panel" id="htms" file="match/match team motivation short ibh bottom" team_index="0">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+        </widget>
+		<widget class="match_team_stats_panel" id="atms" file="match/match team motivation short ibh bottom" team_index="1">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+		</widget>
+	
+	
+<!-- nothing to change with these panels -->
+		<widget class="preselected_match_chalkboard_panel" id="prmC" display_event_time_window="5" display_recent_events="true" file="match/preselected match recent events chalkboard panel">
+            <translation id="title" translation_id="450750" type="use" value="Recent Events[COMMENT: match chalkboard option to display recent noteworth events whilst in the middle of playing a match]" />
+            <list id="chalkboard_events_to_display">
+              <!-- Shot gone in -->
+              <integer value="1" />
+              <!-- Shot missed target -->
+              <integer value="2" />
+              <!-- Shot hit woodwork -->
+              <integer value="3" />
+              <!-- Shot saved -->
+              <integer value="4" />
+              <!-- Shot blocked -->
+              <integer value="5" />
+              <!-- Foul against -->
+              <!-- <integer value="14" /> -->
+              <!-- Foul called -->
+              <integer value="15" />
+              <!-- Yellow card -->
+              <integer value="16" />
+              <!-- Red card -->
+              <integer value="17" />
+              <!-- Foul penalty -->
+              <integer value="18" />
+              <!-- Offside -->
+              <integer value="19" />
+            </list>
+          </widget>
+		<widget class="events_match_chalkboard_panel" id="mecp" file="match/events match chalkboard panel">
+            <translation id="title" translation_id="247381" type="use" value="Shots" />
+        </widget>
+		<widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+            <translation id="title" translation_id="247327" type="use" value="Action Zones" />
+            <colour id="ptlc" name="white" />
+        </widget>
+        <widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+            <translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+        </widget>
+		<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+            <translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+        </widget>
+        <widget class="match_away_analysis_panel" id="Maan" file="match/match analysis small">
+            <translation id="title" translation_id="281396" type="use" value="Away Analysis" />
+        </widget>
+        <widget class="match_report_panel" id="mtrp" file="match/match report small">
+            <translation id="title" translation_id="248079" type="use" value="Report" />
+        </widget>
+        <widget class="match_latest_scores_panel" id="mlsp" file="match/match latest scores small" save_session_state="true">
+            <translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+        </widget>
+        <widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+            <translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+        </widget>
+        <widget class="match_league_table_panel" id="mltp" MLTs="true">
+            <translation id="title" translation_id="248082" type="use" value="League Table" />
+        </widget>	
+	
+	</widget> <!-- END BOTTOM LEFT CONTENT don't delete -->
+	</container> <!-- END LEFT BOTTOM PANEL -->
+		
+
+ <!--LEFT BOTTOM PANEL -->
+ <container class="subsection_box" appearance="boxes/subsection/transparent/paper3"  minimum_height="1" priority="3" default_height="-2">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+        <layout class="arrange_vertical_attachment" alignment="fill" offset="0" />
+        
+        <widget class="match_view_selector_panel" id="htr22" save_session_state="true" save_default_state="true" default_item="mtrp" file="client_object/client object viewer selector match">
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+	
+<!-- LB1 Overview - 2 default options if want a different view change the file bit to point to alternative file -->	  
+	<widget class="match_info_panel" id="bmin" file="match/match info small ibh" >
+	<translation id="title" translation_id="292788" type="use" value="Overview[COMMENT: match screen; match overview panel title]" />
+	</widget>
+	<widget class="match_info_panel" id="bmin2" title="Overview (Small)" file="match/match info overview ibh"/>
+	
+	
+<!-- LB2 Match Stats - 2 default options if want a different view change the file bit to point to alternative file -->
+	<widget class="match_stats_panel" id="mtst" file="match/heffem match stats">
+	<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+	</widget>
+	<widget class="match_stats_panel" id="mtst2" title="Match Stats (Bars)" file="match/match stats">
+	</widget>
+
+	
+<!-- LB3 Formation - first widget is for H team, 2 for A team. if want a different view change the file bit on both to point to alternative file -->
+	<widget class="match_formation_panel" id="hmtt" file="match/match formation panel ibh" team_index="0" read_only="true">
+	<translation id="title" translation_id="230056" type="use" value="Tactics" />
+	</widget>
+	<widget class="match_formation_panel" id="amtt" file="match/match formation panel ibh" team_index="1" read_only="true">
+	<translation id="title" translation_id="230056" type="use" value="Tactics" />
+	</widget>
+	
+	
+<!-- LB5 Player Ratings - first widget is for H team, 2 for A team. if want a different view change the file bit on both to point to alternative file.-->
+	<!-- If you want the subs to appear in the first XI when brought on change the bottom bit to top for the other file -->
+	<widget class="match_team_stats_panel" id="hfMs" file="match/match team stats ibh bottom" team_index="0">
+	<record id="object_property">
+	<integer id="get_property" value="objt" />
+    <integer id="set_property" value="objt" />
+    </record>
+    </widget>
+	<widget class="match_team_stats_panel" id="afMs" file="match/match team stats ibh bottom" team_index="1">
+    <record id="object_property">
+    <integer id="get_property" value="objt" />
+    <integer id="set_property" value="objt" />
+    </record>
+    </widget>
+	
+	
+<!-- LB6 Motivation - first widget is for H team, 2 for A team. if want a different view change the file bit on both to point to alternative file.-->
+	<!-- If you want the subs to appear in the first XI when brought on change the bottom bit to top for the other file -->
+  <widget class="match_team_stats_panel" id="htms" file="match/match team motivation short ibh bottom" team_index="0">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+        </widget>
+		<widget class="match_team_stats_panel" id="atms" file="match/match team motivation short ibh bottom" team_index="1">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+		</widget>
+	
+	
+<!-- nothing to change with these panels -->
+		<widget class="preselected_match_chalkboard_panel" id="prmC" display_event_time_window="5" display_recent_events="true" file="match/preselected match recent events chalkboard panel">
+            <translation id="title" translation_id="450750" type="use" value="Recent Events[COMMENT: match chalkboard option to display recent noteworth events whilst in the middle of playing a match]" />
+            <list id="chalkboard_events_to_display">
+              <!-- Shot gone in -->
+              <integer value="1" />
+              <!-- Shot missed target -->
+              <integer value="2" />
+              <!-- Shot hit woodwork -->
+              <integer value="3" />
+              <!-- Shot saved -->
+              <integer value="4" />
+              <!-- Shot blocked -->
+              <integer value="5" />
+              <!-- Foul against -->
+              <!-- <integer value="14" /> -->
+              <!-- Foul called -->
+              <integer value="15" />
+              <!-- Yellow card -->
+              <integer value="16" />
+              <!-- Red card -->
+              <integer value="17" />
+              <!-- Foul penalty -->
+              <integer value="18" />
+              <!-- Offside -->
+              <integer value="19" />
+            </list>
+          </widget>
+		<widget class="events_match_chalkboard_panel" id="mecp" file="match/events match chalkboard panel">
+            <translation id="title" translation_id="247381" type="use" value="Shots" />
+        </widget>
+		<widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+            <translation id="title" translation_id="247327" type="use" value="Action Zones" />
+            <colour id="ptlc" name="white" />
+        </widget>
+        <widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+            <translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+        </widget>
+		<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+            <translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+        </widget>
+        <widget class="match_away_analysis_panel" id="Maan" file="match/match analysis small">
+            <translation id="title" translation_id="281396" type="use" value="Away Analysis" />
+        </widget>
+        <widget class="match_report_panel" id="mtrp" file="match/match report small">
+            <translation id="title" translation_id="248079" type="use" value="Report" />
+        </widget>
+        <widget class="match_latest_scores_panel" id="mlsp" file="match/match latest scores small" save_session_state="true">
+            <translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+        </widget>
+        <widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+            <translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+        </widget>
+        <widget class="match_league_table_panel" id="mltp" MLTs="true">
+            <translation id="title" translation_id="248082" type="use" value="League Table" />
+        </widget>	
+	
+	</widget> <!-- END BOTTOM LEFT CONTENT don't delete -->
+	</container> <!-- END LEFT BOTTOM PANEL -->
+
+
+
+	</container> <!-- END LEFT PANEL -->
+
+
+
+		<!--MIDDLE PANEL -->
+		<container class="subsection_box" default_width="-3" minimum_width="400" priority="1" appearance="boxes/subsection/transparent/paper3">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+      <container class="vertical_adaptive_container" inset="0" offset="0" gap="2">
+
+        <!--match info Team Score-->
+				<widget class="match_info_panel" id="minf" default_height="-1" minimum_height="200" priority="1" file="match/heffem match info overview review">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				
+
+				<!--match stats/analysis/best/worst players-->
+				<widget class="match_analysis_panel" id="Anal" default_height="300" minimum_height="300" priority="1" file="match/match analysis panel overview ibh">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+      </container>
+				
+		</container><!-- END MIDDLE PANEL -->
+
+		
+<!-- RIGHT PANEL -->
+	<container class="vertical_adaptive_container" inset="0" offset="0" minimum_width="400" default_width="-2" priority="2" gap="2">
+	
+<!-- RIGHT TOP PANEL -->
+	<container class="subsection_box" appearance="boxes/subsection/transparent/paper3"  minimum_height="1" priority="3" default_height="-1">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+        <layout class="arrange_vertical_attachment" alignment="fill" offset="0" />
+        
+        <widget class="match_view_selector_panel" id="htr2" save_session_state="true" save_default_state="true" default_item="mlsp" file="client_object/client object viewer selector match">
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+	
+<!-- RT1 Overview - 2 default options if want a different view change the file bit to point to alternative file -->	  
+	<widget class="match_info_panel" id="bmin" file="match/match info small ibh" >
+	<translation id="title" translation_id="292788" type="use" value="Overview[COMMENT: match screen; match overview panel title]" />
+	</widget>
+	<widget class="match_info_panel" id="bmin2" title="Overview (Small)" file="match/match info overview ibh"/>
+	
+	
+<!-- RT2 Match Stats - 2 default options if want a different view change the file bit to point to alternative file -->
+	<widget class="match_stats_panel" id="mtst" file="match/heffem match stats">
+	<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+	</widget>
+	<widget class="match_stats_panel" id="mtst2" title="Match Stats (Bars)" file="match/match stats">
+	</widget>
+
+	
+<!-- RT3 Formation - first widget is for H team, 2 for A team. if want a different view change the file bit on both to point to alternative file -->
+	<widget class="match_formation_panel" id="hmtt" file="match/match formation panel ibh" team_index="0" read_only="true">
+	<translation id="title" translation_id="230056" type="use" value="Tactics" />
+	</widget>
+	<widget class="match_formation_panel" id="amtt" file="match/match formation panel ibh" team_index="1" read_only="true">
+	<translation id="title" translation_id="230056" type="use" value="Tactics" />
+	</widget>
+	
+	
+<!-- RT5 Player Ratings - first widget is for H team, 2 for A team. if want a different view change the file bit on both to point to alternative file.-->
+	<!-- If you want the subs to appear in the first XI when brought on change the bottom bit to top for the other file -->
+	<widget class="match_team_stats_panel" id="hfMs" file="match/match team stats ibh bottom" team_index="0">
+	<record id="object_property">
+	<integer id="get_property" value="objt" />
+    <integer id="set_property" value="objt" />
+    </record>
+    </widget>
+	<widget class="match_team_stats_panel" id="afMs" file="match/match team stats ibh bottom" team_index="1">
+    <record id="object_property">
+    <integer id="get_property" value="objt" />
+    <integer id="set_property" value="objt" />
+    </record>
+    </widget>
+	
+	
+<!-- RT6 Motivation - first widget is for H team, 2 for A team. if want a different view change the file bit on both to point to alternative file.-->
+	<!-- If you want the subs to appear in the first XI when brought on change the bottom bit to top for the other file -->
+  <widget class="match_team_stats_panel" id="htms" file="match/match team motivation short ibh bottom" team_index="0">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+        </widget>
+		<widget class="match_team_stats_panel" id="atms" file="match/match team motivation short ibh bottom" team_index="1">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+		</widget>
+	
+	
+<!-- nothing to change with these panels -->
+		<widget class="preselected_match_chalkboard_panel" id="prmC" display_event_time_window="5" display_recent_events="true" file="match/preselected match recent events chalkboard panel">
+            <translation id="title" translation_id="450750" type="use" value="Recent Events[COMMENT: match chalkboard option to display recent noteworth events whilst in the middle of playing a match]" />
+            <list id="chalkboard_events_to_display">
+              <!-- Shot gone in -->
+              <integer value="1" />
+              <!-- Shot missed target -->
+              <integer value="2" />
+              <!-- Shot hit woodwork -->
+              <integer value="3" />
+              <!-- Shot saved -->
+              <integer value="4" />
+              <!-- Shot blocked -->
+              <integer value="5" />
+              <!-- Foul against -->
+              <!-- <integer value="14" /> -->
+              <!-- Foul called -->
+              <integer value="15" />
+              <!-- Yellow card -->
+              <integer value="16" />
+              <!-- Red card -->
+              <integer value="17" />
+              <!-- Foul penalty -->
+              <integer value="18" />
+              <!-- Offside -->
+              <integer value="19" />
+            </list>
+          </widget>
+		<widget class="events_match_chalkboard_panel" id="mecp" file="match/events match chalkboard panel">
+            <translation id="title" translation_id="247381" type="use" value="Shots" />
+        </widget>
+		<widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+            <translation id="title" translation_id="247327" type="use" value="Action Zones" />
+            <colour id="ptlc" name="white" />
+        </widget>
+        <widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+            <translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+        </widget>
+		<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+            <translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+        </widget>
+        <widget class="match_away_analysis_panel" id="Maan" file="match/match analysis small">
+            <translation id="title" translation_id="281396" type="use" value="Away Analysis" />
+        </widget>
+        <widget class="match_report_panel" id="mtrp" file="match/match report small">
+            <translation id="title" translation_id="248079" type="use" value="Report" />
+        </widget>
+        <widget class="match_latest_scores_panel" id="mlsp" file="match/match latest scores small" save_session_state="true">
+            <translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+        </widget>
+        <widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+            <translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+        </widget>
+        <widget class="match_league_table_panel" id="mltp" MLTs="true">
+            <translation id="title" translation_id="248082" type="use" value="League Table" />
+        </widget>	
+	</widget> <!-- don't delete -->
+	</container>  <!-- END RIGHT TOP PANEL -->
+ 
+ <!--RIGHT BOTTOM PANEL -->
+	<container class="subsection_box" appearance="boxes/subsection/transparent/paper3"  minimum_height="1" priority="3" default_height="-1">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+    <layout class="arrange_vertical_attachment" alignment="fill" offset="0" />
+     
+        <widget class="match_view_selector_panel" id="htr3" save_session_state="true" save_default_state="true" default_item="mltp" file="client_object/client object viewer selector match">
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+	
+<!-- RB1 Overview - 2 default options if want a different view change the file bit to point to alternative file -->	  
+	<widget class="match_info_panel" id="bmin" file="match/match info small ibh" >
+	<translation id="title" translation_id="292788" type="use" value="Overview[COMMENT: match screen; match overview panel title]" />
+	</widget>
+	<widget class="match_info_panel" id="bmin2" title="Overview (Small)" file="match/match info overview ibh"/>
+	
+	
+<!-- RB2 Match Stats - 2 default options if want a different view change the file bit to point to alternative file -->
+	<widget class="match_stats_panel" id="mtst" file="match/heffem match stats">
+	<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+	</widget>
+	<widget class="match_stats_panel" id="mtst2" title="Match Stats (Bars)" file="match/match stats">
+	</widget>
+
+	
+<!-- RB3 Formation - first widget is for H team, 2 for A team. if want a different view change the file bit on both to point to alternative file -->
+	<widget class="match_formation_panel" id="hmtt" file="match/match formation panel ibh" team_index="0" read_only="true">
+	<translation id="title" translation_id="230056" type="use" value="Tactics" />
+	</widget>
+	<widget class="match_formation_panel" id="amtt" file="match/match formation panel ibh" team_index="1" read_only="true">
+	<translation id="title" translation_id="230056" type="use" value="Tactics" />
+	</widget>
+	
+	
+<!-- RB5 Player Ratings - first widget is for H team, 2 for A team. if want a different view change the file bit on both to point to alternative file.-->
+	<!-- If you want the subs to appear in the first XI when brought on change the bottom bit to top for the other file -->
+	<widget class="match_team_stats_panel" id="hfMs" file="match/match team stats ibh bottom" team_index="0">
+	<record id="object_property">
+	<integer id="get_property" value="objt" />
+    <integer id="set_property" value="objt" />
+    </record>
+    </widget>
+	<widget class="match_team_stats_panel" id="afMs" file="match/match team stats ibh bottom" team_index="1">
+    <record id="object_property">
+    <integer id="get_property" value="objt" />
+    <integer id="set_property" value="objt" />
+    </record>
+    </widget>
+	
+	
+<!-- RB6 Motivation - first widget is for H team, 2 for A team. if want a different view change the file bit on both to point to alternative file.-->
+	<!-- If you want the subs to appear in the first XI when brought on change the bottom bit to top for the other file -->
+  <widget class="match_team_stats_panel" id="htms" file="match/match team motivation short ibh bottom" team_index="0">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+        </widget>
+		<widget class="match_team_stats_panel" id="atms" file="match/match team motivation short ibh bottom" team_index="1">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+		</widget>
+	
+	
+<!-- nothing to change with these panels -->
+		<widget class="preselected_match_chalkboard_panel" id="prmC" display_event_time_window="5" display_recent_events="true" file="match/preselected match recent events chalkboard panel">
+            <translation id="title" translation_id="450750" type="use" value="Recent Events[COMMENT: match chalkboard option to display recent noteworth events whilst in the middle of playing a match]" />
+            <list id="chalkboard_events_to_display">
+              <!-- Shot gone in -->
+              <integer value="1" />
+              <!-- Shot missed target -->
+              <integer value="2" />
+              <!-- Shot hit woodwork -->
+              <integer value="3" />
+              <!-- Shot saved -->
+              <integer value="4" />
+              <!-- Shot blocked -->
+              <integer value="5" />
+              <!-- Foul against -->
+              <!-- <integer value="14" /> -->
+              <!-- Foul called -->
+              <integer value="15" />
+              <!-- Yellow card -->
+              <integer value="16" />
+              <!-- Red card -->
+              <integer value="17" />
+              <!-- Foul penalty -->
+              <integer value="18" />
+              <!-- Offside -->
+              <integer value="19" />
+            </list>
+          </widget>
+		<widget class="events_match_chalkboard_panel" id="mecp" file="match/events match chalkboard panel">
+            <translation id="title" translation_id="247381" type="use" value="Shots" />
+        </widget>
+		<widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+            <translation id="title" translation_id="247327" type="use" value="Action Zones" />
+            <colour id="ptlc" name="white" />
+        </widget>
+        <widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+            <translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+        </widget>
+		<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+            <translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+        </widget>
+        <widget class="match_away_analysis_panel" id="Maan" file="match/match analysis small">
+            <translation id="title" translation_id="281396" type="use" value="Away Analysis" />
+        </widget>
+        <widget class="match_report_panel" id="mtrp" file="match/match report small">
+            <translation id="title" translation_id="248079" type="use" value="Report" />
+        </widget>
+        <widget class="match_latest_scores_panel" id="mlsp" file="match/match latest scores small" save_session_state="true">
+            <translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+        </widget>
+        <widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+            <translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+        </widget>
+        <widget class="match_league_table_panel" id="mltp" MLTs="true">
+            <translation id="title" translation_id="248082" type="use" value="League Table" />
+        </widget>	
+	
+	</widget> <!-- don't delete -->
+	</container> <!-- RIGHT BOTTOM PANEL END -->
+	</container> <!-- RIGHT PANEL END -->
+	</container> <!-- ALL PANELS CLOSED -->
+
+</panel>

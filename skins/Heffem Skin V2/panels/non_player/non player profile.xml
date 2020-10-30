@@ -1,0 +1,613 @@
+<panel>
+  <layout class="arrange_vertical_attachment" layout="-1" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <!-- MAIN AREA -->
+  <container class="horizontal_adaptive_container" offset="0" inset="0">
+
+    <container class="bordered_box" appearance="boxes/bordered/standard/paper" red_replacement="" default_width="400" priority="1">
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="6"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+      <container class="bordered_box" appearance="boxes/bordered/transparent/paper5" height="450">
+        <layout class="arrange_vertical_attachment" layout="180, 41, 1, 42, 1, 42, 1, 30, 1, 42, 1, 60" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+            <container offset="0" inset="0" gap="0" default_height="195" minimum_height="80" priority="3">
+                <layout class="arrange_vertical_attachment" layout="-4,-1" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                <container class="horizontal_adaptive_container" inset="0" gap="0">
+                    <layout class="arrange_horizontal_attachment" layout="-4,-2" offset="0" gap="0" />
+
+                <!-- Face -->
+                <container class="plain_box" inset="0" offset="0" priority="1">
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+                    <widget class="picture" file="heffem/item_background/player" image_alignment="top, centre_x" red_replacement="primary" blue_replacement="secondary" scale_picture="true" keep_aspect_ratio="true" />
+                    <widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,centre_y">
+                        <record id="object_property">
+                          <list id="get_properties">
+                            <!--Facegen data request-->
+                            <record get_property="fcgn" />
+                            <!--Fake name request-->
+                            <record get_property="Pfke" />
+                            <record get_property="prpc" set_property="valu" />
+                          </list>
+                        </record>
+                      </widget>
+                </container>
+                    <container height="200" priority="1">
+                        <layout class="arrange_vertical_attachment" layout="-5,2,-5,2,-2,2,-2" offset="0" />
+                        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                        <container>
+                            <layout class="arrange_vertical_attachment" layout="-1" offset="7" gap="0" />
+                            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                            <widget class="object_portrait_picture" id="pclB" image_alignment="centre" scale_picture="true" width="60" height="60" wants_mouse_events="true" embed_in_frame="true">
+                                <layout class="centre_in_parent_attachment" alignment="all" inset="0" embed_in_frame="true" />
+                                <record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt" />
+                            </widget>
+                        </container>
+                        <widget class="picture" file="dividers/standard/horizontal/line" height="2" />
+                        <container>
+                            <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+                            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                            <widget class="object_portrait_picture" id="npiB" image_alignment="centre" scale_picture="true" width="80" kee_aspect_ratio="true" height="60" wants_mouse_events="true" embed_in_frame="true">
+                                <layout class="centre_in_parent_attachment" alignment="all" inset="0" embed_in_frame="true" />
+                                <record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt" />
+                            </widget>
+                        </container>
+                        <widget class="picture" file="dividers/standard/horizontal/line" height="2" />
+                        <container priority="1">
+                            <layout class="arrange_horizontal_attachment" layout="-2,-2" offset="0" />
+                            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                            <widget class="international_appearances_label" size="11" font="label" colour="heffem" id="inta" alignment="left, centre_y">
+                                <integer id="int_apps_label_format" value="1" />
+                                <!-- 1 is for apps -->
+                                <record id="object_property">
+                                    <integer id="get_property" value="Pist" />
+                                </record>
+                            </widget>
+                            <!--int goals-->
+                            <widget class="international_appearances_label" size="11" font="label" colour="heffem" id="intg" alignment="right, centre_y">
+                                <integer id="int_apps_label_format" value="2" />
+                                <!-- 2 is goals -->
+                                <record id="object_property">
+                                    <integer id="get_property" value="Pist" />
+                                </record>
+                            </widget>
+                        </container>
+                        <widget class="picture" file="dividers/standard/horizontal/line" height="2" />
+                        <container priority="1">
+                            <layout class="arrange_horizontal_attachment" layout="-2,-2" offset="0" />
+                            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                            <widget class="international_appearances_label" size="10" colour="white" font="label" id="youa" alignment="left, centre_y">
+                                <integer id="int_apps_label_format" value="3" />
+                                <!-- 3 is for youth apps -->
+                                <record id="object_property">
+                                    <integer id="get_property" value="Pist" />
+                                </record>
+                            </widget>
+                            <!--youth goals-->
+                            <widget class="international_appearances_label" font="label" size="10" id="youg" colour="white" alignment="right, centre_y">
+                                <integer id="int_apps_label_format" value="4" />
+                                <!-- 4 is for youth goals -->
+                                <record id="object_property">
+                                    <integer id="get_property" value="Pist" />
+                                </record>
+                            </widget>
+                        </container>
+                    </container>
+                    <container class="client_object_viewer_selector_panel" id="cosZ" file="player/player overview smal selector panel" save_session_state="true" priority="1" default_height="-1" />
+                </container>
+            </container>
+
+
+            <!-- Signature -->
+            <container class="bordered_box" default_height="41" priority="1" appearance="heffem/signature2" red_replacement="heffem" blue_replacement="black" default_width="350" minimum_width="150" image_alignment="centre">
+                <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                <widget class="person_button" id="pnam" auto_size="" alignment="top" colour="heffem" font="signature" multiline="false" size="18">
+                    <record id="object_property">
+                        <list id="get_properties">
+                            <record>
+                                <integer id="get_property" value="titl" />
+                                <integer id="set_property" value="text" />
+                            </record>
+                        </list>
+                    </record>
+                </widget>
+            </container>
+
+            <widget class="picture" file="dividers/standard/horizontal/line" height="1" image_alignment="centre" />
+
+
+            <container default_height="40" minimum_height="40" priority="1">
+                <layout class="arrange_horizontal_attachment" layout="-2, -2" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+                <!-- age -->
+                <container>
+                    <layout class="arrange_vertical_attachment" layout="-9,-11" offset="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                    <!--age text label-->
+                    <widget class="label" alignment="centre_x,centre_y" size="small" colour="heffem" font="label">
+                        <translation id="text" translation_id="227770" type="use" value="Age" />
+                    </widget>
+                    <widget class="label" id="age" size="12" auto_size="vertical" alignment="centre_x,centre_y,can_scale">
+                        <record id="object_property">
+                            <integer id="get_property" value="Page" />
+                        </record>
+                    </widget>
+                </container>
+                <!-- age -->
+                <container>
+                    <layout class="arrange_vertical_attachment" layout="-9,-11" offset="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                    <widget class="label" alignment="centre_x,centre_y" size="small" colour="heffem" font="label">
+                        <translation id="text" translation_id="227786" type="use" value="DoB[Comment - Date of Birth]" />
+                    </widget>
+                    <!--DDN-->
+                    <widget class="editable_client_object_property_panel" id="dobc" colour="white" alignment="centre_x,top" size="12">
+                        <record id="object_property">
+                            <integer id="get_property" value="Pdob" />
+                        </record>
+                        <record id="widget_properties" display_format="0" />
+                    </widget>
+                </container>
+            </container>
+
+
+
+            <widget class="picture" file="dividers/standard/horizontal/line" height="1" image_alignment="centre" />
+            <container class="plain_box" default_height="40" minimum_height="40" priority="1">
+                <layout class="arrange_horizontal_attachment" layout="-5, -5" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+                <container>
+                    <layout class="arrange_vertical_attachment" layout="-9,-11" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                    <!--Personality label-->
+                    <widget class="label" alignment="centre_x,bottom" size="small" colour="heffem" font="label">
+                        <translation id="text" translation_id="247713" type="use" value="Personality" />
+                    </widget>
+                    <!--Personality-->
+                    <widget class="personality_label" id="peRs" size="12" style="" alignment="centre_x,bottom">
+                        <record id="object_property">
+                            <integer id="get_property" value="PPst" />
+                        </record>
+                    </widget>
+                </container>
+                <container>
+                    <layout class="arrange_vertical_attachment" layout="-9,-11" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                    <!--Reputation label-->
+                    <widget class="label" alignment="centre_x,bottom" size="small" colour="heffem" font="label">
+                        <translation id="text" translation_id="330399" type="use" value="Reputation[COMMENT - person list view column heading]" />
+                    </widget>
+                    <!--Reputation-->
+                    <widget class="reputation_label" id="repU" size="12" style="" alignment="centre_x,bottom">
+                        <record id="object_property">
+                            <integer id="get_property" value="Pcrp" />
+                        </record>
+                    </widget>
+                </container>
+            </container>
+            <widget class="picture" file="dividers/standard/horizontal/line" height="1" image_alignment="centre" />
+            <!-- Statut -->
+            <container default_height="28" minimum_height="30" priority="1">
+                <layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+                <container>
+                    <layout class="arrange_vertical_attachment" layout="-1,1" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                    <!--player extra details (e.g. onloan at...)-->
+                    <widget class="player_extra_details_text" id="plex" priority="1" font="label" size="13" colour="white" alignment="centre_x, centre_y">
+                        <record id="object_property" get_property="NPxD" />
+                    </widget>
+                    
+                    <container height="1" />
+                </container>
+            </container>
+            <widget class="picture" file="dividers/standard/horizontal/line" height="1" image_alignment="centre" />
+            <!--CONTRAT-->
+            <container default_height="40" minimum_height="40" priority="1">
+                <layout class="arrange_horizontal_attachment" layout="-4, -4" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+                <container>
+                    <layout class="arrange_vertical_attachment" layout="-9,-11" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                    <!--wage label-->
+                    <widget class="label" id="wglb" alignment="centre_x,centre" size="small" colour="heffem" font="label">
+                        <translation id="text" translation_id="242353" type="use" value="Wages" />
+                    </widget>
+                    <!--wage-->
+                    <container class="wage_label" id="wkwg" size="12" style="" alignment="centre_x" format="0" auto_size="vertical">
+                        <record id="object_property">
+                            <integer id="get_property" value="Pcww" />
+                        </record>
+                    </container>
+                </container>
+                <container>
+                    <layout class="arrange_vertical_attachment" layout="-9,-11" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                    <!--expiry date label-->
+                    <widget class="label" size="small" font="label" colour="heffem" alignment="centre_x,centre">
+                        <translation id="text" translation_id="227784" type="use" value="Expires" />
+                    </widget>
+                    <!--expiry date-->
+                    <widget class="date_cell" id="expd" size="12" style="" alignment="centre_x" auto_size="vertical">
+                        <record id="object_property">
+                            <integer id="get_property" value="Pced" />
+                        </record>
+                    </widget>
+                </container>
+            </container>
+
+            <widget class="picture" file="dividers/standard/horizontal/line" height="1" image_alignment="centre" />
+
+
+				<container default_height="65" minimum_height="30" priority="3">
+					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+					
+					<container>
+						<layout class="arrange_vertical_attachment" layout="-4,-4,-4" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />	   
+						<!--value label-->
+						
+						<widget class="label" id="vall" spec="text" size="small" font="title" colour="heffem" alignment="centre_x,centre_y">
+      <translation id="text" translation_id="329843" type="use" value="Coaching Qualifications[COMMENT: non-player profile; coaching qualification]" />
+						</widget>		
+						<!--value-->
+		
+						
+						<widget class="label" id="coaq" size="12" alignment="centre_x,top" auto_size="vertical"/>
+					    <widget class="label" id="coco" size="12" alignment="centre_x,top" font="text" colour="white"/>
+					</container>
+				
+				</container>
+
+
+
+
+
+
+      </container>
+	  
+	  
+
+      <widget class="non_player_roles_panel" id="nprp" minimum_height="200" />
+    
+    </container>
+    
+    <!-- main box -->
+    <container class="bordered_box" appearance="boxes/bordered/standard/paper" default_width="-3" priority="1">
+      <layout class="arrange_vertical_attachment" offset="0" layout="-5,60,-2" gap="6"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <container class="bordered_box" appearance="boxes/bordered/transparent/paper5">
+        <layout class="arrange_horizontal_attachment" offset="0" layout="-2,-1" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+        <container>
+          <layout class="arrange_vertical_attachment" offset="0" layout="40,-1,100" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <container>
+            <layout class="arrange_horizontal_attachment" offset="0" alignment="left" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <widget class="radio_button" id="MgtW" auto_size="horizontal" appearance="tabs/subsection/normal/top/button" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/16px/manager" secondary_icon_alignment="left" >
+              <translation id="text" translation_id="447595" type="use" value="Managerial[COMMENT:Attribute Category;to show only managerial related attributes]" />
+              <event id="click_event">
+                <flags id="event_id" value="eAtH" />
+                <flags id="mode" value="1" />
+              </event>
+            </widget>
+            <widget class="radio_button" id="CctW" auto_size="horizontal" appearance="tabs/subsection/normal/top/button" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/16px/training" secondary_icon_alignment="left">
+              <translation id="text" translation_id="230043" type="use" value="Coaching" />
+              <event id="click_event">
+                <flags id="event_id" value="eAtH" />
+                <flags id="mode" value="2" />
+              </event>
+            </widget>
+            <widget class="radio_button" id="SctW" auto_size="horizontal" appearance="tabs/subsection/normal/top/button" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/16px/scouting" secondary_icon_alignment="left">
+              <translation id="text" translation_id="248356" type="use" value="Scouting" />
+              <event id="click_event">
+                <flags id="event_id" value="eAtH" />
+                <flags id="mode" value="3" />
+              </event>
+            </widget>
+            <widget class="radio_button" id="MdtW" auto_size="horizontal" appearance="tabs/subsection/normal/top/button" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/16px/medical" secondary_icon_alignment="left">
+              <translation id="text" translation_id="422164" type="use" value="Medical[COMMENT:Job Centre- Medical team sub-section]" />
+              <event id="click_event">
+                <flags id="event_id" value="eAtH" />
+                <flags id="mode" value="4" />
+              </event>
+            </widget>
+          </container>
+          <container class="non_player_attributes_panel" id="patp" />
+
+          <container class="person_chemistry_relationship_panel" file="">
+            <record id="object_property">
+              <integer id="get_property" value="objt" />
+              <integer id="set_property" value="objt" />
+            </record>
+            <layout class="arrange_horizontal_attachment" layout="-3, -3" offset="8" gap="25" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <!--very close relationship colour-->
+            <colour id="pVgC" name="green 500" />
+            <!--close relationship colour-->
+            <colour id="pgCl" name="green 300" />
+            <!--aquaintance relationship colour-->
+            <colour id="pACl" name="green 100" />
+            <!--contact relationship colour-->
+            <colour id="pCTr" name="blue 300" />
+            <!--rival relationship colour-->
+            <colour id="prVr" name="red 100" />
+            <!--adversary relationship colour-->
+            <colour id="pAdv" name="red 300" />
+            <!--distant relationship colour-->
+            <colour id="pCds" name="red 500" />
+
+            <!--relationship-->
+            <container>
+              <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="6" />
+              <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="6" />
+              <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+              <widget class="picture" id="hrcP" height="48" width="48" file="icons/48px/relationship" image_alignment="centre" scale_picture="true"  keep_aspect_ratio="true" />
+
+              <container>
+                <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+                <layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+
+                <widget class="label" colour="faded text" auto_size="all" alignment="left,centre_y" font="label">
+                  <translation id="text" translation_id="447541" type="use" value="Relationship[COMMENT: player Relationships panel; panel header title for player relationship with manager]" />
+                </widget>
+
+                <container height="24">
+                  <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+                  <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4" />
+                  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+                  <widget class="label" id="relL" auto_size="horizontal" alignment="left,centre_y" font="value"/>
+
+                  <widget class="picture" id="hrcl" width="16" hidden="true" file="icons/16px/up" image_alignment="centre" scale_picture="true" />
+                </container>
+              </container>
+            </container>
+            <!--Opinion-->
+            <container>
+              <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+              <layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+              <layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+
+              <widget class="label" colour="faded text" id="opHd" auto_size="all" alignment="left,centre_y" font="label">
+                <translation id="text" translation_id="447596" type="use" value="Opinion of [%person#1-you][COMMENT: player Relationships panel; panel header title for players opinion of manager]" />
+              </widget>
+
+              <widget class="label" id="opiL" auto_size="all" alignment="left,centre_y" font="value" />
+
+            </container>
+
+          </container>
+          
+        </container>
+
+        <container>
+          <layout class="arrange_vertical_attachment" offset="0" alignment="top, extend" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <!-- personality -->
+          <widget class="label" font="fonts/title" colour="accent" auto_size="vertical">
+            <translation id="text" translation_id="251873" type="use" value="Personality[COMMENT - person list view column heading]" />
+          </widget>
+          <widget class="personality_label" auto_size="vertical">
+            <record id="object_property" dont_set_hint="true" get_property="PPst" />
+          </widget>
+
+          <widget class="picture" file="dividers/standard/horizontal/line" height="5" />
+
+          <!-- languages -->
+          <widget class="label" font="fonts/title" colour="accent" auto_size="vertical">
+            <translation id="text" translation_id="295874" type="use" value="Languages Spoken" />
+          </widget>
+          <widget class="languages_text" auto_size="vertical" multiline="true" >
+            <record id="object_property" dont_set_hint="true" get_property="Lang"/>
+          </widget>
+
+          <container>
+            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+            <widget class="non_player_knowledge_panel" id="npkn" file="none" height="400">
+              <layout class="stick_to_sides_attachment" alignment="all" inset="0,8,0,8" apply_to_children="true" />
+
+              <container class="titled_box" appearance="boxes/titled/compact/paper">
+                <translation id="title" translation_id="334387" type="use" value="World Knowledge[COMMENT: team scouts; information about range of knowledge]" />
+                <layout class="arrange_vertical_attachment" layout="-5,-4" offset="0" gap="0"/>
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+                <container class="team_scouting_knowledge_map" id="npMp">
+                  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+                </container>
+
+                <widget class="table" mode="fill_rows, stripe_rows" id="tabl" layout="-1, -1" auto_size_rows="false" row_height="22" save_session_state="true" save_default_state="true">
+                  <list id="column_properties">
+                    <record indx="0" alignment="left,centre_y" />
+                  </list>
+
+                  <list id="column_display_properties">
+                    <record indx="0" left="4" sort_disabled="true" />
+                    <record indx="1" top="6" bottom="6" right="4" sort_disabled="true" />
+                  </list>
+                </widget>
+
+              </container>
+            </widget>
+
+            <container class="scrolling_box" id="nptp">
+              <container class="non_player_tendencies_panel"  should_force_refresh="true" file="none">
+                <layout class="arrange_vertical_attachment" alignment="top" />
+                <layout class="fit_children_attachment" alignment="vertical,fill"  />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+                <!-- Property setting the path to use for 'high' tendencies (>10) -->
+                <string id="higT" value="icons/16px/tendency up" />
+
+                <!-- Property setting the path to use for 'low' tendencies (<=10) -->
+                <string id="lowT" value="icons/16px/tendency down" />
+
+                <!-- Vertical separator line -->
+                <widget class="picture" file="dividers/standard/horizontal/line" height="5" />
+
+                <widget class="label" font="fonts/title" colour="accent" auto_size="vertical">
+                  <translation id="text" translation_id="395653" type="use" value="Tends to[COMMENT: non player tendencies label, lists a person's tendencies below]" />
+                </widget>
+
+                <widget class="table" id="tend" mode="fill_rows" layout="-1" auto_size_rows="true" fixed_size_rows="false" default_sort_column="pict" row_spacing="2" auto_size="vertical">
+
+                  <list id="column_properties">
+                    <record index="0" alignment="left, centre_y" />
+                  </list>
+
+                  <list id="column_display_properties">
+                    <record index="0" id="pict" sort_disabled="true" left="0" />
+                  </list>
+                </widget>
+
+                <!-- Vertical separator line -->
+                <widget class="picture" file="dividers/standard/horizontal/line" height="5" />
+
+                <widget class="label" font="fonts/title" colour="accent" auto_size="vertical">
+                  <translation id="text" translation_id="395652" type="use" value="Tends not to[COMMENT: non player tendencies label, lists a person's non-tendencies below]" />
+                </widget>
+
+                <widget class="table" id="nten" mode="fill_rows" layout="-1" auto_size_rows="true" fixed_size_rows="false" default_sort_column="pict" row_spacing="2" auto_size="all">
+
+                  <list id="column_properties">
+                    <record index="0" alignment="left, centre_y" />
+                  </list>
+
+                  <list id="column_display_properties">
+                    <record index="0" id="pict" sort_disabled="true" left="0" />
+                  </list>
+                </widget>
+
+                <record id="object_property">
+                  <integer id="set_property" value="objt" />
+                  <integer id="get_property" value="objt" />
+                </record>
+              </container>
+            </container>
+
+          </container>
+        </container>
+      </container>
+
+      <container class="bordered_box" appearance="boxes/bordered/standard/paper" height="60">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+        <widget class="table" mode="fill_rows, printable" id="nptt" layout="-1,-1,-1" auto_size_rows="true" auto_size="vertical" row_spacing="0">
+          <list id="column_properties">
+            <record indx="0" alignment="left,top" />
+            <record indx="1" alignment="left,top" />
+            <record indx="2" alignment="left,top" />
+            <record indx="3" alignment="left,top" />
+            <record indx="4" alignment="left,top" />
+            <record indx="5" alignment="left,top" />
+            <record indx="6" alignment="left,top" />
+            <record indx="7" alignment="left,top" />
+            <record indx="8" alignment="left,top" />
+          </list>
+
+          <list id="column_display_properties">
+            <record indx="0" auto_hide_priority="1" sort_disabled="true" />
+            <record indx="1" auto_hide_priority="2" sort_disabled="true" />
+            <record indx="2" auto_hide_priority="3" sort_disabled="true" />
+            <record indx="3" auto_hide_priority="4" sort_disabled="true" />
+            <record indx="4" auto_hide_priority="5" sort_disabled="true" />
+            <record indx="5" auto_hide_priority="6" sort_disabled="true" />
+            <record indx="6" auto_hide_priority="7" sort_disabled="true" />
+            <record indx="7" auto_hide_priority="8" sort_disabled="true" />
+            <record indx="8" auto_hide_priority="9" sort_disabled="true" />
+          </list>
+        </widget>
+      </container>
+
+  <container id="cskr" class="horizontal_adaptive_container" offset="0" inset="0" >
+
+    <!-- History -->
+    <container class="bordered_box" minimum_width="300" default_width="-1" priority="1">
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <widget class="player_history_achievements_panel" id="pac1" file="non_player/non player history">
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="get_property" value="objt" />
+              <integer id="set_property" value="objt" />
+            </record>
+          </list>
+        </record>
+      </widget>
+    </container>
+
+    <!-- Happiness -->
+    <container class="bordered_box" id="phhp" minimum_width="300" default_width="-1" priority="2">
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <widget class="person_happiness_panel" file="person/person happiness profile">
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="get_property" value="objt" />
+              <integer id="set_property" value="objt" />
+            </record>
+          </list>
+        </record>
+      </widget>
+    </container>
+
+    <!-- Plans -->
+    <container class="bordered_box" minimum_width="300" default_width="-1" priority="3">
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <widget class="person_happiness_panel" id="phap" file="person/person happiness profile plans">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+    </container>
+  </container>
+
+
+    </container>
+
+    <!-- biography -->
+    <container class="bordered_box" minimum_width="200" default_width="-1" priority="2" red_replacement="">
+      <layout class="arrange_vertical_attachment" layout="-1, 250" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <container class="person_history_biography_panel" file="person/person history biography no title" id="biog">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </container>
+
+      <!-- tactics -->
+      <widget class="non_player_tactics_overview_panel" file="non_player/non player tactics formation">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+      
+    </container>
+    
+  </container>
+
+
+
+</panel>

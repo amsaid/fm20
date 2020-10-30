@@ -1,0 +1,68 @@
+﻿<panel result_type_format="2" colour_team_names="true" colour_team_scores="true" >
+
+  <layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+  
+  <!--background colour
+  <widget class="picture" id="bkcl" height="8" file="boxes/custom/solid/paper" scale_picture="true" rthr="68">
+  </widget>-->
+
+  <!--team name and incidents-->
+  <container height="60">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	      <widget class="picture" id="bkcl" auto_size="vertical" file="heffem/match overview/right2" cached="true" rthr="68" alignment="centre">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+    <layout class="centre_in_parent_attachment" alignment="vertical" />
+  </widget>
+
+
+    <container>
+      <layout class="arrange_horizontal_attachment" alignment="right,extend" gap="10" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+      <!--home team logo-->
+      <widget class="match_team_logo_picture" id="TeLo" image_alignment="right"  scale_picture="true" width="60" height="60" />
+    </container>
+
+    <container>
+      <layout class="arrange_horizontal_attachment" alignment="right,extend" gap="10" offset="20"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+      <!-- Kit -->
+      <widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="right" width="100" />
+    </container>
+
+
+
+    <container>
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" gap="10" offset="10"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+    <!-- score -->
+    <widget class="text" id="mits" auto_size="horizontal" alignment="left,centre_y" size="19" multiline="false"  font="title" style="bold"/>
+
+    <!-- aggregate score -->
+    <widget class="text" id="mita" auto_size="horizontal" spec="label"  font="title" alignment="left,centre_y" size="15" multiline="false"/>
+
+    <!-- team name -->
+    <widget class="text" id="mitn" size="13" style="semi_bold" font="title" alignment="left,centre_y"/>
+  </container>
+  </container>
+
+      <container height="3"/>
+  
+  <widget class="table" id="miit" layout="30,-1" mode="fill_rows, stripe_rows" row_spacing="0" auto_size_rows="true" fixed_size_rows="false" row_height="20">
+
+    <list id="column_properties">
+      <record index="0" alignment="centre" auto_size="vertical" size="10"/>
+      <record index="1" spec="text" auto_size="vertical" alignment="left,centre_y" multiline="true" size="10"/>
+    </list>
+
+    <list id="column_display_properties">
+      <record index="0" id="icon" left="4" top="4" bottom="4" />
+      <record index="1" id="text" top="4" bottom="4" />
+    </list>
+
+  </widget>
+</panel>

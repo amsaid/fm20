@@ -1,0 +1,173 @@
+<panel>
+
+	<layout class="arrange_horizontal_attachment" layout="-5,-8" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+
+	<!--match information-->
+	<container class="vertical_adaptive_container" id="middle" inset="0" offset="0" priority="1">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- MATCH INFO  -->
+		<container  class="subsection_box" appearance="boxes/subsection/transparent/paper3"   default_height="-3"  priority="2" minimum_height="400" >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<widget class="match_info_panel" id="bmin" file="match/heffem match info overview small2" team_index="0">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+
+		
+
+   		<container class="horizontal_adaptive_container" offset="0" inset="0" gap="2" default_height="-3" priority="5" mode="distribute_equally">	
+		<!-- SELECTOR PANEL UNDERNEATH -->
+		<container  class="subsection_box" appearance="boxes/subsection/transparent/paper3"  default_height="-1" priority="1" minimum_height="250" >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="match_stats_panel" id="mtst" file="match/heffem match stats">
+					<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+							<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				</widget>
+		</container>
+
+		
+		<!-- SELECTOR PANEL UNDERNEATH -->
+		<container  class="subsection_box" appearance="boxes/subsection/transparent/paper3"  default_height="-1" priority="1" minimum_height="250" >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <widget class="match_view_selector_panel" id="sel1" pause_match_on_menu_opening="true" default_item="mltp" file="client_object/client object viewer selector match">
+
+
+          <widget class="match_action_zones_panel" id="mazp" file="match/match action zones small" save_session_state="true">
+            <translation id="title" type="use" value="Action Zones and Focus of Attacks" />
+            <colour id="ptlc" name="white" />
+          </widget>
+          <widget class="match_league_table_panel" id="mltp" MLTs="true">
+            <translation id="title" translation_id="248082" type="use" value="League Table" save_session_state="true" />
+          </widget>
+          <widget class="events_match_chalkboard_panel" id="mecp">
+            <translation id="title" translation_id="247381" type="use" value="Shots" save_session_state="true" />
+          </widget>
+          <widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small" save_session_state="true">
+            <translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+          </widget>
+          <widget class="match_away_analysis_panel" id="Maan" file="match/match analysis small" save_session_state="true">
+            <translation id="title" translation_id="281396" type="use" value="Away Analysis" />
+          </widget>
+          <widget class="match_report_panel" id="mtrp" file="match/match report small" save_session_state="true">
+            <translation id="title" translation_id="248079" type="use" value="Report" />
+          </widget>
+          <widget class="match_goal_update_panel" id="mgup" file="match/match goal update small" save_session_state="true">
+            <translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+          </widget>
+
+          <widget class="match_latest_scores_panel" id="mlsp" file="match/match latest scores small"  default_item="true" save_session_state="true">
+            <translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+          </widget>
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+
+	  </widget>
+
+
+
+
+		</container>
+		</container>
+
+	</container>
+	
+
+
+	<!--home match stats-->
+	<container  class="subsection_box" appearance="boxes/subsection/transparent/paper3"  id="hmts">
+		<layout class="arrange_vertical_attachment" layout="40,-10, -7" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+	<container class="horizontal_adaptive_container" layout="-1,-1" id="middle" inset="0" offset="0" priority="1">
+		<!--name and kit-->
+		<container class="home_match_incidents_panel" id="Hnkp" file="match/match incidents left in between highlights" height="100">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</container>
+
+		<!--name and kit-->
+		<container class="away_match_incidents_panel" id="Ankp" file="match/match incidents right in between highlights" height="100">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</container>
+	</container>
+
+	<container class="horizontal_adaptive_container" layout="-1,-1" id="middle" inset="0" offset="0" priority="1">
+
+
+		<widget class="match_team_stats_panel" id="HMts" file="match/match team stats popup" team_index="0">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+		
+		<widget class="match_team_stats_panel" id="AMts" file="match/match team stats popup2" team_index="1">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+		
+	</container>
+		
+
+	<container class="horizontal_adaptive_container" layout="-1,-1" id="middle" inset="0" offset="0" priority="1">
+				<container >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="match_formation_panel" id="hmtt" file="match/heffem match formation panel review" team_index="0" read_only="true">
+					<translation id="title" translation_id="230056" type="use" value="Tactics" />
+									<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				</widget>
+		</container>
+
+					<container >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="match_formation_panel" id="amtt" file="match/heffem match formation panel review" team_index="1" read_only="true">
+					<translation id="title" translation_id="230056" type="use" value="Tactics" />
+									<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				</widget>
+		</container>
+
+
+	</container>
+
+	</container>
+
+
+
+	
+	
+</panel>

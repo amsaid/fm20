@@ -1,0 +1,320 @@
+<panel wants_mouse_events="true">
+  <!-- When the panel is shown, tell the edit box for the first name to request keyboard focus -->
+  <record id="shown_event">
+    <flags id="event_id" value="REQF" />
+    <flags id="event_target" value="frst" />
+  </record>
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="bordered_box">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+
+    <!-- box containing personal details form -->
+    <container id="pdpa">
+
+      <!-- Title
+      <widget class="label" font="title" size="normal" colour="accent">
+        <layout class="stick_to_sides_attachment" alignment="top, horizontal" inset="0" />
+
+        <translation id="text" translation_id="292599" type="use" value="Personal Details[COMMENT: add manager screen; panel title]" />
+      </widget>-->
+
+      <!-- Red text area - text informing the user what the asterisk means-->
+
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+      <container>
+        <layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+
+        <container width="500" height="600">
+<!-- manager pic added extra row at end 30 -->          
+          <layout class="grid_layout_attachment" row_layout="20,30,22,20,30,22,20,30,22,20,30,1,20,30,30,60,30" mode="auto" vertical_gap="5" vertical_offset_start="40" vertical_offset_end="0">
+            <list id="column_layout">
+              <record>
+                <string id="column_layout" value="-1,-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="10" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1,-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="10" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="0" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1,-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="10" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1,-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="10" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="0" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="0" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="0" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="0" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1,-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="5" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1,-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="5" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="0" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="0" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="0" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="0" />
+              </record>
+              <record>
+                <string id="column_layout" value="-1,-1,-1" />
+                <integer id="horizontal_offset" value="20" />
+                <integer id="horizontal_gap" value="5" />
+              </record>
+<!-- manager pic need column layout setting -->
+			<record>
+				<string id="column_layout" value="-1,-1,-2" />
+				<integer id="horizontal_offset" value="20" />
+				<integer id="horizontal_gap" value="5" />
+			</record>
+            </list>
+          </layout>
+
+          <container>
+            <layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <widget class="label" font="title" alignment="left, centre_y" auto_size="horizontal" colour="accent">
+              <translation id="text" translation_id="292600" type="use" value="Name[COMMENT: add manager panel; name label]" />
+            </widget>
+
+            <widget class="label" font="title" alignment="left, centre_y" auto_size="horizontal" colour="accent">
+              <translation id="hint" translation_id="300786" type="use" value="All items with a * must be filled in[COMMENT:indicator to the user that the coloured asterisk indicates that the user must fill in this field]" />
+              <translation id="text" translation_id="248129" type="use" value="*" />
+            </widget>
+
+          </container>
+          <container>
+            <layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <widget class="label" font="title" alignment="left, centre_y" auto_size="horizontal" colour="accent">
+              <translation id="text" translation_id="374250" type="use" value="Surname[COMMENT: add manager panel; Surname label, somehow we've never actually had this string in the game!]" />
+            </widget>
+
+            <widget class="label" font="title" alignment="left, centre_y" auto_size="horizontal" colour="accent">
+              <translation id="hint" translation_id="300786" type="use" value="All items with a * must be filled in[COMMENT:indicator to the user that the coloured asterisk indicates that the user must fill in this field]" />
+              <translation id="text" translation_id="248129" type="use" value="*" />
+            </widget>
+
+          </container>
+
+
+          <widget class="edit_box" id="frst" edit_event="frst" alignment="left, centre_y" column_span="3">
+            <translation id="description" translation_id="298759" type="use" value="First Name[comment first name of a new untitled user]" />
+            <layout class="max_length_attachment" length="25" />
+            <record id="changed_event">
+              <flags id="event_id" value="ChNa" />
+            </record>
+          </widget>
+          <widget class="edit_box" id="last" edit_event="last" alignment="left, centre_y">
+            <translation id="description" translation_id="298760" type="use" value="Last Name[comment: last name of a new untitled user]" />
+            <layout class="max_length_attachment" length="25" />
+            <boolean id="select_on_focus" value="true" />
+            <record id="changed_event">
+              <flags id="event_id" value="ChNa" />
+            </record>
+          </widget>
+
+          <container>
+            <layout class="stick_to_sides_attachment" alignment="top, left" apply_to_children="true" inset="0" />
+            <widget class="widget_popup_button" Jcol="text" colour="disabled" secondary_icon="icons/16px/edit" appearance="" auto_size="all" id="mNam" popup_alignment="bottom,left" widget_type="container">
+              <record id="widget_properties" file="human/add manager name information dialog" width="500" />
+              <record id="modal_popup_properties" file="modal popup panel auto sized" />
+            </widget>
+          </container>
+
+
+
+          <container>
+            <layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <widget class="label" font="title" alignment="left, centre_y" auto_size="horizontal" colour="accent">
+              <translation id="text" translation_id="227841" type="use" value="Nationality" />
+            </widget>
+
+            <widget class="label" font="title" alignment="left, centre_y" auto_size="horizontal" colour="accent">
+              <translation id="hint" translation_id="300786" type="use" value="All items with a * must be filled in[COMMENT:indicator to the user that the coloured asterisk indicates that the user must fill in this field]" />
+              <translation id="text" translation_id="248129" type="use" value="*" />
+            </widget>
+
+          </container>
+          <widget class="label" alpha="215" font="title" alignment="left, centre_y" colour="accent">
+            <translation id="text" translation_id="227960" type="use" value="Place Of Birth" />
+          </widget>
+
+          <container>
+            <layout class="arrange_horizontal_attachment" alignment="right, extend" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <widget class="filter_edit_box" id="natn" appearance="edit boxes/custom/selection/box" alignment="left, center_y" >
+              <flags id="changed_event" value="natn" />
+              <flags id="select_on_focus" value="true" />
+              <boolean id="validate_string" value="true" />
+            </widget>
+
+            <widget class="icon_button" click_event="napu" id="napu" appearance="buttons/standard/split/right/button" icon="icons/16px/down" auto_size="horizontal">
+              <layout class="stick_to_sides_attachment" alignment="vertical" inset="1" />
+            </widget>
+          </container>
+
+          <container>
+            <layout class="arrange_horizontal_attachment" alignment="right, extend" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+            
+            <widget class="city_picker_popup_button" id="city" appearance="edit boxes/custom/selection/box" alignment="left, center_y">
+              <flags id="select_on_focus" value="true" />
+              <boolean id="validate_string" value="true" />
+            </widget>
+
+            <widget class="icon_button" click_event="cipu" id="cipu" appearance="buttons/standard/split/right/button" height="30" icon="icons/16px/down" auto_size="horizontal">
+              <layout class="stick_to_sides_attachment" alignment="vertical" inset="1" />
+            </widget>
+          </container>
+
+          <container>
+            <layout class="stick_to_sides_attachment" alignment="top, left" apply_to_children="true" inset="0" />
+            <widget class="widget_popup_button" Jcol="text" colour="disabled" secondary_icon="icons/16px/edit" appearance="" auto_size="all" id="mLan" popup_alignment="bottom,left" widget_type="container">
+              <translation id="text" translation_id="420653" type="use" value="Other Languages Spoken[COMMENT: add manager profile panel, section for displaying and choosing additional spoken languages]" />
+              <record id="widget_properties" file="human/add manager language information dialog" width="500" />
+              <record id="modal_popup_properties" file="modal popup panel auto sized" />
+            </widget>
+          </container>
+
+          <widget class="label" alpha="215" font="title" alignment="left" colour="accent">
+            <translation id="text" translation_id="247154" type="use" value="Favourite Team" />
+          </widget>
+
+          <widget class="popup_button" id="favo" alignment="left">
+            <translation id="text" translation_id="292603" type="use" value="Select a Team[COMMENT: add manager panel; option for the user to select a team from a list]" />
+          </widget>
+
+          <container>
+            <layout class="stick_to_sides_attachment" alignment="top, left" apply_to_children="true" inset="0" />
+            <widget class="widget_popup_button" Jcol="text" colour="disabled" secondary_icon="icons/16px/edit" appearance="" auto_size="all" id="mTea" popup_alignment="bottom,left" widget_type="container">
+              <translation id="text" translation_id="361248" type="use" value="Other Favourite Teams[COMMENT: add manager; selection for user to choose multiple favourite teams]" />
+              <record id="widget_properties" file="human/add manager team information dialog" width="500" />
+              <record id="modal_popup_properties" file="modal popup panel auto sized" />
+            </widget>
+          </container>
+
+          <widget class="label" alignment="left" font="title" colour="accent">
+            <translation id="text" translation_id="229988" type="use" value="Preferred Formation" />
+          </widget>
+
+          <widget class="label" alignment="left" font="title" colour="accent">
+            <translation id="text" translation_id="390544" type="use" value="Second Preferred Formation[COMMENT: add manager extra info panel, label for alternative favoured formation]" />
+          </widget>
+          
+          <widget class="icon_button" id="form" column_span="4" alignment="left" secondary_icon="icons/16px/maximise" icon_enabled="false" secondary_icon_enabled="true">
+            <record id="click_event">
+              <integer id="event_id" value="form" />
+              <integer id="index" value="Nppf" />
+            </record>
+            <translation id="text" translation_id="343389" type="use" value="Choose a Formation[COMMENT: add manager panel; option for the user to select a team from a list]" />
+          </widget>
+
+          <widget class="icon_button" id="for2" alignment="left" height="30" secondary_icon="icons/16px/maximise" icon_enabled="false" secondary_icon_enabled="true">
+            <record id="click_event">
+              <integer id="event_id" value="form" />
+              <integer id="index" value="Npsf" />
+            </record>
+            <translation id="text" translation_id="343389" type="use" value="Choose a Formation[COMMENT: add manager panel; option for the user to select a team from a list]" />
+          </widget>
+
+          <container>
+            <!--<layout class="stick_to_sides_attachment" alignment="top, left" apply_to_children="true" inset="0" />
+            <widget class="widget_popup_button" Jcol="text" colour="disabled" secondary_icon="icons/8px/down" appearance="" auto_size="all" id="mFor" height="30" popup_alignment="bottom,left" widget_type="container">
+              <translation id="text" translation_id="420654" type="use" value="Other Favourite Formations[COMMENT: add manager; selection for user to choose multiple favourite teams]" />
+              <record id="widget_properties" file="human/add manager formation information dialog" width="500" />
+              <record id="modal_popup_properties" file="modal popup panel auto sized" />
+            </widget>-->
+          </container>
+
+          <!-- Responsibilities-->
+          <widget class="label" alignment="left, centre_y" font="title" colour="accent">
+            <translation id="text" translation_id="335274" type="use" value="Responsibilities[COMMENT: Manager main/top menu: national team options when team name is not visible]" />
+          </widget>
+          <widget class="icon_button" id="oRDb" click_event="oReD" alignment="left, centre_y"  secondary_icon="icons/16px/maximise" icon_enabled="false" secondary_icon_enabled="true">>
+            <translation id="text" translation_id="335274" type="use" value="Responsibilities[COMMENT: Manager main/top menu: national team options when team name is not visible]" />
+          </widget>
+
+          <widget class="label" font="title" size="normal" colour="accent" alignment="left, centre_y">
+            <translation id="text" translation_id="312758" type="use" value="Social Networks" />
+          </widget>
+
+          <widget class="icon_button" id="yoib" icon="icons/48px/youtube" icon_alignment="centre" click_event="yoDI" />
+          <widget class="icon_button" id="faib" icon="icons/48px/facebook" icon_alignment="centre" click_event="faDI" />
+          <widget class="icon_button" id="twib" icon="icons/48px/twitter" icon_alignment="centre" click_event="twDI" />
+<!-- pick manager picure -->
+<widget class="label"  alignment="right, centre_y" style="semi_bold">
+<translation id="text" translation_id="292605" type="use" value="Manager Picture[COMMENT: add_manager_panel; select manager picture]" />
+</widget>
+<widget class="icon_button" id="slpc" alignment="left, centre_y" icon="icons/actions/select picture" fixed="true"  auto_size="vertical">
+<translation id="text" translation_id="361086" type="use" value="Choose Picture[COMMENT: Minor wording change, meaing the same, us etop 10 matches; Add Manager Wizard - Button that lets the manager select a picture of himself for his ingame manager profile]" />
+<event id="click_event" event_id="sepi" event_target="sepi" />
+</widget>
+<widget class="text"  alignment="left,centre_y" size="7" multiline="true">
+<translation id="text" translation_id="292607" type="use" value="Select a picture to be used on your profile[COMMENT: add manager panel, option asking the user to select a picture for their profile]" />
+</widget>
+
+        </container>
+
+
+      </container>
+    </container>
+
+  </container>
+
+</panel>

@@ -1,0 +1,12 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_allignment="extend" vertical_layout="24,-1" vertical_gap="5" />
+	<widget class="text" spec="text" alignment="right" size="12" font="title" colour="heffem">
+		<translation id="text" translation_id="318313" type="use" value="Substitutes[COMMENT: subs bench panel; subsection box which will list any designated substitutes]" />
+	</widget>
+	<widget class="subs_bench_icon_panel" id="subs" file="none" icon_flags="show_name,show_number,colour_names_for_team,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="tactics/tactics icon info panel match sub preview lineups 2">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+		<container id="icns">
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="right" horizontal_inset="0" />
+		</container>
+	</widget>
+</panel>

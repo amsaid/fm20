@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="5" />
+
+
+
+ 
+  <container class="horizontal_adaptive_container" offset="0" inset="0" gap="5" mode="distribute_equally">
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+ 
+		  
+		
+  
+  
+  
+  
+  
+     <!-- C -->
+  <container class="vertical_adaptive_container" offset="0" inset="0" gap="5" minimum_width="800" default_width="-7" priority="1" mode="distribute_equally">
+      
+      <!-- 1 -->    
+    <container class="horizontal_adaptive_container" offset="0" inset="0" gap="5" minimum_height="500" default_height="-6" priority="1" mode="distribute_equally">	
+
+
+      <!-- Portrait & Important info-->
+      <container minimum_height="500" default_width="-4" priority="1">
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+        <widget class="player_personal_details_panel" id="ppdp">
+          <record id="object_property" get_property="objt" set_property="objt"/>
+        </widget>
+      </container>
+	  
+
+
+      <container class="vertical_adaptive_container"  appearance="heffem/transplayer"  offset="0" inset="0" gap="5" default_width="-8" priority="1" mode="distribute_equally">
+        <!-- Attributes Container -->
+        <container class="inner_box" offset="0" inset="0" gap="0" default_height="390" priority="1">
+          <translation id="title" translation_id="229822" type="use" value="Attributes" />
+          <!-- buttons area -->
+          <container id="btna" embed_in_frame="true">
+            <attachment_group class="title_embedded_panel_right" horizontal_offset="0"/>
+
+            <widget class="check_box" id="shtr" click_event="shtc" alignment="centre" auto_size="all" save_session_state="true" save_default_state="true" embed_in_frame="true">
+              <translation id="text" translation_id="258284" type="use" value="Show recent attribute changes[COMMENT: text on player_profile panel to toggle the attribute change arrows RE-TRANSLATE FOR FM2008]" />
+            </widget>
+            <widget class="player_roles_popup_button" id="skpa" show_attribute_highlight_colours="true" show_clear_item="true"  alignment="centre" appearance="buttons/subtle/normal/button" auto_size="horizontal" height="30" fixed="true" spec="text" show_selected_role="true" embed_in_frame="true">
+              <translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+            </widget>
+          </container>
+
+          <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <container class="player_attributes_panel" id="patp" file="player/player attributes panel" highlight_attributes="true" show_attribute_offsets="false" dont_allow_custom_attribute_change_ranges="true"/>
+        </container>
+
+
+
+		<!-- TM -->
+		<container class="horizontal_adaptive_container" offset="0" inset="0" gap="5" minimum_height="120" default_height="-2" priority="5" mode="distribute_equally">	
+
+
+	      <container class="client_object_viewer_selector_panel" id="cosA" navigation_container="true" file="player/player overview big selector panel" save_session_state="true" minimum_width="280" dont_set_embedded_title="true" default_width="-1" priority="2">
+	        <integer id="default_for_unemployed_managers" value="ppsh"/>
+	        <integer id="default_for_international_managers_other_team" value="ppsh"/>
+	        <integer id="default_for_everyone_else" value="ppsh"/>
+	        <integer id="default_for_versus_mode" value="ppsh"/>
+	      </container>   
+
+	      <container class="client_object_viewer_selector_panel" id="cos5" navigation_container="true"  file="player/player overview big selector panel1" save_session_state="true" minimum_width="280" dont_set_embedded_title="true" default_width="-1" priority="2">
+	        <integer id="default_for_unemployed_managers" value="paAn"/>
+	        <integer id="default_for_international_managers_other_team" value="paAn"/>
+	        <integer id="default_for_everyone_else" value="paAn"/>
+	        <integer id="default_for_versus_mode" value="paAn"/>
+	      </container>   
+
+	    </container>  
+ 	  </container>  
+ 	</container>   	
+
+   		<container class="horizontal_adaptive_container" offset="0" inset="0" gap="4" minimum_height="120" default_height="-2" priority="5" mode="distribute_equally">	
+      <!-- Season stats-->
+      <container class="bordered_box" default_width="-743"  minimum_height="100" default_height="-2" priority="1" >
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+        <widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
+          <record id="object_property">
+            <list id="get_properties">
+              <!-- Hide this panel if player is in inactive league-->
+              <record id="object_property" get_property="objt" set_property="objt"/>
+              <record id="object_property" get_property="Pila" set_property="hidn"/>
+            </list>
+          </record>
+        </widget>
+        <widget class="player_stats_panel" id="pssp" file="player/player stats small">
+          <record id="object_property">
+            <list id="get_properties">
+              <!-- Show this panel if player is in inactive league-->
+              <record id="object_property" get_property="Pila" set_property="Shwn"/>
+              <record id="object_property" get_property="objt" set_property="objt"/>
+            </list>
+          </record>
+        </widget>
+      </container> 	 	
+
+
+	      <container class="client_object_viewer_selector_panel" id="cosX" navigation_container="true"  file="player/player overview small selector panel" save_session_state="true" dont_set_embedded_title="true" default_width="-369" >
+	        <integer id="default_for_unemployed_managers" value="pgpp"/>
+	        <integer id="default_for_international_managers_other_team" value="pgpp"/>
+	        <integer id="default_for_everyone_else" value="pitf"/>
+	        <integer id="default_for_versus_mode" value="pitf"/>
+	      </container>   
+
+
+
+      </container> 	 	
+   </container>   
+  
+     <!-- R -->
+  <container class="vertical_adaptive_container" offset="0" inset="0" gap="5" default_width="-4" minimum_width="320" priority="1" mode="distribute_equally">
+
+      <container class="client_object_viewer_selector_panel" id="cos9" navigation_container="true" file="player/player overview small selector panel" save_session_state="true" dont_set_embedded_title="true" default_height="-9" priority="8">
+        <integer id="default_for_unemployed_managers" value="phb1"/>
+        <integer id="default_for_international_managers_other_team" value="phb1"/>
+        <integer id="default_for_everyone_else" value="hefr"/>
+        <integer id="default_for_versus_mode" value="hefr"/>
+      </container>
+
+
+
+   		<container class="horizontal_adaptive_container" offset="0" inset="0" gap="5" minimum_height="120" default_height="-3" priority="5" mode="distribute_equally">
+      <container class="client_object_viewer_selector_panel" id="cosH" navigation_container="true" file="player/player overview small selector panel" save_session_state="true" dont_set_embedded_title="true" priority="8">
+        <integer id="default_for_unemployed_managers" value="pfmp"/>
+        <integer id="default_for_international_managers_other_team" value="pfmp"/>
+        <integer id="default_for_everyone_else" value="pfmp"/>
+        <integer id="default_for_versus_mode" value="pfmp"/>
+      </container>     
+ 
+      <container class="client_object_viewer_selector_panel" id="cos4" navigation_container="true" file="player/player overview small selector panel" save_session_state="true"  dont_set_embedded_title="true" priority="8">
+        <integer id="default_for_unemployed_managers" value="ppsp"/>
+        <integer id="default_for_international_managers_other_team" value="ppsp"/>
+        <integer id="default_for_everyone_else" value="ppsp"/>
+        <integer id="default_for_versus_mode" value="ppsp"/>
+      </container>    
+      
+
+      </container>     
+
+
+
+   		<container class="horizontal_adaptive_container" offset="0" inset="0" gap="5" minimum_height="120" default_height="-3" priority="5" mode="distribute_equally">
+      <container class="client_object_viewer_selector_panel" id="cos3" navigation_container="true" file="player/player overview small selector panel" save_session_state="true" dont_set_embedded_title="true"  priority="8">
+        <integer id="default_for_unemployed_managers" value="ptis"/>
+        <integer id="default_for_international_managers_other_team" value="ptis"/>
+        <integer id="default_for_everyone_else" value="ptis"/>
+        <integer id="default_for_versus_mode" value="ptis"/>
+      </container>   
+      <container class="client_object_viewer_selector_panel" id="cosF" navigation_container="true" file="player/player overview small selector panel" save_session_state="true" dont_set_embedded_title="true"  priority="8">
+        <integer id="default_for_unemployed_managers" value="tab1"/>
+        <integer id="default_for_international_managers_other_team" value="tab1"/>
+        <integer id="default_for_everyone_else" value="Pfor"/>
+        <integer id="default_for_versus_mode" value="Pfor"/>
+      </container>     
+      </container>    
+
+
+   		<container class="horizontal_adaptive_container" offset="0" inset="0" gap="5" minimum_height="120" default_height="-3" priority="5" mode="distribute_equally">
+      <container class="client_object_viewer_selector_panel" id="cos4" navigation_container="true" file="player/player overview small selector panel" save_session_state="true" dont_set_embedded_title="true"  priority="8">
+        <integer id="default_for_unemployed_managers" value="Phap"/>
+        <integer id="default_for_international_managers_other_team" value="Phap"/>
+        <integer id="default_for_everyone_else" value="Phap"/>
+        <integer id="default_for_versus_mode" value="Phap"/>
+      </container>
+      <container class="client_object_viewer_selector_panel" id="cosG" navigation_container="true" file="player/player overview small selector panel" save_session_state="true" dont_set_embedded_title="true"  priority="8">
+        <integer id="default_for_unemployed_managers" value="pbop"/>
+        <integer id="default_for_international_managers_other_team" value="pbop"/>
+        <integer id="default_for_everyone_else" value="pbop"/>
+        <integer id="default_for_versus_mode" value="pbop"/>
+      </container>
+      </container>    
+
+   </container>   
+
+  </container>
+
+
+  
+ 
+</panel>
+

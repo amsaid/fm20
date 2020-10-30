@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel save_default_state="true">
+    <integer id="width_threshold" value="1200" />
+    <integer id="width_with_labels" value="125" />
+    <integer id="width_without_labels" value="50" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+    <container class="bordered_box" appearance="boxes/custom/interface/sidebar/paper" red_replacement="heffem3" />
+    <widget class="bordered_box" appearance="boxes/custom/interface/sidebar pattern/paper" />
+    <container />
+    <container height="1000" />
+    <!--<container class="bordered_box" id="colm" appearance="boxes/custom/interface/sidebar/paper" red_replacement="dark accent" >	
+	</container>-->
+    <container class="vertical_adaptive_container" inset="0" offset="0" gap="0">
+
+        <container  class="plain_box"  appearance="heffem/plainsidebar" red_replacement="primary" height="60">
+		<layout class="arrange_horizontal_attachment" layout="-4,20,-4" gap="0" offset="0" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+            <!-- Back Button -->
+            <widget class="screen_history_button" id="back" fixed="true" width="60" appearance="buttons/custom/interface/navigation bar/button" icon="icons/26px/back" icon_alignment="centre">
+                <attachment class="get_global_attachment" get_property="hnpt" set_property="itms" />
+                <record id="primary_icon_properties" red_replacement="secondary" />
+                <record id="click_event" event_id="GOTO" event_target="brow" scin="-3" />
+
+                <attachment class="test_global_attachment" get_property="MnuS" mode="1" value="true" set_property="hidn" skip_if_null="true" />
+            </widget>
+            
+				<!--left sided main logo and quick flicks-->
+				<container id="flik" >
+					<layout class="arrange_horizontal_attachment" layout="20"  />
+					<!--quick flicks-->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+						<widget class="quick_flick_button" id="flkl" auto_size="all" appearance="icons/16px/up" icon_enabled="true" cached="true" step="-1" red_replacement="secondary">
+							<layout class="stick_to_sides_attachment" alignment="left,top" inset="16,0,0,0" />
+							<attachment class="get_global_attachment" get_property="stPQ" set_property="click_event" />
+						</widget>
+						<widget class="quick_flick_button" id="flkr" auto_size="all" appearance="icons/16px/down" cached="true" step="1" red_replacement="secondary">
+							<layout class="stick_to_sides_attachment" alignment="left,top" inset="30,0,0,0" />
+							<attachment class="get_global_attachment" get_property="stNQ" set_property="click_event" />
+						</widget>
+					</container>
+				</container>
+
+            <!-- Next Button -->
+            <widget class="screen_history_button" id="forw" fixed="true" width="40" appearance="buttons/custom/interface/navigation bar/button" icon="icons/26px/forward" icon_alignment="centre">
+                <attachment class="get_global_attachment" get_property="hnit" set_property="itms" />
+                <record id="primary_icon_properties" red_replacement="secondary" />
+                <record id="click_event" event_id="GOTO" event_target="brow" scin="-2" />
+
+                <attachment class="test_global_attachment" get_property="MnuS" mode="1" value="true" set_property="hidn" skip_if_null="true" />
+            </widget>
+        </container>
+
+        <container class="plain_box" height="134" appearance="heffem/item_background/sidebar" image_alignment="top, centre_x" red_replacement="primary" blue_replacement="secondary" scale_picture="true" keep_aspect_ratio="true">
+            <!-- Primary Logo -->
+            <widget class="picture" id="lgtF" scale_picture="true" keep_aspect_ratio="true" width="50" image_alignment="centre">
+                <layout class="stick_to_sides_attachment" alignment="vertical" inset="3" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="3" />
+                <attachment class="test_setting_attachment" get_setting="show_badges" default_value="true" set_property="hidn">
+                    <boolean id="value" value="false" />
+                </attachment>
+                <!-- tells the picture to listen to the 'main picture' global property being set, and set its own file property from it -->
+                <record id="object_property">
+                    <integer id="get_property" value="mnpc" />
+                    <integer id="set_property" value="file" />
+                </record>
+            </widget>
+        </container>
+
+
+        <container id="colm" default_height="-1">
+            <layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="4" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+            <!--club/nation selector-->
+            <container class="tabbed_container" id="tabc" changed_event="Tesc" contents_kind="container" group_kind="container" hide_selector_if_one_or_fewer_items="true">
+                <record id="top_properties">
+                    <flags id="appearance" value="tabs/custom/sidebar" />
+                    <flags id="auto_size" value="vertical" />
+                    <flags id="alignment" value="top" />
+                    <boolean id="use_alt_end_tab_appearances" value="false" />
+                    <boolean id="hide_text_if_truncated" value="true" />
+                </record>
+                <!--club table-->
+                <container id="CLUB">
+                    <layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                    <widget class="table" id="club" mode="select_rows,fill_rows,hide_headings,dont_allow_click_unselect_single,drag_rows,drop_on_rows,insert_on_drop" auto_size_rows="true" fixed_size_rows="false" selected_appearance="tables/custom/sidebar/selected/row">
+                        <list id="column_table_properties">
+                            <record width="-1" column_heading="Icon">
+                                <record id="column_widget_properties" />
+                            </record>
+                            <record width="-3" minimum_width="100" column_heading="Name">
+                                <record id="column_widget_properties" alignment="left,centre_y" size="normal">
+                                    <record id="secondary_text_properties" alignment="left,top" size="normal" />
+                                </record>
+                            </record>
+                        </list>
+                    </widget>
+                    <widget class="table" id="cluF" mode="select_rows,fill_rows,hide_headings,dont_allow_click_unselect_single" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical" selected_appearance="tables/custom/sidebar/selected/row">
+                        <list id="column_table_properties">
+                            <record width="-1" column_heading="Icon">
+                                <record id="column_widget_properties" />
+                            </record>
+                            <record width="-3" minimum_width="100" column_heading="Name">
+                                <record id="column_widget_properties" alignment="left,centre_y" colour="faded white" font="title" size="small" gap="0">
+                                    <record id="secondary_text_properties" alignment="left,top" size="normal" colour="white" />
+                                </record>
+                            </record>
+                        </list>
+                    </widget>
+                </container>
+                <!--nation table-->
+                <container id="NATI">
+                    <layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                    <widget class="table" id="nati" mode="select_rows,fill_rows,hide_headings,dont_allow_click_unselect_single,drag_rows,drop_on_rows,insert_on_drop" auto_size_rows="true" fixed_size_rows="false" selected_appearance="tables/custom/sidebar/selected/row">
+                        <list id="column_table_properties">
+                            <record width="-1" column_heading="Icon">
+                                <record id="column_widget_properties" />
+                            </record>
+                            <record width="-3" minimum_width="100" column_heading="Name">
+                                <record id="column_widget_properties" alignment="left,centre_y" size="normal" />
+                            </record>
+                        </list>
+                    </widget>
+                    <widget class="table" id="natF" mode="select_rows,fill_rows,hide_headings,dont_allow_click_unselect_single" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical" selected_appearance="tables/custom/sidebar/selected/row">
+                        <list id="column_table_properties">
+                            <record width="-1" column_heading="Icon">
+                                <record id="column_widget_properties" />
+                            </record>
+                            <record width="-3" minimum_width="100" column_heading="Name">
+                                <record id="column_widget_properties" alignment="left,centre_y" colour="faded white" font="title" size="small" gap="0">
+                                    <record id="secondary_text_properties" alignment="left,top" size="normal" colour="white" />
+                                </record>
+                            </record>
+                        </list>
+                    </widget>
+                </container>
+            </container>
+            <!--unemployed table-->
+            <container id="UNEM">
+                <layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                <widget class="table" id="unem" mode="select_rows,fill_rows,hide_headings,dont_allow_click_unselect_single,drag_rows,drop_on_rows,insert_on_drop" auto_size_rows="true" fixed_size_rows="false" selected_appearance="tables/custom/sidebar/selected/row">
+                    <list id="column_table_properties">
+                        <record width="-1" column_heading="Icon">
+                            <record id="column_widget_properties" />
+                        </record>
+                        <record width="-3" minimum_width="100" column_heading="Name">
+                            <record id="column_widget_properties" alignment="left,centre_y" size="normal" />
+                        </record>
+                    </list>
+                </widget>
+                <widget class="table" id="uneF" mode="select_rows,fill_rows,hide_headings,dont_allow_click_unselect_single" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+                    <list id="column_table_properties">
+                        <record width="-1" column_heading="Icon">
+                            <record id="column_widget_properties" />
+                        </record>
+                        <record width="-3" minimum_width="100" column_heading="Name">
+                            <record id="column_widget_properties" alignment="left,centre_y" colour="faded white" font="title" size="small" gap="0">
+                                <record id="secondary_text_properties" alignment="left,top" size="normal" colour="white" />
+                            </record>
+                        </record>
+                    </list>
+                </widget>
+            </container>
+        </container>
+        <!-- ver -->
+        <container height="20" >
+            <layout class="arrange_horizontal_attachment" alignment="middle" offset="-5" />
+            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+            <widget class="text" alignment="left,top" auto_size="all" spec="text" font="label" size="10" colour="heffem">
+                <translation id="hint" type="use" value="Heffem Skin Version" />
+                <flags id="text" value="Heffem Skin V2" />
+                <record id="cotx">
+                    <flags id="bypass_clickthru" value="true" />
+                </record>
+            </widget>
+        </container>
+    </container>
+</panel>

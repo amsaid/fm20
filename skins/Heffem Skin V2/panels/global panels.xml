@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- this file lists the global panels that should be installed -->
+<panel>
+
+
+  <!-- Add on manager helper layer -->
+  <container id="adMN" class="add_on_manager_helper_panel">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+    <boolean id="exclude_from_find" value="true" />
+  </container>
+
+  <!-- Browser -->
+  <container class="object_browser_container" browser_class="client_object_browser" id="_CoB">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  </container>
+
+ <container id="bgs1" file="background_selector/workings" hidn="true"/>
+ <container id="lgs1" file="logo_selector/workings" hidn="true"/>
+ <container id="sbs1" file="scoreboard_selector/workings" hidn="true"/>
+
+  <!-- progress panel -->
+  <container class="game_processing_panel_container">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  </container>
+
+  <!-- notification container -->
+  <container id="prmo">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+    <boolean id="exclude_from_find" value="true" />
+  </container>
+
+	<!-- Comment this out if the tutorial is disabled -->
+	<!-- tutorial layer -->
+	<container id="tutL" class="tutorial_panel" hidden="true" wants_mouse_events="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</container>
+
+  <!-- modal area -->
+  <container id="modl">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  </container>
+	<!-- Comment this out if the tutorial is disabled -->
+	<!-- tutorial modal layer -->
+	<container id="tutM" class="tutorial_modal_layer" hidden="true" wants_mouse_events="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</container>
+
+  <!-- post-modal area -->
+  <container id="nocp">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+    <boolean id="exclude_from_find" value="true" />
+  </container>
+
+  <!-- Help layers -->
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+    <container id="hcLY">
+      <boolean id="exclude_from_find" value="true" />
+    </container>
+    <container id="hlLY">
+      <boolean id="exclude_from_find" value="true" />
+    </container>
+    <boolean id="exclude_from_find" value="true" />
+  </container>
+
+  <!-- hud -->
+  <container id="hud " hidden="true" file="hud">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  </container>
+
+</panel>

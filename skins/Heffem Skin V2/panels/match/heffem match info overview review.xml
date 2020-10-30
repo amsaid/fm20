@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel info_panel_type="1">
+
+  <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+
+  <container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" mode="distribute_equally">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+    <!-- L -->
+    <container class="vertical_adaptive_container" default_width="350"  offset="0" inset="0" gap="0" minimum_width="150" priority="1" mode="distribute_equally">
+
+
+
+
+
+
+      <container default_height="60" minimum_height="30" priority="1">
+        <layout class="arrange_horizontal_attachment" layout="-2,-4, -2" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+
+        <container>
+          <layout class="arrange_vertical_attachment" layout="-1,-4,-4" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <container/>
+          <!--date-->
+          <widget class="date_cell" id="date" alignment="left,centre_y" font="label" size="small" auto_size="vertical" colour="heffem">
+            <translation id="format" translation_id="447557" type="use" value="[%date#1-time] kick off on [%date#1-short][COMMENT: string to show the kick off time and date of a fixture]" />
+            <record id="object_property">
+              <integer id="get_property" value="fxdt" />
+            </record>
+          </widget>
+
+          <!--referee-->
+          <widget class="referee_strictness_label" id="reff" auto_size="vertical" alignment="left,centre_y"   size="10" colour="white">
+            <translation id="format" translation_id="332843" type="use" value="Referee: [%string#1][COMMENT: string to how strict the referee is]"/>
+          </widget>
+
+        </container>
+
+
+
+        <container >
+          <layout class="arrange_vertical_attachment" layout="-1,-4,-4"  offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+          <!--stadium-->
+
+          <container/>
+          <!--competition-->
+          <widget class="fixture_name_text" id="fxnm" size="14" auto_size="vertical" alignment="middle" font="title" colour="heffem">
+            <record id="object_property">
+              <integer id="get_property" value="FxNm" />
+            </record>
+          </widget>
+          <widget class="text" id="stad" alignment="centre" spec="text" side="11"  auto_size="vertical" />
+
+        </container>
+
+        <container>
+          <layout class="arrange_vertical_attachment" layout="-1,-4,-4" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <container/>
+          <!--attendance-->
+          <widget class="label" size="small" auto_size="vertical" alignment="right,centre_y"  font="label" colour="heffem">
+            <translation id="text" translation_id="247242" type="use" value="Attendance" />
+          </widget>
+          <widget class="label" id="attl" auto_size="vertical" alignment="right,centre_y"  size="10" />
+        </container>
+
+      </container>
+
+
+      <widget class="picture" file="dividers/standard/horizontal/line" height="1" image_alignment="centre"/>
+
+
+      <container height="5"/>
+
+
+
+
+      <!-- MATCH RESULT -->
+      <container default_height="500" minimum_height="200"  priority="1">
+        <translation id="title" translation_id="447558" type="use" value="Scoresheet[COMMENT: string title for the score and scorers of a match]" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+        <container class="bordered_box" appearance="boxes/bordered/transparent/paper1" >
+          <layout class="arrange_horizontal_attachment" layout="-1,-1" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <!--  home incidents panel -->
+          <widget class="home_match_incidents_panel" id="hmip" small_version="true" file="match/heffem match incidents left review" />
+
+          <!--  away incidents panel -->
+          <widget class="away_match_incidents_panel" id="amip" small_version="true" file="match/heffem match incidents right review" />
+        </container>
+      </container>
+
+
+    </container>
+
+  </container>
+
+
+</panel>

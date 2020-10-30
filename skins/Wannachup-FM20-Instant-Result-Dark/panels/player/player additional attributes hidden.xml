@@ -1,0 +1,159 @@
+ <!-- panel displaying extra attributes a bout a player, for example condition, footedness etc -->
+<!-- Meant to be used with a CLIENT_OBJECT_XML_panel -->
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+  <layout class="arrange_vertical_attachment" alignment="top, extend" offset="25" gap="0"/>
+
+  <widget class="table" layout="-2, -1" mode="fill_rows, stripe_rows, printable" row_height="20" row_spacing="1">
+    <list id="column_display_properties">
+      <record index="0" left="10" sort_disabled="true"/>
+      <record index="1" right="0" sort_disabled="true"/>
+    </list>
+
+    <!--Asking Price-->
+    <widget class="label" col="0" row="0"   colour="accent" font="title1" size="9" >
+      <translation id="text"   type="use"  translation_id="227778"  value="Asking Price" />
+    </widget>
+    <widget class="value_label"  row="0" column="1" alignment="centre" colour="white" font="title1" size="10" >
+      <record id="object_property" get_property="Pnar"/>
+    </widget>
+	
+		
+	
+	    <!--RCA-->
+    <widget class="label" row="1" column="0" colour="accent" font="title1" size="9">
+      <string id="text" value="RCA" />
+    </widget>
+    <widget class="label" row="1" column="1" alignment="centre" style="semi_bold" colour="orange 600">
+      <record id="object_property" get_property="ERCA"/>
+    </widget>
+
+    <!--CA-->
+    <widget class="label" row="2" column="0" colour="accent" font="title1" size="9">
+      <string id="text" value="CA"/>
+    </widget>
+    <widget class="label" row="2" column="1" alignment="centre" style="semi_bold" colour="orange 800">
+      <record id="object_property" get_property="PCAB"/>
+    </widget>
+
+
+    
+    <!--PA-->
+    <widget class="label" row="3" column="0" colour="accent" font="title1" size="9">
+      <string id="text" value="PA"/>
+    </widget>
+    <widget class="label" row="3" column="1" alignment="centre" style="semi_bold" colour="orange 800">
+      <record id="object_property" get_property="PPAB"/>
+    </widget>
+	
+	  <!--Current Reputation-->
+    <widget class="label" row="4" col="0"  size="10" >
+      <translation id="text" value="Current Reputation" />
+    </widget>
+    <widget class="label" row="4" column="1" alignment="centre" style="semi_bold"  size="9">
+      <record id="object_property" get_property="PCRP"/>
+    </widget>
+
+    <!--adaptability-->
+    <widget class="label" row="5" column="0" size="10" >
+      <translation id="text" translation_id="227943" type="use" value="Adaptability" />
+    </widget>
+    <widget class="attribute_label" row="5" column="1" alignment="centre" style="semi_bold"  size="10">
+      <record id="object_property" get_property="Pada"/>
+    </widget>
+
+    <!--ambition-->
+    <widget class="label" row="6" col="0" size="10">
+      <translation id="text" translation_id="293412" type="use" value="Ambition" />
+    </widget>
+    <widget class="attribute_label" row="6" column="1" alignment="centre" style="semi_bold" size="10">
+      <record id="object_property" get_property="Pamb"/>
+    </widget>
+
+    <!--loyalty-->
+    <widget class="label" row="7" col="0" size="10">
+      <translation id="text" translation_id="293414" type="use" value="Loyalty" />
+    </widget>
+    <widget class="attribute_label" row="7" column="1" alignment="centre" style="semi_bold" size="10">
+      <record id="object_property" get_property="Ploy"/>
+    </widget>
+
+    <!--pressure-->
+    <widget class="label" row="8" col="0" size="10">
+      <translation id="text" type="use" translation_id="293329" value="Pressure" />
+    </widget>
+    <widget class="attribute_label" row="8" column="1" alignment="centre" style="semi_bold" size="10">
+      <record id="object_property" get_property="Ppre"/>
+    </widget>
+
+    <!--professional-->
+    <widget class="label" row="9" col="0" size="10" >
+      <translation id="text" translation_id="293415" type="use" value="Professionalism" />
+    </widget>
+    <widget class="attribute_label" row="9" column="1" alignment="centre" style="semi_bold" size="10">
+      <record id="object_property" get_property="Ppro"/>
+    </widget>
+
+    <!--sportmanship-->
+    <widget class="label" row="10" col="0" size="10">
+      <translation id="text" translation_id="293416" type="use" value="Sportsmanship" />
+    </widget>
+    <widget class="attribute_label" row="10" column="1" alignment="centre" style="semi_bold" size="10">
+      <record id="object_property" get_property="Pspo"/>
+    </widget>
+
+    <!--temperament-->
+    <widget class="label" row="11" col="0" size="10" >
+      <translation id="text" translation_id="349110" type="use" value="Temperament[COMMENT: how good a person is at keeping their temper]" />
+    </widget>
+    <widget class="attribute_label" row="11" column="1" alignment="centre" style="semi_bold" size="10">
+      <record id="object_property" get_property="Ptem"/>
+    </widget>
+
+    <!--controversy-->
+    <widget class="label" row="12" col="0" size="10">
+      <translation id="text" translation_id="293413" type="use" value="Controversy" />
+    </widget>
+    <widget class="attribute_label" row="12" column="1" alignment="centre" style="semi_bold" size="10">
+      <record id="object_property" get_property="Pcvy"/>
+    </widget>
+
+    <!--consistency-->
+    <widget class="label" row="13" col="0" size="10" >
+      <translation id="text"  type="use" value="Consistency[COMMENT: column heading; short for Consistency]" />
+    </widget>
+    <widget class="attribute_label" row="13" column="1" alignment="centre" style="semi_bold" size="10">
+      <record id="object_property" get_property="PCON"/>
+    </widget>
+
+    <!--dirtiness-->
+    <widget class="label" row="14" col="0" size="10">
+      <translation id="text" translation_id="230007" type="use" value="Dirtiness" />
+    </widget>
+    <widget class="attribute_label" row="14" column="1" alignment="centre" style="semi_bold" size="10">
+      <record id="object_property" get_property="Pdir"/>
+    </widget>
+
+    <!--Important Matches-->
+    <widget class="label" row="15" col="0"  size="10">
+      <translation id="text" type="use"  value="Important Matches" />
+    </widget>
+    <widget class="attribute_label" row="15" column="1" alignment="centre" style="semi_bold" size="10">
+      <record id="object_property" get_property="Pimp"/>
+    </widget>
+
+    <!--injury-->
+    <widget class="label" row="16" col="0"  size="10">
+      <translation id="text" translation_id="230009" type="use" value="Injury Proneness" />
+    </widget>
+    <widget class="attribute_label" row="16" column="1" alignment="centre" style="semi_bold" size="10">
+      <record id="object_property" get_property="Pipr"/>
+    </widget>
+
+	
+
+
+
+  </widget>
+
+</panel>

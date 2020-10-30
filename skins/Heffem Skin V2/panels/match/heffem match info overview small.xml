@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel info_panel_type="1">
+
+  <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+    <!-- L -->
+    <container class="vertical_adaptive_container" default_width="350"  offset="0" inset="0" gap="0" minimum_width="150" priority="1" mode="distribute_equally">
+
+
+      <container default_height="30" minimum_height="30" priority="1">
+        <layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+
+        <record id="object_property" get_property="maCo" set_property="maCo" />
+
+        <!--SETTINGS / SAVE MATCH -->
+        <container class="match_playback_control_container" file="" height="70">
+          <layout class="arrange_vertical_attachment" alignment="fill" offset="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+          <record id="object_property" get_property="maCo" set_property="maCo" />
+
+          <!-- CONTAINER HOLDING BUTTONS -->
+          <container>
+            <layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <!-- POPUP BUTTONS -->
+            <widget id="View" class="priority_action_popup_button">
+              <list id="items">
+                <!-- WATCH GOALS -->
+                <record id="vgls" event_id="vgls" type="5" priority="1">
+                  <translation id="name" translation_id="454724" type="use" value="Watch Goals[COMMENT: command to watch some match highlights]" />
+                </record>
+                <!-- WATCH KEY HIGHLIGHTS -->
+                <record id="vkey" event_id="vkey" type="3">
+                  <translation id="name" translation_id="454725" type="use" value="Watch Key Highlights[COMMENT: command to watch some match highlights]" />
+                </record>
+                <!-- WATCH EXTENDED -->
+                <record id="vext" event_id="vext" type="2">
+                  <translation id="name" translation_id="454726" type="use" value="Watch Extended Highlights[COMMENT: command to watch some match highlights]" />
+                </record>
+                <!-- WATCH COMPREHENSIVE -->
+                <record id="vcom" event_id="vcom" type="1">
+                  <translation id="name" translation_id="454727" type="use" value="Watch Comprehensive Highlights[COMMENT: command to watch some match highlights]" />
+                </record>
+              </list>
+            </widget>
+
+            <!-- SAVE MATCH -->
+            <widget class="button" id="svmt" click_event="svmt" auto_size="all">
+              <translation id="text" translation_id="232965" type="use" value="Save Match" />
+            </widget>
+
+          </container>
+
+        </container>
+
+
+      </container>
+
+
+
+
+
+
+      <container default_height="45" minimum_height="30" priority="1">
+        <layout class="arrange_horizontal_attachment" layout="-5, -8, -5" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+
+        <container>
+          <layout class="arrange_vertical_attachment" layout="-1,-4,-4" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <container/>
+          <!--date-->
+          <widget class="date_cell" id="date" alignment="left,centre_y" font="label" size="small" auto_size="vertical" colour="heffem">
+            <translation id="format" translation_id="447557" type="use" value="[%date#1-time] kick off on [%date#1-short][COMMENT: string to show the kick off time and date of a fixture]" />
+            <record id="object_property">
+              <integer id="get_property" value="fxdt" />
+            </record>
+          </widget>
+
+          <!--referee-->
+          <widget class="referee_strictness_label" id="reff" auto_size="vertical" alignment="left,centre_y"   size="10" colour="white">
+            <translation id="format" translation_id="332843" type="use" value="Referee: [%string#1][COMMENT: string to how strict the referee is]"/>
+          </widget>
+
+        </container>
+
+        <container height="60">
+          <layout class="arrange_vertical_attachment" layout="-1,-4,-4" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal"  inset="0" offset="0" apply_to_children="true" />
+          <container/>
+          <!--stadium-->
+
+          <!--competition-->
+          <widget class="fixture_name_text" id="fxnm" size="small" alignment="middle" auto_size="vertical"  font="title" colour="heffem">
+            <record id="object_property">
+              <integer id="get_property" value="FxNm" />
+            </record>
+          </widget>
+          <widget class="text" id="stad" alignment="centre" spec="text" side="10"  auto_size="vertical" />
+
+        </container>
+
+
+
+
+        <container>
+          <layout class="arrange_vertical_attachment" layout="-1,-4,-4" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <container/>
+          <!--attendance-->
+          <widget class="label" size="small" auto_size="vertical" alignment="right,centre_y"  font="label" colour="heffem">
+            <translation id="text" translation_id="247242" type="use" value="Attendance" />
+          </widget>
+          <widget class="label" id="attl" auto_size="vertical" alignment="right,centre_y"  size="10" />
+        </container>
+
+      </container>
+
+
+
+
+
+
+      <!-- MATCH RESULT -->
+      <container default_height="-1" minimum_height="200"  priority="1">
+        <translation id="title" translation_id="447558" type="use" value="Scoresheet[COMMENT: string title for the score and scorers of a match]" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+        <container class="bordered_box" appearance="boxes/bordered/transparent/paper1" >
+          <layout class="arrange_horizontal_attachment" layout="-1,-1" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <!--  home incidents panel -->
+          <widget class="home_match_incidents_panel" id="hmip" small_version="true" file="match/heffem match incidents left overview" />
+
+          <!--  away incidents panel -->
+          <widget class="away_match_incidents_panel" id="amip" small_version="true" file="match/heffem match incidents right overview" />
+        </container>
+      </container>
+
+
+
+
+    </container>
+
+
+</panel>

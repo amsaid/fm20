@@ -1,0 +1,46 @@
+<panel>
+
+  <!-- Starting XI Styles -->
+  <flags id="stxi" value="tables/standard/normal"/>
+
+  <!-- Subs Styles -->
+  <flags id="subs" value="tables/custom/squad/substitute/row"/>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <!--Table of player stats-->
+  <widget class="match_player_list_table" id="pltb" database_table_type="1" mode="fill_rows, stripe_rows" row_height="28">
+    <boolean id="sort_disabled" value="true" />
+
+    <list id="default_sort_column">
+      <integer value="Pshp" />
+    </list>
+    
+	<!-- to change which columns are active change hidden value to false to show and true to hide, the order you arrange them in is the order they should show in game, first item is on the left -->
+<!-- if you don;t have enough room on the screen then items with a higher priority value disappear first - so name will be last to go and passes first -->
+	
+    <record id="viewed_property_ids">
+        
+		  <record id="Pshp" disabled="true" hidden="true"/> <!-- picked pos disabled status stops it being clicked-->
+          <record id="PsnC" auto_hide_priority="4" hidden="false" /> <!-- squad number in dot -->
+		  <record id="PsnS" auto_hide_priority="4" width="32" hidden="true" /> <!-- squad number on shirt -->
+		  <record id="Psnu" auto_hide_priority="4" hidden="true"/> <!-- squad number text only -->
+		  <record id="PinD" auto_hide_priority="9" hidden="false"/> <!--subbed time -->
+          <record id="Pcar" auto_hide_priority="5" hidden="false" /> <!-- status sub/card/inj -->
+          <record id="PisC" auto_hide_priority="5" hidden="false" /> <!-- captain -->
+          <record id="Pnam" auto_hide_priority="1" minimum_width="100" hidden="false" /> <!-- name -->
+		  <!-- below option disabled in to show example to format name and remove (i) if you want -->
+		  <!-- <record id="Pnam" format="[%person#1-initial_surname]" info_popup_enabled="false"/> -->
+		  <record id="Pmtc" auto_hide_priority="2" hidden="false" /> <!-- body language -->
+		  <record id="Ppfc" auto_hide_priority="3" hidden="false" /> <!-- body performance -->
+		  <record id="Pcon" auto_hide_priority="6" hidden="false" /> <!-- condition with donut -->
+          <record id="MPrt" auto_hide_priority="5" hidden="false" /> <!-- rating -->
+          <record id="MPgl" auto_hide_priority="7" hidden="false" /> <!-- goals -->
+          <record id="MPas" auto_hide_priority="8" hidden="false" /> <!-- assists -->
+		  <record id="MPCc" auto_hide_priority="1600" hidden="true" /> <!-- chances created -->
+		  <record id="MPkp" auto_hide_priority="1600" hidden="true" /> <!-- key passes -->
+    </record>
+
+  </widget>
+
+</panel>

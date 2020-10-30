@@ -1,0 +1,11 @@
+<panel>
+	<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="4" offset="0" />
+
+
+	<widget class="match_team_logo_picture" id="TeLo" lignment="left,centre_y" width="45" height="45"/>
+
+	<!-- team name -->
+	<widget class="text" id="mitn" font="title" size="12" alignment="right,centre_y" auto_size="vertical"/>
+
+</panel>

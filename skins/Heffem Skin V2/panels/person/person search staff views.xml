@@ -1,0 +1,249 @@
+<record>
+  <flags id="current_view" value="hefc" />
+  
+				<!--default view-->
+				<flags id="default_view" value="hefc" />
+
+  <list id="views">
+    <record id="hefc">
+      <translation id="text" type="use" value="Heffem Infos Search Coaching Staff" />
+      <record id="view">
+        <!-- BASE -->
+        <record id="PSpi" />                          <!-- status flags -->
+        <record id="Pnat" width="30"/>                          <!-- nationality -->
+        <flags id="PSag" width="30" />                           <!-- person age -->
+        <record id="Psnm" />                          <!-- person name with information icon -->
+        <record id="Ppfj" multiline="false" width="135"/>        <!-- Role Desired -->
+        <flags id="Pclb" width="135" />                           <!-- club team -->
+        <flags id="NrSr" width="80" />                           <!-- reputation -->
+        <flags id="PPst" width="135" />                           <!-- personality -->
+
+        <!-- MENTAL -->
+        <flags id="Npad" width="30" />        <!-- adaptability -->
+        <flags id="Npmo" width="30" />        <!-- motivating -->
+        <flags id="Npld" width="30" />        <!-- level of discipline -->
+			  <flags id="Npde" width="30" />			  <!-- determination -->
+        <flags id="Npmm" width="30" />        <!-- man management -->
+        <flags id="Npja" width="30" />        <!-- judging ability -->
+        <flags id="Npjp" width="30" />        <!-- judgning potential -->
+			  <flags id="Nptk" width="30" />			  <!-- tactical knowledge -->
+
+        <!-- OTHERS -->
+        <flags id="Npwy" width="30" />        <!-- working with youngsters -->
+        <flags id="Ncta" width="30" />        <!-- tactical coaching-->
+        <flags id="Nchd" width="30" />        <!-- coaching defending-->
+        <flags id="Ncha" width="30" />        <!-- coaching attacking-->
+        <flags id="Ncte" width="30" />        <!-- technical coaching-->
+        <flags id="Nchm" width="30" />        <!-- mental coaching-->
+        <flags id="Nchf" width="30" />        <!-- fitness coaching -->
+        <flags id="Npgs"  width="30"/>        <!-- goalkeeper coaching shot stopping -->
+        <flags id="Npgh" width="30" />        <!-- goalkeeper coaching handling -->
+        <flags id="Npgd" width="30" />        <!-- goalkeeper coaching distribution -->
+      </record>
+    </record>
+
+    <record id="hefr">
+      <translation id="text" type="use" value="Heffem Infos Search Recruitment Staff" />
+      <record id="view">
+        <!-- BASE -->
+        <record id="PSpi" />                          <!-- status flags -->
+        <record id="Pnat" width="30"/>                          <!-- nationality -->
+        <flags id="PSag" width="30" />                           <!-- person age -->
+        <record id="Psnm" />                          <!-- person name with information icon -->
+        <record id="Ppfj" multiline="false" width="135"/>        <!-- Role Desired -->
+        <flags id="Pclb" width="135" />                           <!-- club team -->
+        <flags id="NrSr" width="80" />                           <!-- reputation -->
+        <flags id="PPst" width="135" />                           <!-- personality -->
+
+        <!-- MENTAL -->
+        <flags id="Npad" width="30" />        <!-- adaptability -->
+        <flags id="Npmo" width="30" />        <!-- motivating -->
+        <flags id="Npld" width="30" />        <!-- level of discipline -->
+			  <flags id="Npde" width="30" />			  <!-- determination -->
+        <flags id="Npmm" width="30" />        <!-- man management -->
+        <flags id="Npja" width="30" />        <!-- judging ability -->
+        <flags id="Npjp" width="30" />        <!-- judgning potential -->
+        <flags id="Nneg" width="30" />        <!-- negotiating -->
+
+        <!-- OTHERS -->
+			  <flags id="Npjd" width="30" />			  <!-- judgning player data -->
+			  <flags id="Npjt" width="30" />			  <!-- judgning team data -->
+        <flags id="Npjs" width="30" />        <!-- judging staff ability -->
+			  <flags id="Nppd" width="30" />			  <!-- presenting data -->
+
+      </record>
+    </record>
+
+    <record id="hefm">
+      <translation id="text" type="use" value="Heffem Infos Search Medical Staff" />
+      <record id="view">
+        <!-- BASE -->
+        <record id="PSpi" />                          <!-- status flags -->
+        <record id="Pnat" width="30"/>                          <!-- nationality -->
+        <flags id="PSag" width="30" />                           <!-- person age -->
+        <record id="Psnm" />                          <!-- person name with information icon -->
+        <record id="Ppfj" multiline="false" width="135"/>        <!-- Role Desired -->
+        <flags id="Pclb" width="135" />                           <!-- club team -->
+        <flags id="NrSr" width="80" />                           <!-- reputation -->
+        <flags id="PPst" width="135" />                           <!-- personality -->
+
+        <!-- MENTAL -->
+        <flags id="Npad" width="30" />        <!-- adaptability -->
+        <flags id="Npmo" width="30" />        <!-- motivating -->
+        <flags id="Npld" width="30" />        <!-- level of discipline -->
+			  <flags id="Npde" width="30" />			  <!-- determination -->
+        <flags id="Npmm" width="30" />        <!-- man management -->
+
+        <!-- OTHERS -->
+			  <flags id="Npph" width="30" />			  <!-- physiotherapy -->
+			  <flags id="NpIM" width="30" />			  <!-- injury management -->
+			  <flags id="Nppd" width="30" />			  <!-- presenting data -->
+      </record>
+    </record>
+
+    <record id="----" />
+
+    <record id="ctrc">
+      <translation id="text" translation_id="230163" type="use" value="Contract" />
+      <record id="view">
+        <record id="PSpi" />                          <!-- status flags -->
+        <record id="Psnm" />                          <!-- person name with information icon -->
+        <flags id="PSag" />                           <!-- person age -->
+        <record id="Ppfj" multiline="false" />        <!-- Role Desired -->
+        <flags id="Pclb" />                           <!-- club team -->
+        <record id="PCcj" multiline="false" />        <!-- club job text -->
+        <record id="PCij" multiline="false" />        <!-- internationl job text -->
+        <flags id="Pcif" />                           <!-- full time or part-time contract -->
+        <flags id="Pnrs" />                           <!-- reputation -->
+        <flags id="Pcty" />                           <!-- contact type -->
+        <flags id="Pcww" />                           <!-- weekly wage -->
+        <flags id="Pced" />                           <!-- end date -->
+      </record>
+    </record>
+
+    <record id="----" />
+
+    <record id="rate">
+      <translation id="text" translation_id="229619" type="use" value="Rating" />
+
+      <!-- Define attributes/properties to view in this view type on the panel.
+								  Any properties not defined here will be hidden for this view. -->
+      <record id="view">
+        <record id="PSpi" />                         <!-- status flags -->
+        <record id="Psnm" />                         <!-- person name with information icon -->
+        <flags id="Pclb" />                          <!-- club team -->
+        <record id="PCcj" multiline="false" />       <!-- club job text -->
+        <record id="NCst" auto_hide_priority="1" />  <!-- rating for current role-->
+        <record id="PCij" multiline="false" />       <!-- internationl job text -->
+        <record id="Ppfj" multiline="false" />       <!-- Role Desired -->
+        <record id="NIst" auto_hide_priority="1" />  <!-- rating for preferred role-->
+      </record>
+    </record>
+
+    <record id="coat">
+      <translation id="text" translation_id="230027" type="use" value="Coaching Attributes" />
+
+      <!-- Define attributes/properties to view in this view type on the panel.
+								  Any properties not defined here will be hidden for this view. -->
+      <record id="view">
+        <record id="PSpi" />       <!-- status flags -->
+        <record id="Psnm" />       <!-- person name with information icon -->
+        <record id="Ppfj" multiline="false" />  <!-- Role Desired -->
+        <flags id="Pclb" />        <!-- club team -->
+        <flags id="Npgd" />        <!-- goalkeeper coaching distribution -->
+        <flags id="Npgh" />        <!-- goalkeeper coaching handling -->
+        <flags id="Npgs" />        <!-- goalkeeper coaching shot stopping -->
+        <flags id="Ncha" />        <!-- coaching attacking-->
+        <flags id="Nchd" />        <!-- coaching defending-->
+        <flags id="Nchf" />        <!-- fitness coaching -->
+        <flags id="Nchm" />        <!-- mental coaching-->
+        <flags id="Ncte" />        <!-- technical coaching-->
+        <flags id="Ncta" />        <!-- tactical coaching-->
+        <flags id="Npmm" />        <!-- man management -->
+        <flags id="Npwy" />        <!-- working with youngsters -->
+      </record>
+    </record>
+
+	  <record id="miat">
+		  <translation id="text" translation_id="394485" type="use" value="Medical Team Attributes[COMMENT: team staff attributes panel label]" />
+
+		  <!-- Define attributes/properties to view in this view type on the panel.
+								  Any properties not defined here will be hidden for this view. -->
+		  <record id="view">
+			  <record id="PSpi" />			<!-- status flags -->
+			  <record id="Psnm" />      <!-- person name with information icon -->
+			  <record id="Ppfj" multiline="false" />  <!-- Role Desired -->
+			  <flags id="Pclb" />			  <!-- club team -->
+			  <flags id="Nppd" />			  <!-- presenting data -->
+			  <flags id="Npld" />			  <!-- level of discipline -->
+			  <flags id="Npph" />			  <!-- physiotherapy -->
+			  <flags id="NpIM" />			  <!-- injury management -->
+			  <flags id="Npmo" />			  <!-- motivating -->
+			  <flags id="Npad" />			  <!-- adaptability -->
+			  <flags id="Npde" />			  <!-- determination -->
+			  <flags id="Npjd" />			  <!-- judgning player data -->
+			  <flags id="Npjt" />			  <!-- judgning team data -->
+			  <flags id="Nptk" />			  <!-- tactical knowledge -->
+		  </record>
+	  </record>
+
+    <record id="MEat">
+      <translation id="text" translation_id="230062" type="use" value="Mental Attributes" />
+
+      <!-- Define attributes/properties to view in this view type on the panel.
+								  Any properties not defined here will be hidden for this view. -->
+      <record id="view">
+        <record id="PSpi" />       <!-- status flags -->
+        <record id="Psnm" />       <!-- person name with information icon -->
+        <record id="Ppfj" multiline="false" />  <!-- Role Desired -->
+        <flags id="Pclb" />        <!-- club team -->
+        <flags id="Npad" />        <!-- adaptability -->
+        <flags id="Npde" />        <!-- determination -->
+        <flags id="Npmo" />        <!-- motivating -->
+        <flags id="Nptk" />        <!-- tactical knowledge -->
+        <flags id="Npld" />        <!-- level of discipline -->
+        <flags id="Npja" />        <!-- judging ability -->
+        <flags id="Npjp" />        <!-- judgning potential -->
+        <flags id="Npjd" />        <!-- judgning player data -->
+        <flags id="Npjt" />        <!-- judgning team data -->      
+       
+      </record>
+    </record>
+
+    <record id="----" />
+
+    <record id="nige">
+      <translation id="name" translation_id="361135" type="use" value="Hidden Attributes[COMMENT: attirbute filters; hidden attributes filterable in the editor]" />
+      <!-- Define attributes/properties to view in this view type on the panel.
+									  Any properties not defined here will be hidden for this view. -->
+      <record id="view">
+        <record id="Psnm" />
+        <flags id="Pcsj" />
+        <flags id="PSag" />
+        <flags id="Ncra" />
+        <flags id="Npta" />
+        <flags id="Nwrr" />
+        <flags id="Ncrr" />
+        <flags id="Nhmr" />
+      </record>
+    </record>
+
+    <record id="ndbg">
+      <translation id="name" translation_id="247109" type="use" value="Debug" />
+      <!-- Define attributes/properties to view in this view type on the panel.
+									  Any properties not defined here will be hidden for this view. -->
+      <record id="view">
+        <flags id="Pcsj" />         <!-- short job text -->
+        <record id="PSpi" />        <!-- status flags -->
+        <record id="Psnm" />        <!-- person name with information icon -->
+        <flags id="PSag" />         <!-- person age -->
+        <flags id="Ncra" />
+        <flags id="Npta" />
+        <flags id="Nwrr" />
+        <flags id="Ncrr" />
+        <flags id="Nhmr" />
+        <flags id="Npqs" />
+      </record>
+    </record>
+  </list>
+</record>

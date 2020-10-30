@@ -1,0 +1,68 @@
+<panel>
+
+  <boolean id="save_session_state" value="true" />
+  <boolean id="save_default_state" value="true" />
+
+  <!-- rail cam controls -->
+  <!--<container id="rail" height="36">
+    <layout class="stick_to_sides_attachment" alignment="left,bottom" inset="0" />
+    <layout class="fit_children_attachment" alignment="horizontal,fill" gap="5" offset="10" />
+
+    <container>
+      <layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+      <layout class="arrange_horizontal_attachment" alignment="left" gap="5" offset="10" />
+      <layout class="fit_children_attachment" alignment="horizontal,fill" gap="5" offset="10" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+      <widget class="icon_button" send_repeat_events_on_hold="true" icon="icons/16px/plus" icon_alignment="centre" height="30" width="36">
+        <record id="click_event">
+          <flags id="event_id" value="stZI" />
+          <flags id="event_target" value="scrC" />
+        </record>
+      </widget>
+      <widget class="icon_button" send_repeat_events_on_hold="true" icon="icons/16px/minus" icon_alignment="left" height="30" width="36">
+        <record id="click_event">
+          <flags id="event_id" value="stZO" />
+          <flags id="event_target" value="scrC" />
+        </record>
+      </widget>
+      <widget class="icon_button" send_repeat_events_on_hold="true" icon="icons/16px/left" icon_alignment="left" height="30" width="36">
+        <record id="click_event">
+          <flags id="event_id" value="stRL" />
+          <flags id="event_target" value="scrC" />
+        </record>
+      </widget>
+      <widget class="icon_button" send_repeat_events_on_hold="true" icon="icons/16px/right" icon_alignment="left" height="30" width="36">
+        <record id="click_event">
+          <flags id="event_id" value="stRR" />
+          <flags id="event_target" value="scrC" />
+        </record>
+      </widget>
+      <widget class="button" auto_size="all">
+        <translation id="text" translation_id="230013" type="use" value="Reset" />
+        <record id="click_event">
+          <flags id="event_id" value="stRZ" />
+          <flags id="event_target" value="scrC" />
+        </record>
+      </widget>
+    </container>
+  </container>-->
+
+  <!--in-between highlights summary panel-->
+  <widget class="match_in_between_highlights_panel" id="MVSp" cancel_mouse_hide="true">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+    <record id="object_property" get_property="objt" set_property="objt" />
+  </widget>
+  
+  <!-- SCOREBOARD - COMMENTED OUT BECAUSE IT DOESN'T WORK 
+  <container id="ptcn" hidden="true">
+  			<widget class="match_titlebar_panel" id="MHDr" file="match/match title bar score highlight frame viewer" cancel_mouse_hide="true" hidden="false" height="40">
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="5" />
+				    <record id="object_property" get_property="objt" set_property="objt" />
+
+			</widget>
+			</container> -->
+
+</panel>

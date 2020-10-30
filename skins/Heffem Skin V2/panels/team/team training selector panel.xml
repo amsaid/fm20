@@ -1,0 +1,40 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="subsection_box" appearance="boxes/subsection/standard/paper70"  id="SUBP">
+		<!-- this panel contains a panel that will be decided at run-time from code, decided by the state / setting for the particular sub-panel on the manager snapshot/home main panel -->
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<widget class="link_button_title" id="COSt" embed_in_frame="true">
+			<layout class="arrange_horizontal_attachment" alignment="left" embed_in_frame="true" gap="0" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="left" embed_in_frame="true" inset="12" />
+			<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="12" />
+		</widget>
+
+		<widget class="popup_button" id="popv" auto_size="horizontal" height="30" click_event="msis" appearance="buttons/custom/customise panel/button" fixed="true" embed_in_frame="true">
+			<layout class="arrange_horizontal_attachment" alignment="right" embed_in_frame="true" gap="0" offset="2" />
+			<layout class="stick_to_sides_attachment" alignment="right" embed_in_frame="true" inset="14" />
+			<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="5" />
+		</widget>
+	</container>
+
+	<!-- Make sure everything is late loading! -->
+	<widget class="team_training_week_panel" id="tsBr" section="ttcP" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmc="false" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="466557" type="use" value="Training Session Breakdown[COMMENT; training section of player profile]" />
+	</widget>
+	<widget class="team_injuries_overview_panel" id="MedC" section="InOv" late_loading="true" valid_for_unemployed_manager="false" file="team/team injuries overview panel snapshot">
+		<translation id="title" translation_id="450760" type="use" value="Medical Centre[COMMENT: Panel title for when viewing medical report, was ID 447586 but we've since been asked to change it to Medical Centre]" />
+	</widget>
+	<widget class="training_overview_panel" file="human/manager home training panel" id="tstr" section="ttcP" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmc="false" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="248422" type="use" value="Training[COMMENT; training section of player profile]" />
+	</widget>
+	<widget class="team_training_happiness_widget" id="ttHp" late_loading="true" section="TeTi" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmc="false" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="334174" type="use" value="Training Happiness[COMMENT: player training, player happiness comments]" />
+	</widget>
+	<widget class="training_overview_panel" file="team/team training panel match preparation" id="tMpr" section="ttcP" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmc="false" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="308600" type="use" value="Match Preparation[COMMENT - team screen section for match preparation]" />
+	</widget>
+	<widget class="club_training_performers_panel" id="CTPP" section="TeTi" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmc="false" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="466443" type="use" value="Training Performance[COMMENT; training performance section of manager home panel]" />
+	</widget>
+</panel>

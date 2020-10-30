@@ -1,0 +1,25 @@
+﻿<panel height="28">
+  <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0"/>
+  <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+
+  <container class="main_box"  appearance="heffem/subs/left/paper2" id="nmcn">
+    <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="4" gap="4"/>
+    <layout class="fit_children_attachment" alignment="horizontal,fill" offset="4" gap="4"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+      
+    <widget  class="text" id="name" format="[%person#1-initial_surname]" size="11" alignment="right,centre_y,can_scale" multiline="false"  font="title" auto_size="all"/>
+  </container>
+
+
+  <container class="main_box" id="numc" appearance="heffem/subs/right/paper2" width="34" >
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+    <widget class="label" id="bsnm" size="11" colour="red" font="title" alignment="centre"  />
+    
+  </container>
+
+
+</panel>

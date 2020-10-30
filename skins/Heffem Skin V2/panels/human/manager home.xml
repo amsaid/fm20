@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	
+	<container class="horizontal_adaptive_container" mode="distribute_equally" inset="0" offset="0">
+		<container class="vertical_adaptive_container" mode="distribute_equally" default_width="-6" inset="0" offset="0" >
+			<widget class="manager_upcoming_fixture_panel" id="tufp" height="380" default_height="-4" priority="1" />
+			
+			<container class="horizontal_adaptive_container" mode="distribute_equally" default_height="-5" inset="0" offset="0">			   
+			   
+				<container class="vertical_adaptive_container" mode="distribute_equally" default_width="-1" inset="0" offset="0">
+								
+					<container class="client_object_viewer_selector_panel" id="cos1" file="human/manager home selector panel" default_height="-2" priority="1">
+						<integer id="default_for_club_teams" value="tssu"/>
+						<integer id="default_for_international_teams" value="tssu"/>
+						<integer id="default_for_international_youth_teams" value="tssu"/>
+						<integer id="default_for_no_team" value="tssu"/>
+					</container>	
+					
+					
+				</container>
+
+				<container class="vertical_adaptive_container" mode="distribute_equally" default_width="-1" inset="0" offset="0">
+								
+					
+					<container class="client_object_viewer_selector_panel" id="cos4" file="human/manager home selector panel" default_height="-2" priority="1">
+							<integer id="default_for_club_teams" value="pssu"/>
+						<integer id="default_for_international_teams" value="pssu"/>
+						<integer id="default_for_international_youth_teams" value="pssu"/>
+						<integer id="default_for_no_team" value=""/>
+					</container>					
+					
+				</container>				
+								
+			</container>
+		</container>
+		<container class="vertical_adaptive_container" mode="distribute_equally" default_width="-3" inset="0" offset="0">
+
+			<container class="client_object_viewer_selector_panel" id="cos5" file="human/manager home selector panel" default_height="-5">
+					<integer id="default_for_club_teams" value="bcsn"/>
+						<integer id="default_for_international_teams" value="bcsn"/>
+						<integer id="default_for_international_youth_teams" value="bcsn"/>
+						<integer id="default_for_no_team" value=""/>
+			</container>	
+			
+			<container class="client_object_viewer_selector_panel" id="cos6" file="human/manager home selector panel" default_height="-5">
+				<integer id="default_for_club_teams" value="mcom"/>
+						<integer id="default_for_international_teams" value="mcom"/>
+						<integer id="default_for_international_youth_teams" value="mcom"/>
+						<integer id="default_for_no_team" value="mcom"/>
+			</container>		
+		</container>	
+		<container class="vertical_adaptive_container" mode="distribute_equally" default_width="-3" inset="0" offset="0">
+
+			<container class="client_object_viewer_selector_panel" id="cos7" file="human/manager home selector panel" default_height="-1">
+				<integer id="default_for_club_teams" value="fsws"/>
+				<integer id="default_for_international_teams" value="fsws"/>
+				<integer id="default_for_international_youth_teams" value="fsws"/>
+				<integer id="default_for_no_team" value="fsws"/>
+			</container>	
+			
+			<container class="client_object_viewer_selector_panel" id="cos8" file="human/manager home selector panel" default_height="-1">
+				<integer id="default_for_club_teams" value="ttsn"/>
+				<integer id="default_for_international_teams" value="ttsn"/>
+				<integer id="default_for_international_youth_teams" value="ttsn"/>
+				<integer id="default_for_no_team" value=""/>
+			</container>			
+		</container>		
+	</container>
+</panel>

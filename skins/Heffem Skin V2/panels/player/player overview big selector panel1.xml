@@ -1,0 +1,11 @@
+<panel  navigation_container="true" >
+  <container class="bordered_box" id="SUBP" >
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  </container>
+
+
+  <widget file="player/player attribute analyser panel" id="paAn" class="client_object_viewer_xml_panel" default_item="true" late_loading="true">
+    <translation id="title" translation_id="334971" type="use" value="Attribute Analysis[COMMENT: player overview; title for a panel showing an attribute analyisis diagram]" />
+  </widget>
+</panel>

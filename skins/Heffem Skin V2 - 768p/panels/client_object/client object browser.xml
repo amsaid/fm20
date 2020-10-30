@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this file lists the global panels that should be installed -->
+<!-- ~ SIDEBAR MOVED TO MAIN SCREEN CONTENT AREA ~ -->
+<panel>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+    <container>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<!-- background picture - covers entire screen -->
+		<widget class="background" file="backgrounds/default" id="bgnd">
+			<record id="object_property">
+				<integer id="get_property" value="bgnd" />
+				<integer id="set_property" value="file" />
+			</record>
+			<attachment class="test_multiple_globals_attachment" default_value="false">
+				<list id="get_properties">
+					<record get_property="MatS" test_mode="equal" value="true" skip_if_null="true" />
+					<!-- PROP_FULL_SCREEN_3D_BEING_DRAWN -->
+					<record get_property="Ma3D" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true" />
+				</list>
+				<integer id="set_property" value="hidn" />
+			</attachment>
+		</widget>
+
+      <container file="background_selector/backgrounds" >
+        <attachment class="test_multiple_globals_attachment" default_value="false">
+          <list id="get_properties">
+            <record get_property="MatS" test_mode="equal" value="true" skip_if_null="true" />
+            <record get_property="Ma3D" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true" />
+          </list>
+          <integer id="set_property" value="hidn" />
+        </attachment>
+      </container>
+        <!--overlay-->
+        <widget class="picture" file="backgrounds/overlay/30" scale_picture="true">
+            <boolean id="keep_aspect_ratio" value="false" />
+        </widget>
+
+		<!-- match background picture - covers entire screen -->
+		<widget class="picture" id="Mbkg" file="backgrounds/default"  scale_picture="true" keep_aspect_ratio="false">
+			<record id="object_property">
+				<integer id="get_property" value="bgnd" />
+				<integer id="set_property" value="file" />
+			</record>
+			<attachment class="test_multiple_globals_attachment" default_value="true">
+				<list id="get_properties">
+					<record get_property="MatS" test_mode="equal" value="false" skip_if_null="true" />
+					<!-- PROP_FULL_SCREEN_3D_BEING_DRAWN -->
+					<record get_property="Ma3D" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true" />
+				</list>
+				<integer id="set_property" value="hidn" />
+			</attachment>
+		</widget>
+    </container>
+    
+    <!-- match - covers entire lower part of screen when looking at a match -->
+    <widget class="match_highlights_panel" id="full" pitch_unique_id="full">
+        <attachment class="test_multiple_globals_attachment" default_value="true">
+            <list id="get_properties">
+                <record get_property="MatS" test_mode="0" value="false" skip_if_null="true" />
+                <record get_property="nfsM" test_mode="0" comparison_mode="1" value="true" skip_if_null="true" />
+                <record get_property="dtty" test_mode="1" comparison_mode="1" value="53" skip_if_null="true" />
+            </list>
+            <integer id="set_property" value="hidn" />
+        </attachment>
+        <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+        </record>
+    </widget>
+    <!-- tunnel interview scene - covers entire screen -->
+    <widget class="picture" file="backgrounds/tunnel" scale_picture="true" keep_aspect_ratio="false">
+        <attachment class="test_multiple_globals_attachment" default_value="false">
+            <list id="get_properties">
+                <record get_property="section" test_mode="0" value="mpPh" skip_if_null="false" />
+                <record get_property="section" test_mode="0" comparison_mode="1" value="mpPa" skip_if_null="true" />
+            </list>
+            <integer id="set_property" value="Shwn" />
+        </attachment>
+    </widget>
+    <!-- pre match briefing scene - covers entire screen -->
+    <widget class="picture" file="backgrounds/briefing" scale_picture="true" keep_aspect_ratio="false">
+        <attachment class="test_multiple_globals_attachment" default_value="false">
+            <list id="get_properties">
+                <record get_property="section" test_mode="0" value="phBR" skip_if_null="false" />
+                <record get_property="section" test_mode="0" comparison_mode="1" value="paBR" skip_if_null="true" />
+            </list>
+            <integer id="set_property" value="Shwn" />
+        </attachment>
+    </widget>
+    <!-- press conference - covers entire screen -->
+    <widget class="environment" id="prCN" room_type="press_conference_room">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+        <attachment class="test_multiple_globals_attachment" default_value="false">
+            <list id="get_properties">
+                <record get_property="section" test_mode="0" value="PprC" skip_if_null="false" />
+            </list>
+            <integer id="set_property" value="Shwn" />
+        </attachment>
+    </widget>
+    <!-- dressing room scene - covers entire screen -->
+    <widget class="environment" id="chCN">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+        <attachment class="test_multiple_globals_attachment" default_value="false">
+            <list id="get_properties">
+                <record get_property="section" test_mode="0" value="htmt" skip_if_null="false" />
+                <record get_property="section" test_mode="0" comparison_mode="1" value="atmt" skip_if_null="true" />
+            </list>
+            <integer id="set_property" value="Shwn" />
+        </attachment>
+    </widget>
+    
+
+  <!-- welcome to club - covers entire screen -->
+  <widget class="environment" id="brEn" room_type="boardroom">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+    <attachment class="test_multiple_globals_attachment" default_value="false">
+      <list id="get_properties">
+        <record get_property="section" test_mode="equal" value="Twtc" skip_if_null="false"/>
+      </list>
+      <integer id="set_property" value="Shwn"/>
+    </attachment>
+  </widget>
+
+	<!-- club vision meeting - covers entire screen -->
+	<widget class="environment" id="CVEn" room_type="boardroom" >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<attachment class="test_multiple_globals_attachment" default_value="false">
+			<list id="get_properties">
+				<record get_property="section" test_mode="0" value="Cvim" skip_if_null="false"/>
+			</list>
+			<integer id="set_property" value="Shwn"/>
+		</attachment>
+	</widget>
+
+	<!-- contract negotiations - covers entire screen -->
+	<widget class="environment" id="CNEn" room_type="boardroom" >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<attachment class="test_multiple_globals_attachment" default_value="false">
+			<list id="get_properties">
+				<record get_property="CNpe" test_mode="not_equal" value="0" skip_if_null="false"/>
+			</list>
+			<integer id="set_property" value="Shwn"/>
+		</attachment>
+	</widget>
+
+    <container>
+        <layout class="arrange_horizontal_attachment" alignment="left,extend" gap="0" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+        <!--when the screen size changes, so does the width of the sidebar - make sure we lay ourselves out correctly-->
+        <attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1124" action_event="layD" disable_setting_name="force_small_sidebar" />
+
+
+        <container>
+            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+            <!-- <widget class="picture" file="boxes/custom/background fade/paper" height="70" /> -->
+            <container>
+                <layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                <animation class="translate_animation" start_value="0, -0.2" end_value="0, 0" duration="0.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_screen" />
+                <!-- header area at top of screen - with title, menus, etc -->
+                <container id="head" class="header_panel">
+                    <attachment class="test_multiple_globals_attachment" default_value="true">
+                        <list id="get_properties">
+							<record get_property="FS  " test_mode="equal" value="true" skip_if_null="false"/>
+							<record get_property="section" test_mode="equal" comparison_mode="or" value="PprC" skip_if_null="false"/>
+							<record get_property="CNpe" test_mode="not_equal" comparison_mode="or" value="0" skip_if_null="false" />
+							<record get_property="section" test_mode="0" comparison_mode="1" value="Twtc" skip_if_null="false"/>
+							<record get_property="section" test_mode="0" comparison_mode="1" value="Cvim" skip_if_null="false"/>
+                        </list>
+                        <integer id="set_property" value="hidn" />
+                    </attachment>
+                    <record id="object_property">
+                        <integer id="get_property" value="objt" />
+                        <integer id="set_property" value="objt" />
+                    </record>
+                </container>
+                <container id="PChd" file="human/press conference header panel" height="60">
+                    <attachment class="test_multiple_globals_attachment" default_value="true">
+                        <list id="get_properties">
+                            <record get_property="section" test_mode="1" value="PprC" skip_if_null="false" />
+                        </list>
+                        <integer id="set_property" value="hidn" />
+                    </attachment>
+                </container>
+                
+				<container id="WChd" class="welcome_to_team_header_panel" height="55">
+					<record id="object_property">
+						<integer id="get_property" value="objt"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+					<attachment class="test_multiple_globals_attachment" default_value="true">
+						<list id="get_properties">
+							<record get_property="section" test_mode="1" value="Twtc" skip_if_null="false"/>
+						</list>
+						<integer id="set_property" value="hidn"/>
+					</attachment>
+				</container>
+
+				<container id="CVhd" class="club_vision_meeting_header_panel" height="60">
+					<attachment class="test_multiple_globals_attachment" default_value="true">
+						<list id="get_properties">
+							<record get_property="section" test_mode="1" value="Cvim" skip_if_null="false"/>
+						</list>
+						<integer id="set_property" value="hidn"/>
+					</attachment>
+				</container>
+
+				<container id="CNhd" file="person/contract negotiations header panel" height="50">
+					<attachment class="test_multiple_globals_attachment" default_value="true">
+						<list id="get_properties">
+							<record get_property="CNpe" test_mode="equal" value="0" skip_if_null="false" />
+						</list>
+						<integer id="set_property" value="hidn"/>
+					</attachment>
+				</container>
+
+                <container id="main">
+                    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                    <!-- rest of the panels -->
+                    <container class="container_with_mouse_events" propagate_mouse_events="false" DisW="false">
+                        <!--when in a match and viewing highlights, we want the above container to allow mouse events to propagate to the match panel underneath it-->
+                        <attachment class="test_multiple_globals_attachment" default_value="false">
+                            <list id="get_properties">
+                                <record get_property="section" test_mode="0" value="hilp" skip_if_null="false" />
+                                <record get_property="MatS" test_mode="0" comparison_mode="1" value="false" skip_if_null="true" />
+                            </list>
+                            <integer id="set_property" value="prme" />
+                        </attachment>
+                        <layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
+                        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                        <!--tab bar-->
+                        <!-- @archie.buck The tutorial relies on this id not changing, if you need to adjust it please let me know -->
+                        <container height="36" id="tabz">
+                            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                            <!-- hide this panel in "navigation disabled" mode -->
+                            <attachment class="test_multiple_globals_attachment" default_value="true">
+                                <list id="get_properties">
+									<record get_property="TTyp" test_mode="equal" value="1" skip_if_null="false" />
+									<record get_property="dtty" test_mode="equal" comparison_mode="and" value="53" skip_if_null="false" />
+									<record get_property="FS  " test_mode="equal" comparison_mode="or" value="true" skip_if_null="false" />
+									<record get_property="DRft" test_mode="equal" comparison_mode="or" value="true" skip_if_null="false" />
+									<record get_property="section" test_mode="equal" comparison_mode="or" value="PprC" skip_if_null="false" />
+									<record get_property="CNpe" test_mode="not_equal" comparison_mode="or" value="0" skip_if_null="false" />
+									<record get_property="section" test_mode="0" comparison_mode="1" value="Twtc" skip_if_null="false" />
+									<record get_property="section" test_mode="0" comparison_mode="1" value="Cvim" skip_if_null="false"/>
+                                </list>
+                                <integer id="set_property" value="hidn" />
+                            </attachment>
+                            <!-- coloured actions bar image -->
+                            <widget class="bordered_box" id="ACTb" appearance="heffem/header/tabbar" red_replacement="primary" blue_replacement="heffem3" />
+                            <container>
+                                <layout class="arrange_horizontal_attachment" alignment="right,extend" gap="2" offset="8" />
+                                <layout class="stick_to_sides_attachment" alignment="vertical" inset="1" apply_to_children="true" />
+                                <!-- actions and sections bar -->
+								<container navigation_container="true" id="tBAR" >
+									<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+									<container class="sections_menu_strip" id="acse" />
+								</container>
+
+
+                                <!--Backroom Advice-->
+                                <widget class="backroom_advice_trigger_button" id="BaC1" />
+                                <!--Backroom Advice 'popup'-->
+                                <widget class="backroom_advice_trigger_button" id="BaC2" file="club/backroom advice trigger button popup panel" disable_layout_attachments_when_embedded="true" hidden="true" />
+                                <container width="10" />
+
+
+
+				<!-- Comment this out if the tutorial is disabled  -->
+					    <widget class="icon_button" width="40" id="hlpB" appearance="chrome/buttons/items/button" hidden="true" icon="icons/26px/help" disable_wheel="true" click_event="ohlp">
+                <record id="primary_icon_properties" red_replacement="heffem" />
+                    <record id="secondary_icon_properties" red_replacement="heffem" />
+	      <translation id="hint" translation_id="466619" type="use" value="Help[COMMENT: Help button on titlebar]" />
+				<attachment class="test_global_attachment" get_property="gset" value="false" set_property="hidn" />
+	    </widget>
+                                
+                                <!-- change manager button -->
+                                <widget class="popup_button" id="ChMN" appearance="buttons/custom/interface/navigation bar/button1" disable_wheel="true" auto_size="horizontal" text="-" style="semi_bold">
+                                    <event id="click_notification_event" event_id="FM" item="NULL" />
+                                    <event id="menu_layout_notification_event" event_id="mlne" event_target="ChMN" />
+                                    <attachment class="get_global_attachment" get_property="Hmen" set_property="itms" />
+                                    <attachment class="get_global_attachment" get_property="HmeV" set_property="Shwn" skip_if_null="false" />
+                                    <attachment class="get_global_attachment" get_property="HmeD" set_property="disa" skip_if_null="false" />
+                                    <attachment class="get_global_attachment" get_property="CHum" set_property="slct" />
+                                    <attachment class="test_screen_size_attachment">
+                                        <list id="properties">
+                                            <record>
+                                                <flags id="alignment" value="horizontal" />
+                                                <integer id="min_value" value="1366" />
+                                                <integer id="max_value" value="10000" />
+                                                <symbol id="set_property" value="auto_size_maximum_width" />
+                                                <integer id="true_value" value="200" />
+                                                <integer id="false_value" value="60" />
+                                            </record>
+                                        </list>
+                                    </attachment>
+                                </widget>
+
+
+
+                              <!-- Graphics Options-->
+                              <widget class="menubar_icon_button" appearance="buttons/custom/interface/navigation bar/button1" cant_be_toggled="true" fixed="true" icon="icons/26px/bs" width="40">
+                                <record id="primary_icon_properties" red_replacement="heffem" />
+                                <record id="secondary_icon_properties" red_replacement="heffem" />
+                                <event id="click_event" event_id="kev3" />
+                                <attachment class="event_relay_attachment" event_id="kev3">
+                                  <record id="action_event">
+                                    <flags id="event_id" value="show" />
+                                    <flags id="event_target" value="bgs1" />
+                                  </record>
+                                </attachment>
+                              </widget>
+			<!--in game editor edit object button-->
+				<widget class="edit_object_icon_button" id="edit" fixed="true" cant_be_toggled="true" icon="icons/16px/edit" appearance="buttons/custom/interface/navigation bar/button1" width="40" secondary_icon_enabled="false">
+					<record id="primary_icon_properties" red_replacement="heffem" />
+					<attachment class="flash_colour_attachment" auto_start="false" rate="850">
+						<colour id="first_colour" red="49" green="52" blue="63" />
+						<colour id="second_colour" red="46" green="103" blue="182" />
+						<flags id="colour_property" value="bkcl" />
+					</attachment>
+				</widget>
+
+
+                                <!--instant match button-->
+                                <widget class="icon_button" id="INST" size="11" appearance="chrome/buttons/continue/button" icon="icons/26px/whistle" colour="rougeheffem" font="title" width="160" style="bold" alignment="centre" icon_alignment="centre_right">
+                                    <record id="primary_icon_properties" red_replacement="rougeheffem" />
+                                    <translation id="text" translation_id="339740" type="use" value="Instant Result[COMMENT: text for a button that will generate an instant result for the upcoming match rather than having to go through and play it]" />
+                                    <record id="click_event" event_id="INST" event_target="glob" />
+                                    <attachment class="test_global_attachment" get_property="section" mode="1" set_property="hidden">
+                                        <list id="value">
+                                            <integer value="phtc" />
+                                            <integer value="PhcP" />
+                                            <integer value="PhcR" />
+                                            <integer value="PhcK" />
+                                            <integer value="PhcH" />
+                                            <integer value="PhcN" />
+                                            <integer value="PhcC" />
+                                            <integer value="PhcF" />
+                                            <integer value="patc" />
+                                            <integer value="PacP" />
+                                            <integer value="PacR" />
+                                            <integer value="PacK" />
+                                            <integer value="PacH" />
+                                            <integer value="PacN" />
+                                            <integer value="PacC" />
+                                            <integer value="PacF" />
+                                        </list>
+                                    </attachment>
+                                    
+                                </widget>
+
+                            </container>
+                        </container>
+                        <container class="plain_box">
+                            <layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0" />
+                            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                            <!-- main area - contains sections/actions panel and content areas -->
+                            <container id="main">
+                                <layout class="arrange_horizontal_attachment" alignment="middle,extend" gap="0" offset="0" />
+                                <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+
+                                
+
+                                <!-- SIDEBAR -->
+                                <widget class="sidebar_menu_table" id="side" width="160">
+                                    <record id="object_property">
+                                        <integer id="get_property" value="objt" />
+                                        <integer id="set_property" value="cotO" />
+                                    </record>
+                                    <attachment class="test_multiple_globals_attachment" default_value="true">
+                                        <list id="get_properties">
+					<record get_property="TTyp" test_mode="equal" value="1" skip_if_null="false" />
+					<record get_property="FS  " test_mode="equal" comparison_mode="or" value="true" skip_if_null="false" />
+					<record get_property="DRpg" test_mode="equal" comparison_mode="or" value="true" skip_if_null="false" />
+					<record get_property="AFPw" test_mode="equal" comparison_mode="or" value="true" skip_if_null="false" />
+					<record get_property="section" test_mode="equal" comparison_mode="or" value="PprC" skip_if_null="false"/>
+					<record get_property="CNpe" test_mode="not_equal" comparison_mode="or" value="0" skip_if_null="false"/>
+					<record get_property="section" test_mode="0" comparison_mode="1" value="Twtc" skip_if_null="false"/>
+					<record get_property="section" test_mode="0" comparison_mode="1" value="Cvim" skip_if_null="false"/>
+                                        </list>
+                                        <integer id="set_property" value="FoHi" />
+                                    </attachment>
+                                    <attachment class="test_setting_attachment" get_setting="force_small_sidebar" value="true" skip_if_false="true" default_value="false" set_property="widt" true_value="45" />
+                                    <attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1200" set_property="widt" true_value="45" false_value="160" disable_setting_name="force_small_sidebar" />
+                                </widget>
+
+                                <!-- screen content area -->
+                                <container id="scca" auto_size="horizontal">
+                                    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+                                </container>
+                            </container>
+                            <!-- footer area at bottom of screen -->
+                            <widget class="match_footer_panel" id="cmif" height="35">
+                                <record id="object_property">
+                                    <integer id="get_property" value="objt" />
+                                    <integer id="set_property" value="objt" />
+                                </record>
+                            </widget>
+                        </container>
+                    </container>
+                </container>
+            </container>
+        </container>
+        <!--replay controls-->
+        <widget class="match_replay_controls_panel" id="mrcp" disable_layout_attachments_when_embedded="true">
+            <layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="66,273,0,222" />
+            <record id="object_property" get_property="objt" set_property="objt" />
+        </widget>
+    </container>
+</panel>

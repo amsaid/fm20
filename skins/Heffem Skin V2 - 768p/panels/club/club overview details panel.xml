@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel>
+    <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	
+    <container class="vertical_adaptive_container" gap="0" offset="0" inset="0" >
+        <!-- Logo, Reputation, Facilities etc. -->
+        <!-- Portrait -->
+        <container offset="0" inset="0" gap="0" height="160" minimum_height="80" priority="3">
+            <layout class="arrange_vertical_attachment" layout="-4" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+            <container class="horizontal_adaptive_container" inset="0" gap="0">
+                <layout class="arrange_horizontal_attachment" layout="-5,-2" offset="0" gap="0" />
+                <!-- Face -->
+                <container class="plain_box" inset="0" offset="0" priority="1">
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+                    <widget class="picture" file="heffem/item_background/club" image_alignment="bottom, centre_x" red_replacement="primary" blue_replacement="secondary" scale_picture="true" keep_aspect_ratio="true" />
+                    <widget class="picture" id="pict" keep_aspect_ratio="true" image_alignment="centre" scale_picture="true" width="180" height="180">
+                        <layout class="stick_to_sides_attachment" alignment="all" inset="15,15,15,15" />
+                        <boolean id="keep_aspect_ratio" value="true" />
+                        <flags id="image_alignment" value="centre" />
+                        <record id="object_property">
+                            <integer id="get_property" value="mnpc" />
+                        </record>
+                    </widget>
+                    <container />
+                </container>
+                <!-- Infos -->
+                <container height="200" priority="1">
+                    <layout class="arrange_vertical_attachment" layout="-5,2,-5,2,-3" offset="0" />
+                    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                    <!-- Nation flag -->
+                    <container>
+                        <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+                        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                        <widget class="object_portrait_picture" id="CnaG" image_alignment="centre" scale_picture="true" width="80" kee_aspect_ratio="true" height="60" wants_mouse_events="true" embed_in_frame="true">
+                            <layout class="centre_in_parent_attachment" alignment="all" inset="0" embed_in_frame="true" />
+                            <record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt" />
+                            <boolean id="scale_picture" value="true" />
+                            <boolean id="keep_aspect_ratio" value="true" />
+                            <flags id="image_alignment" value="centre" />
+                            <record id="object_property">
+                                <integer id="get_property" value="Cnat" />
+                                <integer id="set_property" value="objt" />
+                            </record>
+                        </widget>
+                    </container>
+                    <widget class="picture" file="dividers/standard/horizontal/line" height="2" />
+                    <!-- Logo ligue -->
+                    <container>
+                        <layout class="arrange_vertical_attachment" layout="-1" offset="7" gap="0" />
+                        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                        <widget class="object_portrait_picture" id="lepi" image_alignment="centre" scale_picture="true" width="60" height="60" wants_mouse_events="true" embed_in_frame="true">
+                            <layout class="centre_in_parent_attachment" alignment="all" inset="0" embed_in_frame="true" />
+                            <record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt" />
+                            <boolean id="scale_picture" value="true" />
+                            <boolean id="keep_aspect_ratio" value="true" />
+                            <flags id="image_alignment" value="centre" />
+                            <record id="object_property">
+                                <integer id="get_property" value="Cdiv" />
+                                <integer id="set_property" value="objt" />
+                            </record>
+                        </widget>
+                    </container>
+                    <widget class="picture" file="dividers/standard/horizontal/line" height="2" />
+                    <!-- Position -->
+                    <container priority="1">
+                        <layout class="arrange_horizontal_attachment" layout="-2" offset="0" />
+                        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                        <widget class="division_position_button" id="Tpos" alignment="centre" size="18" font="signature" colour="heffem" style="light_bold">
+                            <record id="object_property">
+                                <integer id="get_property" value="Tpos" />
+                            </record>
+                        </widget>
+                    </container>
+                </container>
+            </container>
+        </container>
+        <container class="bordered_box"  default_height="35" priority="1" appearance="heffem/signature2" red_replacement="heffem" blue_replacement="black" image_alignment="centre">
+            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+            <widget class="text" id="sect" alignment="top" size="15" style="semi_bold" multiline="false" height="18" wants_mouse_events="false" dont_give_default_focus="true" font="signature" colour="heffem">
+                <record id="object_property">
+                    <list id="get_properties">
+                        <record>
+                            <integer id="get_property" value="titl" />
+                            <integer id="set_property" value="text" />
+                        </record>
+                        --&gt;
+                    </list>
+                </record>
+            </widget>
+        </container>
+
+        <widget class="picture" file="dividers/standard/horizontal/line" height="6"  image_alignment="centre" />
+
+		<container height="6" />
+
+
+
+
+        <container class="bordered_box" appearance="boxes/custom/band/standard/paper" height="34">
+            <layout class="arrange_horizontal_attachment" alignment="fill" layout="-2,-3" offset="0" />
+            <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" gap="0" />
+			
+            <!--year founded-->
+            <container>
+                <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+                <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                <widget class="label" id="yrfL" spec="text,small" alignment="centre_x,bottom" auto_size="vertical" font="label" colour="heffem">
+                    <record id="object_property">
+                        <integer id="get_property" value="Cyfn" />
+                        <boolean id="name" value="true" />
+                    </record>
+                </widget>
+                <widget class="dashed_number_label" spec="text" size="12" id="yrfd" alignment="centre_x,top" auto_size="vertical">
+                    <boolean id="NumF" value="0" />
+                    <record id="object_property">
+                        <integer id="get_property" value="Cyfn" />
+                    </record>
+                </widget>
+            </container>
+            <!--professional status-->
+            <container>
+                <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+                <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                <widget class="label" id="proL" spec="text,small" alignment="centre_x,bottom" auto_size="vertical" font="label" colour="heffem">
+                    <record id="object_property">
+                        <integer id="get_property" value="Cprs" />
+                        <boolean id="name" value="true" />
+                    </record>
+                </widget>
+                <widget class="professional_status_label" spec="text" id="pros" size="12" alignment="centre_x,top" auto_size="vertical">
+                    <record id="object_property">
+                        <integer id="get_property" value="Cprs" />
+                    </record>
+                </widget>
+            </container>
+        </container>
+        <container height="5" />
+        <widget class="picture" file="dividers/standard/horizontal/line" height="6" image_alignment="centre" />
+        <container class="bordered_box" appearance="boxes/custom/band/standard/paper" height="34">
+            <layout class="arrange_horizontal_attachment" alignment="fill"  layout="-2,-3" offset="0" />
+            <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" gap="0" />
+			
+            <!--reputation-->
+            <container id="REPU">
+                <layout class="arrange_vertical_attachment" layout="-4,-4" alignment="top" offset="0" gap="1" />
+                <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                <widget class="label" id="CrsL" spec="text,small" multiline="false" colour="heffem" font="label"  alignment="centre_x,bottom" auto_size="vertical" >
+                    <record id="object_property">
+                        <integer id="get_property" value="Crsc" />
+                        <boolean id="name" value="true" />
+                    </record>
+                </widget>
+                <widget class="reputation_label" id="CrsV" spec="text" size="12" alignment="centre_x,top" mode="1" auto_size="vertical">
+                    <record id="object_property">
+                        <integer id="get_property" value="Crsc" />
+                    </record>
+                </widget>
+            </container>
+			
+            <container>
+                <layout class="arrange_vertical_attachment" layout="-4,-4"  alignment="top" offset="0" gap="0" />
+                <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                <widget class="label" id="ccoL" spec="text,small" multiline="false"  alignment="centre_x,bottom" auto_size="vertical"  font="label" colour="heffem">
+                    <record id="object_property">
+                        <integer id="get_property" value="Ccon" />
+                        <boolean id="name" value="true" />
+                    </record>
+                </widget>
+                <widget class="comp_button" spec="text" multiline="false" size="12" id="ccon" alignment="centre_x,top" auto_size="vertical"  icon_enabled="false">
+                    <record id="object_property">
+                        <integer id="get_property" value="Ccon" />
+                    </record>
+                </widget>
+            </container>
+        </container>
+        <container height="5" />
+        <widget class="picture" file="dividers/standard/horizontal/line" height="6" image_alignment="centre" />
+        <container class="bordered_box" appearance="" height="34" inset="6" priority="5">
+            <layout class="arrange_horizontal_attachment" layout="-10,-10" offset="5" inset="5" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" gap="0" />
+            <!--training facilities-->
+            <container id="YOUT">
+                <layout class="arrange_vertical_attachment" layout="-2,-1" alignment="top" offset="0" gap="1" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                <widget class="label" id="TfcL" spec="text,small" multiline="false" colour="heffem" font="label" alignment="centre_x,centre_y">
+                    <record id="object_property">
+                        <integer id="get_property" value="TfcS" />
+                        <boolean id="name" value="true" />
+                    </record>
+                </widget>
+                <widget class="stars_range_strip" id="CtfSt" height="18" lrge="false" alignment="centre_x,top">
+                    <layout class="centre_in_parent_attachment" alignment="horizontal" />
+                    <record id="object_property">
+                        <integer id="get_property" value="Ctf*" />
+                    </record>
+                </widget>
+            </container>
+            <!--youth facilities-->
+            <container id="YOUT">
+                <layout class="arrange_vertical_attachment" layout="-2,-1" alignment="top" offset="0" gap="1" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                <widget class="label" id="TytL" spec="text,small" multiline="false" colour="heffem" font="label" alignment="centre_x,centre_y">
+                    <record id="object_property">
+                        <integer id="get_property" value="TytS" />
+                        <boolean id="name" value="true" />
+                    </record>
+                </widget>
+                <widget class="stars_range_strip" id="CfcSt" height="18" lrge="false" alignment="centre_x,top">
+                    <layout class="centre_in_parent_attachment" alignment="horizontal" />
+                    <record id="object_property">
+                        <integer id="get_property" value="Cfc*" />
+                    </record>
+                </widget>
+            </container>
+        </container>
+        <container height="5" />
+        <widget class="picture" file="dividers/standard/horizontal/line" height="6" image_alignment="centre" />
+        <container class="bordered_box" appearance="boxes/custom/band/standard/paper" height="38">
+            <layout class="arrange_horizontal_attachment" alignment="fill" layout="-1,-1, -1" offset="0" />
+            <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" gap="0" />
+            <!--finances-->
+            <container>
+                <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+                <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                <widget class="label" id="CfiL" spec="text,small" alignment="centre_x,bottom" auto_size="vertical" font="label" colour="heffem">
+                    <record id="object_property">
+                        <integer id="get_property" value="CfiD" />
+                        <boolean id="name" value="true" />
+                    </record>
+                </widget>
+                <widget class="club_finances_description_text" id="CfiV" size="12" alignment="centre_x,top" auto_size="vertical">
+                    <record id="object_property">
+                        <integer id="get_property" value="CfiD" />
+                    </record>
+                </widget>
+            </container>
+            <!--season ticket holders-->
+            <container id="SEAS">
+                <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+                <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                <widget class="label" id="CstL" alignment="centre_x,bottom" spec="text,small" font="label" colour="heffem" auto_size="vertical">
+                    <record id="object_property">
+                        <integer id="get_property" value="Csth" />
+                        <boolean id="name" value="true" />
+                    </record>
+                </widget>
+                <widget class="number_label" id="CstV" alignment="centre_x,top" size="12" auto_size="vertical" colour="white">
+                    <record id="object_property">
+                        <integer id="get_property" value="Csth" />
+                    </record>
+                </widget>
+            </container>
+            <!--estimated value-->
+            <container>
+                <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+                <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                <widget class="label" id="CovL" spec="text,small" alignment="centre_x,bottom" auto_size="vertical" font="label" colour="heffem">
+                    <record id="object_property">
+                        <integer id="get_property" value="Covv" />
+                        <boolean id="name" value="true" />
+                    </record>
+                </widget>
+                <widget class="cash_cell" format="[%cash#1-short-roundtiny]" id="CovV" size="12" alignment="centre_x,top" auto_size="vertical">
+                    <record id="object_property">
+                        <integer id="get_property" value="Covv" />
+                    </record>
+                </widget>
+            </container>
+        </container>
+        <container height="5" />
+        <widget class="picture" file="dividers/standard/horizontal/line" height="6" image_alignment="centre" />
+		
+        <!--legends-->
+        <container>
+            <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+            <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+            <widget class="label" id="TLeL" alignment="centre_x,top" auto_size="vertical" font="label" colour="heffem">
+                <record id="object_property">
+                    <integer id="get_property" value="TLeg" />
+                    <boolean id="name" value="true" />
+                </record>
+            </widget>
+            <widget class="person_list_text" spec="text" id="TLeV" reason="false" size="12" alignment="centre_x,bottom" colour="white" auto_size="vertical">
+                <record id="object_property">
+                    <integer id="get_property" value="TLeg" />
+                </record>
+            </widget>
+        </container>
+        <container height="5" />
+        <widget class="picture" file="dividers/standard/horizontal/line" height="6" image_alignment="centre" />
+        <!--rivals-->
+        <container>
+            <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+            <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+            <record id="object_property">
+                <integer id="get_property" value="TISN" />
+                <integer id="set_property" value="hidn" />
+            </record>
+            <widget class="label" id="CfmL" alignment="centre_x,bottom" spec="text,small" auto_size="vertical" colour="heffem" font="label">
+                <record id="object_property">
+                    <integer id="get_property" value="Cfmr" />
+                    <boolean id="name" value="true" />
+                </record>
+            </widget>
+            <widget class="club_rivalries_list_text" id="CfmV" spec="text" colour="white" size="12" reason="false" alignment="centre_x,bottom" auto_size="vertical">
+                <record id="object_property">
+                    <integer id="get_property" value="Cfmr" />
+                </record>
+            </widget>
+        </container>
+        <container height="5" />
+        <widget class="picture" file="dividers/standard/horizontal/line" height="6" image_alignment="centre" />
+    </container>
+</panel>

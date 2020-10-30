@@ -1,0 +1,763 @@
+<properties version="1.0">
+	
+	<!--  
+	 ============================================================
+	 Default Settings Modified By This Skin
+	 
+	 The definitions below will override the defaults contained
+	 in the parent skins, or in the various global and application
+	 settings files.
+	 
+	 ============================================================
+	 -->
+
+	
+	
+	<!-- misc properties -->
+	<real id="background_opacity" value="0.5" />
+	<integer id="dcht" value="26" comment="default control height"/>
+    <real id="default_control_inset" value="4" />
+    <real id="default_control_offset" value="4" />
+    <real id="default_control_gap" value="6" />
+	<real id="default_table_column_spacing" value="4" />
+	<real id="default_table_row_spacing" value="0" />
+
+	<boolean id="disable_accent_colour" value="false" />
+	<boolean id="disable_dark_accent_colour" value="false" />
+	<boolean id="disable_primary_colour" value="false" />
+	<boolean id="disable_secondary_colour" value="false" />
+	
+	<!--colours for the position lines on the tactics pitch and widgets-->
+        <colour name="goalkeeper_line" red="19" green="26" blue="36" />
+        <colour name="defender_line" red="27" green="35" blue="48" />
+        <colour name="defensive_midfielder_line" red="27" green="40" blue="54" />
+        <colour name="midfielder_line" red="35" green="52" blue="69" />
+        <colour name="attacking_midfielder_line"  red="43" green="64" blue="85" />
+        <colour name="attacker_line" red="54" green="79" blue="105"  />
+        <colour name="substitutes_line" red="50" green="50" blue="50" />
+
+
+
+	
+	<!-- UI colours -->
+	<!-- These colours are used to recolour the appearance graphics used throughout the game, by replacing the red, green and blues of the graphics. -->
+	<!-- This allows fast creation of different colour schemes without having to modify and re-export the graphic assets -->
+	<colour name="ui_background" red="27" green="35" blue="48"/> <!-- Main UI background - red_replacement -->
+	<colour name="dialog_background" red="41" green="43" blue="50"/> <!-- Dialog box background - red_replacement -->
+	<colour name="colour side bar" value="blue grey 900"/> <!-- it's a non-human object - so go this colour for for the sidebar background-->
+
+	<!-- Main UI Header -->
+	<colour name="ui_header_background" red="27" green="35" blue="48"/> <!-- UI header background - red_replacement -->
+	<colour name="ui_header_border" red="62" green="67" blue="78"/> <!-- UI header borders - blue_replacement -->
+	<colour name="ui_header_shadow" red="27" green="35" blue="48"/> <!-- UI header shadow - green_replacement -->
+
+	<colour name="ui_header_icons" red="252" green="252" blue="252"/>
+
+	<!-- Alerts -->
+	<colour name="attention" red="234" green="210" blue="0"/> <!-- Used for things that need to be brought to the users attention - red_replacement -->
+	<colour name="warning" red="222" green="62" blue="9"/> <!-- Used to warn the user that something is wrong - red_replacement -->
+	<colour name="neutral" red="155" green="165" blue="169"/> <!-- Indicates something neutral - red_replacement -->
+	<colour name="positive" red="48" green="178" blue="113"/> <!-- Indicates something positive - red_replacement -->
+	<colour name="positive dark" red="0" green="110" blue="58"/> <!-- Used when white text on top, so needs to be dark(ish) -->
+	<colour name="positive bg" red="29" green="108" blue="57"/> <!-- Used for panel recolouring, so text should stand out -->
+	<colour name="negative" red="231" green="49" blue="49"/> <!-- Indicates something negative - red_replacement -->
+	<colour name="negative dark" red="171" green="30" blue="30"/> <!-- Used when white text on top, so needs to be dark(ish) -->
+	<colour name="negative bg" red="90" green="30" blue="30"/> <!-- Used for panel recolouring, so text should stand out -->	
+
+	<!-- Standard Button - Also used for menu boxes-->
+	<colour name="standard_button" red="54" green="79" blue="105"/> <!-- Main button colour - red_replacement -->
+	<colour name="standard_button_border" red="120" green="129" blue="141"/> <!-- Button border colour - blue_replacement -->
+	<colour name="standard_button_shadow" red="0" green="0" blue="0"/> <!-- Button shadow colour - green_replacement -->
+
+	<!-- Menu -->
+	<colour name="menu_highlight" red="255" green="255" blue="255"/> <!-- Used for _over appearances and separator -->
+
+	<!-- Primary Button -->
+	<colour name="primary_button" red="255" green="213" blue="29"/> <!-- Main button colour - red_replacement -->
+	<colour name="primary_button_border" red="23" green="68" blue="36"/> <!-- Button border colour - blue_replacement -->
+
+	<!-- Toggle Button -->
+	<colour name="toggle_button"  red="27" green="35" blue="48"/> <!-- Main button colour - red_replacement -->
+	<colour name="toggle_button_border" red="40" green="40" blue="50"/> <!-- Button border colour - blue_replacement -->
+
+
+
+	<!-- View Button -->
+	<colour name="view_button" red="250" green="250" blue="250"/> <!-- Main button colour - red_replacement -->
+
+	<!-- Continue Button -->
+	<colour name="continue_button" red="22" green="22" blue="22" /> <!-- Main button colour - red_replacement -->
+	<colour name="continue_button_border" red="21" green="25" blue="39"/> <!-- Main button colour - red_replacement -->
+	<colour name="continue text" red="255" green="213" blue="29" />
+  	<colour name="continue text match" red="255" green="213" blue="29" />
+
+	<!-- Standard Label -->
+	<colour name="standard_label" red="255" green="213" blue="29"/> <!-- Main button colour - red_replacement -->
+
+	<!-- Link Button -->
+	<colour name="link_button" red="255" green="213" blue="29"/> <!-- Main button colour - red_replacement -->
+	<colour name="link_button_border" red="255" green="255" blue="255"/> <!-- Link button colour - blue_replacement -->
+	
+	<!-- Link button used at bottom of inbox panel-->
+	<colour name="link_button_inbox" red="255" green="213" blue="29"/> <!-- Main button colour - red_replacement -->
+
+	<!-- Divider -->
+	<colour name="divider" red="220" green="220" blue="220"/> <!-- used for line dividers throughout the game -->
+
+	<!-- Match Button - Also used for match menu boxes-->
+	<colour name="match_button" red="27" green="35" blue="48"/> <!-- Main button colour - red_replacement -->
+	<colour name="match_button_border" red="40" green="40" blue="50"/> <!-- Button border colour - blue_replacement -->
+	<colour name="match_button_shadow" red="0" green="0" blue="0"/> <!-- Button shadow colour - green_replacement -->
+
+	<!-- Used for icons throughout the UI, like on buttons, checkboxes etc -->
+	<colour name="normal_icon" red="220" green="220" blue="220"/> <!-- Used for tick/bullet on checkboxes and radio buttons -->
+
+	<!-- Used for icons throughout the match, like on buttons, checkboxes etc -->
+	<colour name="match_icon" red="220" green="220" blue="220"/> <!-- Used for tick/bullet on checkboxes and radio buttons -->
+
+	<!-- Linear progress bars -->
+	<colour name="progress_empty" red="27" green="35" blue="48"/> <!-- used for line dividers throughout the game -->
+	<colour name="progress_full" red="255" green="213" blue="29"/> <!-- used for line dividers throughout the game -->
+
+	<!-- Standard Box - titled box, subsection box, bordered box, tabbed box etc-->
+	<colour name="dialog_box_background" red="27" green="35" blue="48"/> <!-- Dialog background colour - red_replacement -->
+
+	<!-- Popup Box - titled box, subsection box, bordered box, tabbed box etc-->
+	<colour name="popup_box_background" red="27" green="35" blue="48"/> <!-- Popup box background colour - red_replacement -->
+
+	<!-- Standard Box - titled box, subsection box, bordered box, tabbed box etc-->
+	<colour name="light_box_background" red="27" green="35" blue="48"/> <!-- Box background colour - red_replacement -->
+	<colour name="light_box_border" red="38" green="30" blue="30"/> <!-- Box border - blue_replacement -->
+	<colour name="light_box_shadow" red="0" green="0" blue="0"/> <!-- Box shadow colour - green_replacement -->
+
+	<!-- Standard Box - titled box, subsection box, bordered box, tabbed box etc-->
+	<colour name="box_background" red="27" green="35" blue="48"/> <!-- Box background colour - red_replacement -->
+	<colour name="box_border" red="38" green="30" blue="30"/> <!-- Box border - blue_replacement -->
+	<colour name="box_shadow" red="0" green="0" blue="0"/> <!-- Box shadow colour - green_replacement -->
+
+	<colour name="alpha_box_background" red="27" green="35" blue="48" alpha="185"/> <!-- box background with lower opacity -->
+
+	<!-- Dark Box -->
+	<colour name="dark_box_background" red="27" green="35" blue="48"/> <!-- Box background colour - red_replacement -->
+	<colour name="dark_box_border" red="50" green="50" blue="50"/> <!-- Box border - blue_replacement -->
+	<colour name="dark_box_shadow" red="0" green="0" blue="0"/> <!-- Box shadow colour - green_replacement -->
+	
+	<!--Darken Box-->
+	<colour name="alt_box_background" red="20" green="21" blue="26" alpha="255"/> <!-- Box background colour - red_replacement -->
+	<colour name="alt_box_border" red="20" green="21" blue="26" alpha="255"/> <!-- Box border - blue_replacement -->
+
+	<!-- Match Box -->
+	<colour name="match_box_background" red="27" green="35" blue="48"/> <!-- Box background colour - red_replacement -->
+	<colour name="match_box_border" red="39" green="42" blue="53"/> <!-- Box border - blue_replacement -->
+	<colour name="match_box_shadow" red="0" green="0" blue="0"/> <!-- Box shadow colour - green_replacement -->
+
+	<!-- Inbox -->
+	<colour name="inbox_sidebar_background" red="48" green="53" blue="60"/> <!-- Box background colour - red_replacement -->
+	<colour name="inbox_content_background" red="27" green="35" blue="48"/> <!-- Box background colour - red_replacement -->
+	<colour name="inbox_button_box_background" red="30" green="31" blue="36"/> <!-- Box background colour - red_replacement -->
+	<colour name="inbox_attachment_background" red="25" green="25" blue="25"/> <!-- Box background colour - red_replacement -->
+	<colour name="inbox_icons" value="blue grey 50"/>
+	<colour name="inbox_text" value="blue grey 50"/>
+
+	<!-- Hint Box -->
+	<colour name="hint_background" red="19" green="22" blue="33"/> <!-- Box background colour - red_replacement -->
+	<colour name="hint_border" red="10" green="20" blue="30"/> <!-- Box border - blue_replacement -->
+
+	<!-- Scrollbar -->
+	<colour name="scrollbar" red="255" green="213" blue="29"/> <!-- Box background colour - red_replacement -->
+
+	<!-- Inbox Scrollbar -->
+	<colour name="inbox_scrollbar" value="white"/> <!-- Box background colour - red_replacement -->
+
+	<!-- Edit box-->
+	<colour name="edit_box_background" red="54" green="79" blue="105" /> <!-- Main edit box colour - red_replacement -->
+	<colour name="edit_box_border"  red="27" green="35" blue="48"/> <!-- Edit box border colour - blue_replacement -->
+	<colour name="edit_box_shadow" red="0" green="0" blue="0"/> <!-- Edit box shadow colour - green_replacement -->
+
+	<!-- Calendar cell -->
+	<colour name="calendar_cell_border" red="40" green="40" blue="40"/> <!-- Box border - blue_replacement -->
+
+	<!-- Slider-->
+	<colour name="slider_body" red="10" green="10" blue="10"/> <!-- Slider colour - red_replacement -->
+	<colour name="slider_border" red="240" green="240" blue="240"/> <!-- Slider colour - red_replacement -->
+
+	<colour name="slider_thumb" red="69" green="72" blue="83"/> <!-- Slider thumb colour - red_replacement -->
+	<colour name="slider_thumb_border" red="40" green="40" blue="60"/> <!-- Slider thumb border colour - blue_replacement -->
+
+	<!-- Table colours -->
+	<colour name="table_heading" red="0" green="0" blue="0"/> <!-- Box background colour - red_replacement -->
+	<colour name="table_row_alternate" red="0" green="0" blue="0"/> <!-- Box border - blue_replacement -->
+	<colour name="table_row_over" red="0" green="0" blue="0"/> <!-- Box shadow colour - green_replacement -->
+	<colour name="table_row_selected" red="250" green="250" blue="250"/> <!-- Box shadow colour - green_replacement -->
+
+	<!-- Inbox colours -->
+	<colour name="inbox_must_respond" red="208" green="2" blue="27"/> <!-- Must respond news item row - red_replacement -->
+	<colour name="inbox_optional" red="248" green="231" blue="28"/> <!-- Optional news item row - red_replacement -->
+	<colour name="inbox_selected" red="255" green="213" blue="29" /> <!-- Selected news item row - red_replacement -->
+
+	<!-- Squad -->
+	<colour name="squad_outside" red="75" green="75" blue="75" /> <!-- Must respond news item row - red_replacement -->
+	<colour name="squad_substitute" red="60" green="60" blue="60"/> <!-- Optional news item row - red_replacement -->
+
+	<!-- Picking Button - Starting-->
+	<colour name="picking_starting_button" red="45" green="135" blue="52"/> <!-- Main button colour - red_replacement -->
+	<colour name="picking_starting_button_border" red="17" green="76" blue="35"/> <!-- Button border colour - blue_replacement -->
+
+	<!-- Picking Button - Sub-->
+	<colour name="picking_sub_button" red="104" green="121" blue="129"/> <!-- Main button colour - red_replacement -->
+	<colour name="picking_sub_button_border" red="61" green="66" blue="70"/> <!-- Button border colour - blue_replacement -->
+
+	<!-- Object Explorer -->
+	<colour name="object_explorer_normal" red="255" green="255" blue="255"/> <!-- Must respond news item row - red_replacement -->
+	<colour name="object_explorer_selected" red="56" green="170" blue="91"/> <!-- Optional news item row - red_replacement -->
+
+	<!-- Card Rows -->
+	<colour name="cards_yellow" red="220" green="226" blue="0"/> <!-- Must respond news item row - red_replacement -->
+	<colour name="cards_red" red="220" green="10" blue="10"/> <!-- Optional news item row - red_replacement -->
+
+	<!-- Team Talk Reactions -->
+	<colour name="team_talk_negative" red="220" green="10" blue="10"/> <!-- Must respond news item row - red_replacement -->
+	<colour name="team_talk_positive" red="32" green="234" blue="1"/> <!-- Optional news item row - red_replacement -->
+
+	<!-- Processing -->
+	<colour name="processing_box_background" red="27" green="35" blue="48"/> <!-- Processing box background colour - red_replacement -->
+	<colour name="processing_box_content_background" red="27" green="40" blue="54"/> <!-- Processing box background colour - red_replacement -->
+	<colour name="processing_box_content_border" red="27" green="35" blue="48"/> <!-- Processing box background colour - red_replacement -->
+
+	<colour name="processing_date" value="grey 50"/> 
+	<colour name="processing_month" value="grey 200"/> 
+	<colour name="processing_headline" value="grey 50"/> 
+	<colour name="processing_goalscorers" value="grey 400"/>
+	<colour name="processing_comp" value="grey 500"/>
+
+
+	<!-- misc "special" colours -->
+	<colour name="selection" red="255" green="213" blue="29"/>
+	<colour name="hilight" red="255" green="213" blue="29"/>
+	<colour name="background" red="27" green="35" blue="48" alpha="230"/>
+	<colour name="disabled" red="245" green="208" blue="189" alpha="160"/>
+	<colour name="transparent" red="0" green="0" blue="0" alpha="0"/>
+	<colour name="hyperlink" red="248" green="223" blue="210"/>
+	<colour name="inaccurate attribute value" red="248" green="223" blue="210" alpha="160"/>	
+
+  	<!-- default text colours -->
+	
+	<colour name="darkened text" red="248" green="223" blue="210"/>
+	<colour name="menu" red="248" green="223" blue="210"/>
+	<colour name="menu selected" red="248" green="223" blue="210"/>
+	<colour name="tree selected" red="248" green="223" blue="210"/>
+	<colour name="tree hilight" red="109" green="29" blue="29"/>
+	<colour name="control" red="248" green="223" blue="210"/>
+	<colour name="text" red="248" green="248" blue="248"/>
+	<colour name="dark text" red="248" green="223" blue="210"/>
+	<colour name="hint" red="248" green="223" blue="210"/>
+	<colour name="title" red="255" green="213" blue="29"/>
+	<colour name="footer" red="108" green="110" blue="112"/>
+	<colour name="html" red="248" green="223" blue="210"/>
+	<colour name="html_hyperlink" red="255" green="213" blue="29"/>
+	<colour name="searchbox text" red="248" green="223" blue="210"/>
+	<colour name="match text" red="255" green="255" blue="255" />
+	<colour name="match text disabled" red="255" green="255" blue="255" alpha="128"/>
+	<colour name="text" red="247" green="249" blue="240"/>
+	<colour name="faded text" red="247" green="249" blue="240" alpha="160"/>
+	<colour name="alt text" red="247" green="249" blue="240"/>
+	<colour name="faded alt text" red="247" green="249" blue="240" alpha="160"/>
+	
+	
+	
+	<colour name="user attention colour 1" red="255" green="210" blue="0" />
+  	<colour name="user attention colour 2" red="225" green="108" blue="0" />
+  
+  	<colour name="news ticker" red="255" green="213" blue="29" />			<!-- News Ticker -->
+
+  	<!-- profile attribute colours -->
+	<colour name="low attribute background" red="40" green="40" blue="40" alpha="140"/>
+  	<colour name="normal attribute background" red="40" green="40" blue="40" alpha="200"/>
+  	<colour name="good attribute background" red="40" green="40" blue="120" />
+  	<colour name="excellent attribute background" red="0" green="0" blue="255" />
+  	<colour name="low attribute match" red="255" green="255" blue="255" alpha="200"/>
+	<colour name="normal attribute match" red="255" green="255" blue="255"/>
+	<colour name="good attribute match" red="159" green="220" blue="122" />
+	<colour name="excellent attribute match" red="122" green="199" blue="75" />
+	
+	<colour name="low attribute" red="130" green="130" blue="130"/>
+	<colour name="normal attribute" red="192" green="192" blue="192"/>
+	<colour name="good attribute" red="255" green="213" blue="29"/>
+	<colour name="excellent attribute" red="231" green="100" blue="32"/>
+	<colour name="special attribute" red="255" green="213" blue="29" alpha="255"/>
+	<colour name="attribute label" red="248" green="223" blue="210" alpha="255"/>
+	<colour name="special attribute label" red="255" green="138" blue="100" alpha="255"/>	
+	<colour name="profile extra text" red="255" green="138" blue="100" alpha="255"/>
+	
+
+	<colour name="low stat" red="100" green="0" blue="0"/>
+	<colour name="medium stat" red="200" green="200" blue="200"/>
+	<colour name="good stat" red="80" green="168" blue="83" />
+	<colour name="excellent stat"  red="42" green="134" blue="45"/>
+
+	<colour name="low stat colourblind" red="140" green="140" blue="140" />
+	<colour name="medium stat colourblind" red="104" green="104" blue="156" />
+	<colour name="good stat colourblind" red="68" green="68" blue="196" />
+	<colour name="excellent stat colourblind" red="0" green="0" blue="240" />
+	
+	
+  <colour name="new game player total good" red="250" green="250" blue="250" />
+  <colour name="new game player total warning" red="222" green="62" blue="9" />
+  <colour name="new game player total bad" red="237" green="67" blue="77" />
+	
+	<!-- condition -->
+	<colour name="low condition" red="169" green="23" blue="23"/>
+	<colour name="mid condition" red="255" green="213" blue="29"/>
+	<colour name="high condition" red="93" green="158" blue="50"/>
+	<colour name="low condition bar" red="169" green="23" blue="23"/>
+	<colour name="mid condition bar" red="255" green="213" blue="29"/>
+	<colour name="high condition bar" red="93" green="158" blue="50"/>
+	<colour name="low condition match" red="169" green="23" blue="23"/>
+	<colour name="mid condition match" red="255" green="213" blue="29"/>
+	<colour name="high condition match" red="93" green="158" blue="50"/>
+
+	<!-- attribute graph colours -->
+	<colour name="graph line 1" red="255" green="255" blue="255"  alpha="150"/>
+	<colour name="graph line 2" red="50" green="200" blue="50"  alpha="150"/>
+	<colour name="graph line 3" red="50" green="50" blue="200"  alpha="150"/>	
+	<colour name="graph line 4" red="255" green="0" blue="120"  alpha="150"/>
+	<colour name="graph line 5" red="50" green="200" blue="200" alpha="150"/>
+	<colour name="graph line 6" red="255" green="175" blue="50" alpha="150"/>
+  	<colour name="graph line 7" red="200" green="50" blue="200" alpha="150"/>
+  	<colour name="graph line 8" red="200" green="200" blue="50" alpha="150"/>
+  	<colour name="graph line 9" red="120" green="0" blue="255"  alpha="150"/>
+  	<colour name="graph line 10" red="0" green="255" blue="120" alpha="150"/>
+                                                                
+  	<!-- analyser polygon colours -->
+	<colour name="attribute analyser line" red="22" green="22" blue="22" />
+	
+	<!-- (additional) stats colours. used on scout, confidence bars -->
+	<colour name="low stat" red="58" green="161" blue="226" />
+	<colour name="medium stat" red="58" green="161" blue="226" />
+	<colour name="good stat" red="58" green="161" blue="226" />
+	<colour name="excellent stat" red="58" green="161" blue="226" />
+
+	<!-- player motivation feedback colours -->
+	<colour name="poor feedback" red="246" green="226" blue="95" />
+	<colour name="ok feedback" red="214" green="217" blue="213" />
+	<colour name="good feedback" red="136" green="219" blue="81" />
+
+	<!-- player colours -->
+	<colour name="virtual player" red="190" green="190" blue="190" alpha="130"/><!-- virtual player -->
+	<colour name="loan out" red="4" green="124" blue="208"/>	<!-- on loan to other club -->
+	<colour name="loan in" red="63" green="200" blue="255"/>				<!-- on loan from other club -->
+	<colour name="co own in" red="255" green="213" blue="29"/>				<!-- co owned at club -->
+	<colour name="co own out" red="255" green="115" blue="53" alpha="255"/>	<!-- co owned not at club -->
+	<colour name="trial in" red="255" green="131" blue="77"/>				<!-- on trial at this club -->
+	<colour name="trial out" red="241" green="95" blue="98" alpha="160"/>	<!-- on trial at other club -->
+	<colour name="shortlisted" red="241" green="95" blue="98"/>		<!-- shortlisted -->
+	<colour name="golden generation" red="146" green="100" blue="0"/>
+	
+	<!-- statistic colours -->
+	<colour name="yellow card" red="237" green="239" blue="95"/>				<!-- yellow card -->
+	<colour name="red card" red="255" green="99" blue="99"/>				<!-- red card -->
+	<colour name="average rating" red="200" green="1" blue="1"/>		<!-- average rating -->
+
+	
+	<!-- team fixtures panel colours -->
+	<colour name="potential fixture" red="222" green="222" blue="222"/>			<!-- row on table showing a possible future fixture date -->
+	<colour name="draw date" red="193" green="193" blue="103"/>				 	<!-- row on table showing the draw date of a stage -->
+	<colour name="selected for friendly" red="81" green="173" blue="216"/>	 		<!-- row on table showing a selected friendly date -->
+	<colour name="unavailable friendly date" red="222" green="222" blue="222" alpha="100"/>	<!-- row on table showing an unavailable friendly date -->
+	<colour name="available friendly date" red="190" green="218" blue="196"/>		<!-- row on table showing an available friendly date -->
+
+	
+    <!-- fixture colours -->
+	<colour name="result score" red="253" green="253" blue="253"/>		     <!-- fixture basic score -->
+	<colour name="result aggregate" red="253" green="253" blue="253" alpha="150"/>		 <!-- fixture aggregate score -->
+	<colour name="position" red="253" green="253" blue="253"/>		         <!-- team league position -->
+ 	<colour name="loser" red="253" green="253" blue="253" alpha="100"/>      <!-- colour for losing team -->
+ 	<colour name="competition" red="253" green="253" blue="253"/>		     <!-- colour for 3-letter competition name -->
+    	<colour name="nation" red="253" green="253" blue="253"/>		         <!-- colour for 3-letter nation name -->
+	<colour name="fixture score separator" red="253" green="253" blue="253"/><!-- colour for : or - score separator -->
+	<colour name="fixture outcome" red="97" green="229" blue="97"/>			 <!-- colour for pen/extra time indicator -->
+	<colour name="fixture tv" red="253" green="253" blue="253"/>			 <!-- 'tv' label for TV matches -->
+	<colour name="league position" red="253" green="253" blue="253" />
+	<colour name="league points deducted" red="120" green="40" blue="40" />	<!-- points deducted label on league tables -->
+	<colour name="goal scorers" red="160" green="160" blue="170" />	<!-- goal scorer names and attendance on fixtures panel -->
+
+	
+  <!-- game status colours -->
+ 	<colour name="user playing" red="255" green="213" blue="29"/> 		     <!-- user is playing the game -->
+ 	<colour name="user waiting" red="80" green="40" blue="40"/>		     <!-- user is waiting -->
+		
+	<!-- special colours -->
+	<colour name="match incident" red="248" green="223" blue="210"/>			<!-- incident -->
+	<colour name="match goal" red="248" green="223" blue="210"/>			<!-- goal -->
+	<colour name="match own goal" red="208" green="166" blue="148"/>			<!-- own goal -->
+	<colour name="match penalty" red="248" green="223" blue="210"/>			<!-- penalty -->
+	<colour name="match missed penalty" red="248" green="223" blue="210" alpha="130"/>	<!-- missed penalty -->
+	<colour name="match yellow card" red="237" green="239" blue="95"/>		<!-- yellow card -->
+	<colour name="match red card" red="255" green="99" blue="99"/>			<!-- red card -->
+	<colour name="match injury" red="255" green="158" blue="115"/> 			<!-- injury -->
+	<colour name="match man of match" red="255" green="213" blue="29"/> 	<!-- man of match -->
+	<colour name="match substitute" red="255" green="255" blue="255" alpha="100"/><!-- substitute -->
+	<colour name="match goal update" red="218" green="180" blue="2"/>			<!-- colour of scoring team on goal updates -->
+   
+ 	<!-- misc -->
+<colour name="divider" red="253" green="253" blue="253"/>		         <!-- used for various dividing lines in tables -->
+ 	<colour name="default foreground" red="255" green="213" blue="29"/>	 <!-- default screen foreground colour -->
+ 	<colour name="default background"  red="27" green="35" blue="48"/>	 	 <!-- default screen background colour -->
+ 	<colour name="default outline" red="240" green="240" blue="240"/>		 		 <!-- default screen outline colour -->
+ 	<colour name="graph team 1" red="255" green="213" blue="29"/>		     <!-- team 1 colour on graph -->
+ 	<colour name="graph team 2" red="0" green="73" blue="144"/>		     	 <!-- team 2 colour on graph -->
+ 	<colour name="neutral commentary foreground" red="255" green="255" blue="255"/>		     <!-- foreground colour for neutral commentary -->
+ 	<colour name="neutral commentary background" red="40" green="40" blue="40"/>		     <!-- background colour for neutral commentary -->
+ 	<colour name="match stats" red="248" green="223" blue="210"/>		     <!-- match stats colour -->
+ 	<colour name="squad number" red="248" green="223" blue="210"/>		     <!-- team stats squad number colour -->
+	<colour name="human controlled" red="255" green="173" blue="29"/>		<!-- colour used to indicate that team is managed by a human player -->
+	<colour name="feeder club" red="118" green="118" blue="237"/>				<!-- colour used to indicate that team is a feeder club for the current human player -->
+	<colour name="news ticker" red="255" green="158" blue="115" />			<!-- News Ticker -->
+	<colour name="notification text" red="255" green="0" blue="0" />		<!-- Text colour for display of number of unread news items -->
+	<colour name="urgent news" red="255" green="0" blue="0" />		<!-- Text colour for display of news items requiring urgent attention -->
+	<colour name="transfer offer comment" red="248" green="223" blue="210"/>		<!-- Comment box on transfer offer screen colour -->
+
+  <!-- News -->
+  <colour name="website background" value="ui_background"/>
+  <colour name="website top story background" value="blue grey 800"/>
+  <colour name="website secondary story background" value="blue grey 700"/>
+  <colour name="website sidebar background" value="blue grey 900"/>
+  <colour name="website item background" value="box_background"/>
+  <colour name="website headline" value="text"/>
+  <colour name="website text" value="text"/>
+  <colour name="website faded text" value="faded text"/>
+	
+	<!-- training stacked bar chart colours -->
+	<colour name="intensive training" red="168" green="47" blue="0"/>			<!-- used to show number of players on intensive training -->
+	<colour name="high training" red="236" green="67" blue="0"/>				<!-- used to show number of players on high training -->
+	<colour name="medium training" red="255" green="158" blue="115"/>		<!-- used to show number of players on medium training -->
+	<colour name="light training" red="255" green="208" blue="187"/>				<!-- used to show number of players on light training -->
+	
+	<colour name="bar value" red="255" green="213" blue="29"/>					<!-- percentage bar fill colour -->
+	<colour name="bar filler" red="27" green="35" blue="48"/>					<!-- percentage bar filler colour -->
+
+	<!--For the Team meeting- the overall colour changes-->
+	<colour name="normal bar filler" red="50" green="50" blue="50"/>  <!--Normal Bar Colour when doing a horizontal percentage split-->
+	<colour name="positive bar filler" red="0" green="200" blue="0"/>   <!-- percentage bar filler colour -->
+	<colour name="negative bar filler" red="200" green="0" blue="0"/>   <!--Negative bar filler colour-->
+
+	<colour name="player comparison left" red="255" green="213" blue="29" />		<!-- player comparison: left player bar colour -->
+	<colour name="player comparison right" red="255" green="158" blue="115" />	<!-- player comparison: right player bar colour -->
+	
+	<colour name="profile bar value" red="255" green="213" blue="29"/>			<!-- percentage bar fill colour -->
+	<colour name="profile bar filler" red="255" green="213" blue="29"/>
+
+	
+ 
+	
+  <colour name="match time slider"   red="27" green="35" blue="48" />
+  <!-- match time slider fill colour -->
+
+  <colour name="match time slider highlight"  red="255" green="213" blue="29" />
+  <!-- match time slider fill colour -->
+
+	<!-- picking colours - not implemented yet -->
+	<colour name="player picked" red="255" green="255" blue="255" />			<!-- picking button colour -->
+	<colour name="picking player unavailable" red="255" green="0" blue="0" />	<!-- player unavailable -->
+
+  	<!-- todays date background-->
+  	<colour name="calendar past background" red="40" green="40" blue="50" alpha="50"/>
+  	<colour name="calendar past text" red="255" green="255" blue="255" alpha="80"/>
+  	<colour name="calendar different month" red="40" green="40" blue="50" alpha="100"/>
+  	<colour name="calendar different month text" red="255" green="255" blue="255" alpha="60"/>
+	
+	<colour name="competition schedule fixture" red="240" green="240" blue="0" alpha="100"/>		<!-- fixture -->
+	<colour name="competition schedule draw date" red="150" green="200" blue="255" alpha="100"/>	<!-- draw date-->
+	<colour name="competition schedule squad selection" red="0" green="255" blue="0" alpha="100"/>	<!-- squad selection date-->
+	<colour name="calendar preseason" red="213" green="213" blue="213" alpha="80"/>
+	<colour name="calendar fixture" red="0" green="172" blue="119" alpha="100"/>					<!-- fixture -->
+	<colour name="calendar schedule date" red="150" green="200" blue="150" alpha="30"/>	<!-- potential fixture date-->
+	<colour name="calendar transfer window" red="200" green="0" blue="0" alpha="80"/>		<!-- transfer window start/end date-->
+	<colour name="calendar note reminder" red="0" green="106" blue="255" alpha="50"/>		<!-- transfer window start/end date-->
+	<colour name="calendar future transfer" red="15" green="220" blue="210" alpha="100"/>		<!-- transfer window start/end date-->
+	<colour name="calendar today" red="255" green="0" blue="0" alpha="100"/>					<!-- todays date-->
+	<colour name="calendar contract expiry" red="179" green="0" blue="231" alpha="50"/>			<!-- contract expiry date -->	
+	<colour name="calendar draft date" red="200" green="15" blue="200" alpha="100"/>			<!-- draft date -->	
+	<colour name="calendar reserve fixture" red="0" green="140" blue="130" alpha="60"/>	
+
+	
+	<colour name="wizard title" red="255" green="213" blue="29" />								<!-- title text colour on the wizards	-->
+	<colour name="wizard text" red="248" green="223" blue="210"/>								<!-- text colour on the wizards	-->
+	<colour name="wizard step complete" red="248" green="223" blue="210" alpha="128"/>				<!-- completed wizard step -->
+	<colour name="wizard step active" red="255" green="213" blue="29" />							<!-- current wizard step -->
+	<colour name="wizard step" red="248" green="223" blue="210"/>									<!-- future wizard step -->
+	
+
+	<!-- match scoreboard colours -->
+	<colour name="match scoreboard clock" red="255" green="213" blue="29"/>					<!-- clock colour -->
+	<colour name="match scoreboard score" red="255" green="255" blue="0"/>					<!-- score colour -->
+	<colour name="match scoreboard aggregate score" red="255" green="200" blue="0"/>					<!-- agg score colour -->
+	<colour name="match scoreboard added time" red="231" green="100" blue="32"/>					<!-- added time colour -->
+
+  	<colour name="match actions foreground" red="255" green="255" blue="255"/>   <!-- match actions bar foreground colour -->
+  	<colour name="match actions background" red="48" green="51" blue="53"/>   <!-- match actions bar background colour -->
+
+	<!-- 2d match colours -->
+	<colour name="match text" red="255" green="255" blue="255"/>			<!-- 2d player name label text colour -->
+	<colour name="match outline" red="40" green="40" blue="40"/>			<!-- 2d player name label text outline colour -->
+	
+	<colour name="medical main" red="46" green="138" blue="255" />		     <!-- medical main colour for pitch -->
+ 	<colour name="medical minor" red="0" green="180" blue="0"/>		         <!-- medical trim colour for pitch -->
+ 	<colour name="medical text" red="0" green="180" blue="0"/>		         <!-- medical text colour for pitch -->
+	
+	<colour name="tactics normal run" red="200" green="200" blue="0"/>		<!-- tactics normal run line colour -->
+ 	<colour name="tactics darkened run" red="255" green="255" blue="255"/>		<!-- tactics darkened run line colour -->
+ 	<colour name="tactics dragged run" red="255" green="255" blue="0"/>		<!-- tactics dragged run line colour -->
+	
+	<colour name="continue button text" red="255" green="255" blue="255"/>		<!-- continue button text colour -->
+
+	<!-- preferred moves label text colours -->
+	<colour name="adding ppm" red="255" green="213" blue="29" />
+	<colour name="removing ppm" red="207" green="29" blue="29"/>
+	<!-- news item headline colours -->
+		<colour name="unread headline" red="231" green="100" blue="32"/>
+		<colour name="read headline" red="160" green="160" blue="160"/>
+		<colour name="selected headline" red="255" green="213" blue="29" />
+		<colour name="must respond headline" red="248" green="223" blue="210"/>
+		<colour name="unread category" red="255" green="255" blue="235"/>
+		<colour name="read category" red="255" green="255" blue="235"/>
+		<colour name="selected category" red="255" green="255" blue="235"/>
+
+  <colour name="team_form_win" red="59" green="150" blue="65"/>
+  <colour name="team_form_draw" red="61" green="61" blue="61"/>
+  <colour name="team_form_loss" red="169" green="40" blue="40"/>
+	
+	<!-- news screen colours -->
+	<colour name="top news header" red="176" green="0" blue="0"/>
+	<colour name="news item list header" red="176" green="0" blue="0"/>
+	<colour name="other stories header" red="176" green="0" blue="0"/>
+	
+	<colour name="contract negotiation restriction" red="176" green="0" blue="0"/>
+	
+	<colour name="add manager must fill" red="176" green="0" blue="0"/>
+
+	<colour name="scout card text" value="grey 50"/>
+	<colour name="fmt scout card"  red="27" green="35" blue="48"/>
+	
+	<!-- Transfer Centre -->
+	<colour name="transfer centre extra info" red="80" green="80" blue="80" />
+	<colour name="transfer centre fee" red="55" green="80" blue="110" />
+
+  <!-- Conversation colours -->
+	<colour name="human speech bubble" red="50" green="50" blue="50" alpha="100"/>
+	<colour name="happy speech bubble" red="0" green="112" blue="0"/>
+	<colour name="unhappy speech bubble" red="112" green="0" blue="0"/>
+	<colour name="negotiation speech bubble" red="42" green="68" blue="101"/>
+	<colour name="negotiation last chance bubble" red="178" green="133" blue="0"/>
+
+  <!-- General Conversation Colours for the team meeting + other players -->
+  <colour name="general speech bubble 1" red="200" green="80" blue="50"/>
+  <colour name="general speech bubble 2" red="68" green="150" blue="135"/>
+  <colour name="general speech bubble 3" red="71" green="119" blue="200"/>
+  <colour name="general speech bubble 4" red="100" green="50" blue="30"/>
+
+  <colour name="injured" red="255" green="75" blue="75"/>     <!-- injured -->
+  <colour name="slightly injured" red="245" green="166" blue="35"/>     <!-- slightly injured -->
+  
+  <!--Training colours-->
+  <colour name="training focus colour 0" red="0" green="163" blue="225" alpha="255"/> <!-- Balanced -->
+  <colour name="training focus colour 1" red="170" green="0" blue="0" alpha="255"/> <!-- Fitness -->
+  <colour name="training focus colour 2" red="255" green="216" blue="0" alpha="255"/> <!-- Tactics -->
+  <colour name="training focus colour 3" red="85" green="29" blue="115" alpha="255"/> <!-- Ball Control -->
+  <colour name="training focus colour 4" red="255" green="78" blue="0" alpha="255"/> <!-- Defending -->
+  <colour name="training focus colour 5" red="0" green="180" blue="55" alpha="255"/> <!-- Attacking -->
+  <colour name="training focus colour 6" red="200" green="200" blue="200" alpha="255"/> <!-- Team Cohersion -->
+  <colour name="training focus colour 7" red="178" green="156" blue="202" alpha="255"/> <!-- Not Used -->
+  <colour name="training focus colour 8" red="183" green="197" blue="207" alpha="255"/> <!-- Not Used -->
+
+
+  <!-- Match Prep colour -->
+  <colour name="match prep colour 0" red="103" green="109" blue="114" alpha="255"/><!-- Tactics Only -->
+  <colour name="match prep colour 1" red="130" green="117" blue="56" alpha="255"/><!-- Teamwork -->
+  <colour name="match prep colour 2" red="124" green="59" blue="59" alpha="255"/><!-- Defensive Positioning -->
+  <colour name="match prep colour 3" red="90" green="120" blue="64" alpha="255"/><!-- Attacking Movement -->
+  <colour name="match prep colour 4" red="171" green="121" blue="121" alpha="255"/><!-- Defensive Set Pieces -->
+  <colour name="match prep colour 5" red="146" green="173" blue="100" alpha="255"/><!-- Attacking Set Pieces -->
+  
+  <colour name="training rest day colour" red="255" green="255" blue="255" alpha="0"/><!--rest days-->
+  <colour name="training season break colour" red="49" green="52" blue="63" alpha="180"/>
+
+  <colour name="result_table_0_0_colour" red="247" green="247" blue="247" alpha="0"/>
+  <colour name="result_table_0_1_colour" red="248" green="248" blue="248" alpha="20"/>
+  <colour name="result_table_0_2_colour" red="252" green="222" blue="222" alpha="60"/>
+  <colour name="result_table_0_3_colour" red="241" green="198" blue="198" alpha="100"/>
+  <colour name="result_table_0_4_colour" red="247" green="178" blue="178" alpha="140"/>
+
+  <colour name="result_table_1_0_colour" red="223" green="236" blue="210" alpha="20"/>
+  <colour name="result_table_1_1_colour" red="247" green="247" blue="247" alpha="0"/>
+  <colour name="result_table_1_2_colour" red="248" green="235" blue="235" alpha="20"/>
+  <colour name="result_table_1_3_colour" red="252" green="222" blue="222" alpha="60"/>
+  <colour name="result_table_1_4_colour" red="241" green="198" blue="198" alpha="100"/>
+
+  <colour name="result_table_2_0_colour" red="205" green="229" blue="181" alpha="60"/>
+  <colour name="result_table_2_1_colour" red="223" green="236" blue="210" alpha="20"/>
+  <colour name="result_table_2_2_colour" red="247" green="247" blue="247" alpha="0"/>
+  <colour name="result_table_2_3_colour" red="248" green="235" blue="235" alpha="20"/>
+  <colour name="result_table_2_4_colour" red="252" green="222" blue="222" alpha="60"/>
+
+  <colour name="result_table_3_0_colour" red="182" green="219" blue="147" alpha="100"/>
+  <colour name="result_table_3_1_colour" red="205" green="229" blue="181" alpha="60"/>
+  <colour name="result_table_3_2_colour" red="223" green="236" blue="210" alpha="20"/>
+  <colour name="result_table_3_3_colour" red="247" green="247" blue="247" alpha="0"/>
+  <colour name="result_table_3_4_colour" red="248" green="235" blue="235" alpha="20"/>
+
+  <colour name="result_table_4_0_colour" red="172" green="220" blue="127" alpha="140"/>
+  <colour name="result_table_4_1_colour" red="182" green="219" blue="147" alpha="100"/>
+  <colour name="result_table_4_2_colour" red="205" green="229" blue="181" alpha="60"/>
+  <colour name="result_table_4_3_colour" red="223" green="236" blue="210" alpha="20"/>
+  <colour name="result_table_4_4_colour" red="247" green="247" blue="247" alpha="0"/>
+
+  <colour name="stat_pack_records_won" red="115" green="143" blue="93"/>
+  <colour name="stat_pack_records_drew" red="69" green="70" blue="72"/>
+  <colour name="stat_pack_records_lost" red="157" green="120" blue="121"/>
+
+  <!-- managerial style left point -->
+  <colour name="points left colour" red="248" green="250" blue="65"/>
+	
+    <colour name="default accent" red="255" green="213" blue="29" />
+  	<colour name="default dark accent" red="231" green="100" blue="32"/>
+  	<colour name="default primary" red="163" green="31" blue="46" /> 
+  	<colour name="default secondary" red="255" green="255" blue="255" />
+  
+  <!--Squad Depth overview box-->-->
+  <colour name="squad_depth_box_background" red="30" green="31" blue="36"/>
+  
+   <!-- attribute graph colours -->
+  <colour name="graph line 1" red="200" green="50" blue="50"/>	
+	<colour name="graph line 2" red="50" green="200" blue="50"/>
+	<colour name="graph line 3" red="50" green="50" blue="200"/>		
+	<colour name="graph line 4" red="255" green="0" blue="120"/>	
+	<colour name="graph line 5" red="50" green="200" blue="200"/>	
+	<colour name="graph line 6" red="255" green="175" blue="50"/>
+
+  <!-- team/player instructions dialog key colours -->
+  <colour name="selected instruction" red="74" green="195" blue="86" alpha="190"/>
+  <colour name="unselected instruction" red="255" green="255" blue="255" alpha="190"/>
+  <colour name="conflicting instruction" red="188" green="56" blue="56" alpha="190"/>
+  <colour name="conflicting with role instruction" red="243" green="177" blue="177" alpha="190"/>
+  <colour name="preselected instruction" red="218" green="255" blue="196" alpha="190"/>
+
+ <colour name="award winner" red="155" green="125" blue="80"/>
+ 
+ 
+  <colour name="required attribute"   red="231" green="100" blue="32" />
+  <colour name="preferred attribute" red="255" green="213" blue="29"/>
+ 
+
+	<!-- match rating colours -->
+	<colour name="match rating none" red="35" green="35" blue="35" />
+	<colour name="match rating zero to five" red="193" green="0" blue="0"/>
+	<colour name="match rating five to six" red="149" green="0" blue="0" />
+	<colour name="match rating six to seven" red="35" green="35" blue="35" />
+	<colour name="match rating seven to eight" red="80" green="168" blue="83" />
+	<colour name="match rating eight to nine" red="58" green="158" blue="61" />
+	<colour name="match rating nine to ten"  red="42" green="134" blue="45"/>
+	<!-- match rating text colours -->
+	<colour name="match rating text none" value="white" />
+	<colour name="match rating text zero to five" value="white" />
+	<colour name="match rating text five to six" value="white" />
+	<colour name="match rating text six to seven" value="white" />
+	<colour name="match rating text seven to eight" value="white" />
+	<colour name="match rating text eight to nine" value="white" />
+	<colour name="match rating text nine to ten" value="white" />
+
+
+	<colour name="news item" red="54" green="79" blue="105"  />
+	<colour name="scout card"  red="27" green="35" blue="48" />
+
+	<colour name="prozone"  red="0" green="173" blue="239" />
+
+  <!-- Tactic Slot Button -->
+  <colour name="tactic_slot" red="27" green="40" blue="54"/> <!-- Main button colour - red_replacement -->
+  
+	<!-- Pitch box - titled box, subsection box, bordered box, tabbed box etc-->
+	<colour name="pitch_box_background" red="27" green="40" blue="54" alpha="255"/> <!-- Box background colour - red_replacement -->
+	<colour name="style_background" red="23" green="35" blue="48" alpha="255"/> <!-- Box background colour - red_replacement -->
+
+
+	<!--Training category calendar colours-->
+	<colour name="general training calendar colour"				value="blue 900"/>
+	<colour name="match training calendar colour"					value="blue 500"/>
+	<colour name="attacking training calendar colour"     value="green 800"/>
+	<colour name="defending training calendar colour"     value="purple 800"/>
+	<colour name="technical training calendar colour"     value="indigo 400"/>
+	<colour name="tactical training calendar colour"      value="light green 400"/>
+	<colour name="goalkeeping training calendar colour"   value="brown 500"/>
+	<colour name="setpiece training calendar colour"			value="pink 800"/>
+	<colour name="physical training calendar colour"      value="blue grey 800"/>
+	<colour name="extra training calendar colour"					value="teal 800"/>
+  <colour name="match day training calendar colour"     red="255" green="213" blue="29"/>
+  <colour name="rest training calendar colour"          value="blue grey 300"/>
+  <colour name="recovery training calendar colour"      value="teal 300"/>
+	
+	
+
+	<!-- Fixtures & Results -->
+	<colour name="result_background"  red="17" green="22" blue="30" /> <!-- World news background colour - red_replacement -->
+	<colour name="aggregate_result_background"  red="22" green="30" blue="38"/> <!-- First team match background colour - red_replacement -->
+	<colour name="result_time_background"  red="54" green="79" blue="105"/> <!-- First team match background colour - red_replacement -->
+
+	
+
+    <colour name="hashtag"  red="255" green="213" blue="29" />
+
+
+ 
+ 	   <!-- heffem colours -->
+  <colour name="heffem" red="255" green="213" blue="29" />
+  <colour name="heffem2" red="231" green="100" blue="32"/>
+  <colour name="heffem3" red="27" green="35" blue="48" />
+  <colour name="heffem4" red="27" green="40" blue="54" />
+  <colour name="heffem5" red="54" green="79" blue="105" />
+  <colour name="heffem6" red="50" green="74" blue="98" />
+  <colour name="heffem7" red="48" green="70" blue="93" />
+  <colour name="heffem_dark" red="17" green="22" blue="30" />
+  <colour name="heffem_dark2" red="22" green="30" blue="38" />
+  <colour name="heffem_black" red="20" green="20" blue="20" />
+  <colour name="rougeheffem" red="220" green="53" blue="69" />
+
+  <colour name="don" red="0" green="44" blue="138" />
+  <colour name="don2" red="0" green="155" blue="225" />
+  <colour name="twitter" red="29" green="161" blue="242" />
+
+  <colour name="awards"  red="255" green="213" blue="29" />
+  <colour name="award_gold"  red="175" green="149" blue="0" />
+  <colour name="award_silver"  red="180" green="180" blue="180" />
+  <colour name="award_bronze"  red="106" green="56" blue="5" />
+  <colour name="award_gold2"  red="201" green="176" blue="55" />
+  <colour name="award_silver2"  red="215" green="215" blue="215" />
+  <colour name="award_bronze2"  red="173" green="138" blue="85" />
+
+
+  <colour name="pos_perfect"  red="63" green="225" blue="37" />
+  <colour name="pos_verygood"  red="69" green="149" blue="15" />
+  <colour name="pos_good"  red="160" green="207" blue="35" />
+  <colour name="pos_acceptable" red="233" green="219" blue="0" />
+  <colour name="pos_poor"  red="191" green="72" blue="0" />
+  <colour name="pos_verypoor"  red="174" green="0" blue="0" />
+
+
+<colour name="fg purple lighter" red="255" green="213" blue="29" />
+<colour name="fg purple" red="255" green="213" blue="29" />
+<colour name="fg purple darker" red="255" green="213" blue="29" />
+
+<colour name="bg purple lighter"  red="50" green="74" blue="98" />
+<colour name="bg purple"  red="54" green="79" blue="105" />
+<colour name="bg purple darker"  red="48" green="70" blue="93" />
+
+<colour name="bg" red="27" green="35" blue="48" />
+
+<colour name="comp person bar 1" red="255" green="213" blue="29" />
+<colour name="comp person bar 2" red="231" green="100" blue="32"/>
+
+<colour name="comp person 1" red="255" green="213" blue="29" />
+<colour name="comp person 2" red="231" green="100" blue="32"/>
+
+</properties>
+
+	

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+    <container class="plain_box" >
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+    <container height="20">
+      <layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+      
+      <string id="skin_style" value="title link" />
+
+      <!-- Linked header -->
+      
+      <widget class="link_button" section="Ppin" auto_size="all" font="title" colour="heffem">
+      <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+         <translation id="text" translation_id="229993" type="use" value="Preferred Moves" />
+      </widget>
+    </container>  
+  
+    <!-- Spacer -->
+    <container height="3"/>  
+
+    <!-- Bans get put in here. The first 1 columns may be used for -->
+  <widget class="table" id="pref" mode="fill_rows, stripe_rows" layout="-1" auto_size_rows="true" fixed_size_rows="false">
+    <list id="column_properties">
+      <record index="0" alignment="left, centre_y" spec="text" auto_size="vertical"/>
+    </list>
+
+    <list id="column_display_properties">
+      <record indx="0" left="0" top="0" sort_disabled="true"/>
+    </list>
+  </widget>
+  </container>
+</panel>

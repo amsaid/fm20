@@ -1,0 +1,56 @@
+<panel width="132">
+
+   <layout class="arrange_vertical_attachment" layout="-1,-70,48" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	
+				<container  class="plain_box" appearance="heffem/transres2" red_replacement="heffem_dark" >
+		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="10"/>
+		<layout class="stick_to_sides_attachment" alignment="all"  inset="0,0,0,0"  priority="10"/>
+		
+	</container>
+	
+	<container class="transformation_container" >
+		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="10"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="3,3,3,3" priority="10"/>
+		<list id="transformations">
+				<record type="rotation" value="12"/>
+				</list>
+
+	
+    <widget class="object_portrait_picture" id="trop" scale_picture="true" height="50" width="50" transparency="1">
+		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="3"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="-70,-70,-70,-70" priority="3"/>
+		
+      <boolean id="keep_aspect_ratio" value="true" />
+      <flags id="image_alignment" value="centre" />
+
+    </widget>
+	
+	
+	</container>
+    
+
+
+		<container class="plain_box" appearance="heffem/transres" red_replacement="heffem_dark" priority="1" layout="-1" >
+			
+			 <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,0,0,0" apply_to_children="true" />
+			 <layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="3"/>
+			
+	
+  <widget class="text" id="cmpn" spec="text" font="title" alignment="centre" colour="white" multiline="false" auto_size="vertical" size="9">
+  		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="3"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="3" priority="3"/>
+    </widget>
+	
+	    <widget class="text" id="wcnt" spec="text" font="label" colour="heffem"  alignment="centre_x, bottom" auto_size="vertical" size="14">
+		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="3"/>
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" priority="3"/>
+    </widget>
+	
+	
+	</container>
+
+
+
+  
+</panel>

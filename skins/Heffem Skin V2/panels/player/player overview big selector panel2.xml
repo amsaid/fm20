@@ -1,0 +1,12 @@
+<panel  navigation_container="true" >
+  <container class="bordered_box" id="SUBP">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  </container>
+
+  	        <widget class="player_positions_indicator_panel" file="player/player positions indicator small horizontal" id="ppsh" default_item="true" late_loading="true">
+		     <translation id="title" translation_id="230082" type="use" value="Positions" />
+		     <record id="object_property" get_property="objt" set_property="objt"/>
+	        </widget>
+
+</panel>

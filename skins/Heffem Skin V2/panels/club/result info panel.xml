@@ -1,0 +1,61 @@
+<!-- A panel showing a single fixture result -->
+<!-- Designed to be used with the RESULT_INFO_PANEL, a CLIENT_OBJECT_VIEWER_XML_PANEL -->
+<panel>
+
+	
+   <layout class="arrange_vertical_attachment" layout="-1,-70,48" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	
+			
+				<container  class="plain_box" appearance="heffem/transres2" red_replacement="heffem_dark" >
+		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="10"/>
+		<layout class="stick_to_sides_attachment" alignment="all"  inset="0,0,0,0"  priority="10"/>
+		
+	</container>
+	
+				<container class="transformation_container"  >
+		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="10"/>
+		<layout class="stick_to_sides_attachment" alignment="all"  inset="3,3,3,3"  priority="10"/>
+		<list id="transformations">
+				<record type="rotation" value="12"/>
+				</list>
+    <widget class="fixture_opponent_picture" id="oppi" scale_picture="true" height="50" width="50" transparency="1">
+		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="3"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="-70,-70,-70,-70" priority="3"/>
+		
+      <boolean id="keep_aspect_ratio" value="true" />
+      <flags id="image_alignment" value="centre" />
+
+      <record id="object_property">
+        <integer id="get_property" value="fopP" />
+        <boolean id="dont_set_object" value="true"/>
+      </record>
+    </widget>
+	</container>
+	
+	
+		<container class="plain_box" appearance="heffem/transres" red_replacement="heffem_dark" priority="1" layout="-1" >
+			
+			 <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			 <layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="3"/>
+					
+    <widget class="fixture_opponent_venue_text" id="fOpV" spec="text" font="label" colour="white" alignment="centre" auto_size="vertical" size="11">
+		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="3"/>
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="25" priority="3"/>
+      <record id="object_property">
+        <integer id="get_property" value="fOpV" />
+      </record>
+    </widget>
+    <widget class="fixture_full_result_text" id="FxFR" spec="text" format="[%scoreline#1-result_h_a_result]" font="title" alignment="centre" multiline="true" auto_size="vertical" size="16">
+		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="3"/>
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" priority="3"/>
+      <record id="object_property">
+        <integer id="get_property" value="FxFR" />
+      </record>
+    </widget>
+	</container>
+	
+	
+	
+
+</panel>

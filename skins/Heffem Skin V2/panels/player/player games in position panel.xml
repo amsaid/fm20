@@ -1,0 +1,43 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" offset="0" apply_to_children="true" />
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+		<widget class="text" auto_size="vertical" font="title" colour="heffem">
+			<translation id="text" translation_id="257322" type="use" value="Games Played In Position" />
+		</widget>
+		<widget class="table" id="gpip" mode="fill_rows, stripe_rows" layout="-3, -3, -3" stretch_to_fit_rows="true" auto_size_rows="true" fixed_size_rows="false">
+			<list id="default_sort_column">
+				<integer value="club" />
+				<integer value="posi" />
+			</list>
+			<flags id="row_appearance" value="tables/custom/fmc/default/row" />
+			<flags id="row_over_appearance" value="tables/custom/fmc/over/row" />
+			<flags id="stripe_appearance" value="tables/custom/fmc/stripe/row" />
+			<flags id="selected_appearance" value="tables/custom/fmc/selected/row" />
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="242883" type="use" value="Pos" />
+				</record>
+				<record alignment="centre,centre_y">
+					<translation id="hint" translation_id="257323" type="use" value="Games played in this position for his club" />
+					<translation id="text" translation_id="227737" type="use" value="Club" />
+				</record>
+				<record alignment="centre,centre_y">
+					<translation id="hint" translation_id="342768" type="use" value="Average rating in matches for his club team[COMMENT: Player's average rating across games played for his club]" />
+					<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+				</record>
+			</list>
+			<list id="column_properties">
+				<record index="0" alignment="left, centre_y" spec="text" />
+				<record index="1" alignment="centre, centre_y" />
+				<record index="2" alignment="centre, centre_y" />
+			</list>
+			<list id="column_display_properties">
+				<record indx="0" left="4" id="posi" />
+				<record indx="1" id="club" sort_ascending="false" />
+				<record indx="2" id="cave" sort_ascending="false" />
+			</list>
+		</widget>
+	</container>
+</panel>

@@ -1,0 +1,36 @@
+﻿<panel>
+  <flags id="selected_appearance" value="boxes/custom/tactics kit/selected/paper"/>
+  
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="-7"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="-1" apply_to_children="true"/>
+
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="-7"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="-1" apply_to_children="true"/>
+
+    <container>
+      <widget class="tactics_kit_picture" id="kitp">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="2"/>
+      </widget>
+
+    </container>
+  </container>
+
+  <container id="nmcN">
+    <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+    <!--name/condition etc.-->
+    <container class="bordered_box" id="nmcn" appearance="boxes/match/paper" >
+		<layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="0" do_not_size="true"/>
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="2" gap="0"/>
+
+
+		<widget class="text" id="name" size="8" font="title" alignment="centre" auto_size="vertical" multiline="false" style="semi_bold">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" />
+		</widget>
+
+    </container>
+  </container>
+
+</panel>

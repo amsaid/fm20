@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel colour_team_scores="false">
+    <layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+    <container height="60" class="bordered_box" appearance="heffem/matchtop" red_replacement="heffem3">
+        <layout class="arrange_horizontal_attachment" alignment="right,extend" gap="0" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <container>
+            <layout class="arrange_horizontal_attachment" alignment="left,extend" gap="0" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+            <container class="bordered_box" appearance="heffem/matchtop" red_replacement="heffem3">
+                <attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" horizontal_offset="0" vertical_inset="0" />
+                <!-- Back Button -->
+                <widget class="screen_history_button" id="back" fixed="true" width="60" appearance="buttons/custom/interface/navigation bar/button" icon="icons/26px/left" icon_alignment="centre">
+                    <attachment class="get_global_attachment" get_property="hnpt" set_property="itms" />
+                    <record id="primary_icon_properties" red_replacement="heffem" />
+                    <record id="click_event" event_id="GOTO" event_target="brow" scin="-8" />
+                    <attachment class="test_global_attachment" get_property="MnuS" mode="1" value="true" set_property="hidn" skip_if_null="true" />
+                </widget>
+                <!--clock-->
+                <container width="120" >
+                    <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+                    <!--clock-->
+                    <container id="ClkC">
+                        <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-2" />
+                        <record id="default_properties" auto_size="vertical" alignment="centre" colour="match scoreboard clock" />
+                        <widget class="text" id="Mclk" size="24" font="digit" colour="heffem" />
+                        <widget class="text" id="ClkT" size="10" colour="heffem" font="title" />
+                        <widget class="text" id="Pent" size="14" colour="heffem2" />
+                    </container>
+                    <!--injury time indicator-->
+                    <container id="MijC" height="16">
+                        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+                        <widget class="text" id="Mijt" size="small" alignment="centre" style="semi_bold" colour="green 500" />
+                    </container>
+                </container>
+                <!--team names and score-->
+                <container width="380">
+                    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                    <container class="bordered_box" width="400" appearance="heffem/match titlebar/left" id="T1Co" blue_replacement="heffem3" />
+                    <container>
+                        <layout class="arrange_horizontal_attachment" layout="-2,-2,-6,75" offset="0" gap="0" />
+                        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                        <container/>
+                        <!--home team logo-->
+                        <widget class="match_team_logo_picture" id="HtLG" team_index="0" width="35">
+                            <record id="object_property">
+                                <integer id="get_property" value="objt" />
+                                <integer id="set_property" value="objt" />
+                            </record>
+                        </widget>
+                        <!--home team name -->
+                        <widget class="text_button" colour="text" id="T1nm" size="16" font="title" alignment="centre_x,centre_y" click_event="htac">
+                            <record id="object_property" get_property="oSCL" set_property="rrep" />
+                        </widget>
+                        <container>
+                            <layout class="arrange_horizontal_attachment" alignment="right, fill"  offset="0" gap="0" />
+                            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+                            <!--home aggregate score -->
+                            <widget class="text" id="T1as" size="18" colour="heffem2" font="digit" alignment="right,centre_y" />
+                            <!--home score -->
+                            <widget class="text" id="T1sc" size="25" colour="heffem" font="digit" alignment="centre_x,centre_y" />
+							<container/>
+                        </container>
+                    </container>
+                </container>
+                <container class="bordered_box" width="6" appearance="heffem/matchtop" red_replacement="heffem3">
+                    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                    <!--away aggregate score -->
+                    <widget class="text" value=":" colour="heffem" size="23" font="digit" auto_size="horizontal" alignment="centre_x,centre_y" />
+                </container>
+                <widget class="vertical_divider" auto_size="none" />
+                <!--team names and score-->
+                <container width="380">
+                    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                    <container class="bordered_box" width="400" appearance="heffem/match titlebar/right" id="T2Co" blue_replacement="heffem3" />
+                    <container>
+                        <layout class="arrange_horizontal_attachment" layout="75,-6,-2,-2" offset="0" gap="0" />
+                        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+                        <container>
+                            <layout class="arrange_horizontal_attachment" alignment="left, fill"  offset="0" gap="0" />
+                            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+							<container/>
+                            <!--away score -->
+                            <widget class="text" id="T2sc" colour="heffem" size="25" font="digit"  alignment="centre_x,centre_y" />
+                            <!--away aggregate score -->
+                            <widget class="text" id="T2as" colour="heffem2" size="18" font="digit"  alignment="left,centre_y" />
+                        </container>
+                        <!--away team name -->
+                        <widget class="text_button" colour="text" id="T2nm" size="16" font="title" alignment="centre_x,centre_y" click_event="atac">
+                            <record id="object_property" get_property="oSCL" set_property="rrep" />
+                        </widget>
+                        <!--away team logo-->
+                        <widget class="match_team_logo_picture" id="AtLG" team_index="1" width="35">
+                            <record id="object_property">
+                                <integer id="get_property" value="objt" />
+                                <integer id="set_property" value="objt" />
+                            </record>
+                        </widget>
+                        <container/>
+                    </container>
+                </container>
+            </container>
+            <container class="bordered_box" appearance="heffem/matchtop" red_replacement="heffem3">
+                <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+                <!--match timeline-->
+
+				<!--match timeline-->
+				<container id="mtml">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<!-- an animation just to delay widget hiding-->
+					<!--<animation class="fade_animation" trigger_id="hidden" trigger_value="true" start_value="1" end_value="1" duration="1" end_mode="stop"/>-->
+
+					<attachment class="test_multiple_globals_attachment" default_value="true">
+						<list id="get_properties">
+							<record get_property="TTyp" test_mode="not_equal" value="1" skip_if_null="false"/>
+							<record get_property="dtty" test_mode="not_equal" comparison_mode="or" value="53" skip_if_null="false"/>
+							<record get_property="Tmts" test_mode="not_equal" comparison_mode="or" value="2" skip_if_null="true"/>
+						</list>
+						<integer id="set_property" value="hidn"/>
+					</attachment>
+
+					<widget class="spacer" />
+					<container class="match_flow_graphic_panel">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</container>
+				</container>
+
+				<!--match time bar-->
+				<widget class="match_time_slider_panel" id="mtSL">
+					<!-- slide in from right when shown, out left when hidden-->
+					<animation class="slide_in_left_animation"  trigger_id="hidden" trigger_value="false" end_mode="stop"/>
+					<animation class="slide_in_right_animation" trigger_id="hidden" trigger_value="true" end_mode="hold_end"/>
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+
+					<attachment class="test_multiple_globals_attachment" default_value="true">
+						<list id="get_properties">
+							<record get_property="TTyp" test_mode="not_equal" value="1" skip_if_null="false"/>
+							<record get_property="dtty" test_mode="not_equal" comparison_mode="or" value="53" skip_if_null="false"/>
+							<record get_property="Tmts" test_mode="not_equal" comparison_mode="or" value="1" skip_if_null="true"/>
+						</list>
+						<integer id="set_property" value="hidn"/>
+					</attachment>
+				</widget>
+
+				<!--captions-->
+				<widget class="match_caption_panel" id="MCap">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+            </container>
+        </container>
+        <container class="bordered_box" appearance="heffem/matchtop" width="280" red_replacement="heffem3">
+            <layout class="arrange_horizontal_attachment" layout="50,50,180" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+            <!-- FM BUTTON -->
+            <widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items1/button" icon="icons/26px/fm" width="50" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_x, centre_y">
+                <event id="click_notification_event" event_id="FM" item="NULL" />
+                <event id="menu_layout_notification_event" event_id="mlne" event_target="fmst" />
+                <record id="items" file="menus/game" />
+                <record id="primary_icon_properties" red_replacement="heffem" />
+                <translation id="hint" translation_id="292829" type="use" value="Options[COMMENT: menubar game options button]" />
+            </widget>
+            <!-- HOME BUTTON -->
+            <widget class="icon_button" id="homb" width="50" appearance="chrome/buttons/items1/button" red_replacement="heffem" icon="icons/26px/home" icon_alignment="centre">
+                <event id="click_event">
+                    <flags id="event_id" value="HOME" />
+                    <flags id="event_target" value="scrC" />
+                </event>
+                <record id="primary_icon_properties" red_replacement="heffem" />
+                <layout class="centre_in_parent_attachment" alignment="vertical" />
+            </widget>
+            <!-- CONTINUE -->
+            <container class="bordered_box" appearance="chrome/boxes/game bar/match/paper">
+                <attachment_group class="horizontal_arrange_autosize" />
+                <widget class="match_continue_panel" file="match/heffem continue" width="180" id="mcnt">
+                    <record id="object_property">
+                        <integer id="get_property" value="objt" />
+                        <integer id="set_property" value="objt" />
+                    </record>
+                </widget>
+            </container>
+        </container>
+    </container>
+</panel>

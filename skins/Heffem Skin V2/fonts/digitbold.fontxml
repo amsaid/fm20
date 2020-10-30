@@ -1,0 +1,15 @@
+<record>
+	<string id="file_name" value="Open 24 Display St.ttf"/>
+		<real id="font_size_small" value="10" />
+	<real id="font_size_normal" value="10" />
+	<real id="font_size_large" value="9" />
+	<real id="font_size_xlarge" value="10.5" />
+	<real id="font_size_xxlarge" value="15" />
+	
+	
+  <integer id="fill_colour_red" value="240" />
+  <integer id="fill_colour_green" value="240" />
+  <integer id="fill_colour_blue" value="240" />
+  <integer id="fill_colour_alpha" value="255" />
+	
+</record>
